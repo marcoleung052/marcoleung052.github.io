@@ -8,140 +8,165 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
-        body { font-family: 'Inter', sans-serif; }
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
         .gradient-text { background: linear-gradient(90deg, #3b82f6, #8b5cf6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .dropdown:hover .dropdown-menu { display: block; }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-900 leading-relaxed">
+<body class="bg-gray-50 text-gray-900 leading-relaxed" id="top">
 
-    <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-200">
+    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-200">
         <div class="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
-            <span class="text-xl font-bold gradient-text">MARCO LEUNG</span>
-            <div class="space-x-6 text-sm font-medium">
-                <a href="#about" class="hover:text-blue-600 transition">關於</a>
-                <a href="#projects" class="hover:text-blue-600 transition">專案</a>
-                <a href="#experience" class="hover:text-blue-600 transition">經歷</a>
-                <a href="#awards" class="hover:text-blue-600 transition">榮譽</a>
+            <a href="#top" class="text-xl font-bold gradient-text">MARCO LEUNG</a>
+            <div class="flex space-x-8 text-sm font-medium">
+                <a href="#top" class="hover:text-blue-600 transition">關於</a>
+                
+                <div class="relative dropdown">
+                    <a href="#projects" class="hover:text-blue-600 transition flex items-center">專案 <i class="fas fa-chevron-down ml-1 text-[10px]"></i></a>
+                    <div class="dropdown-menu hidden absolute left-0 mt-2 w-48 bg-white border border-gray-100 shadow-xl rounded-lg py-2">
+                        <a href="project-nursing.html" class="block px-4 py-2 hover:bg-blue-50">護理紀錄補全系統</a>
+                        <a href="project-chatbot.html" class="block px-4 py-2 hover:bg-blue-50">多模態 AI 機器人</a>
+                        <a href="project-weather.html" class="block px-4 py-2 hover:bg-blue-50">澳洲天氣預測</a>
+                        <a href="project-retrieval.html" class="block px-4 py-2 hover:bg-blue-50">服飾以圖搜圖</a>
+                        <a href="project-ticketing.html" class="block px-4 py-2 hover:bg-blue-50">威秀訂票系統</a>
+                    </div>
+                </div>
+
+                <div class="relative dropdown">
+                    <a href="#experience" class="hover:text-blue-600 transition flex items-center">經歷 <i class="fas fa-chevron-down ml-1 text-[10px]"></i></a>
+                    <div class="dropdown-menu hidden absolute left-0 mt-2 w-40 bg-white border border-gray-100 shadow-xl rounded-lg py-2">
+                        <a href="experience.html#cadre" class="block px-4 py-2 hover:bg-blue-50">班級幹部</a>
+                        <a href="experience.html#clubs" class="block px-4 py-2 hover:bg-blue-50">社團與活動</a>
+                        <a href="experience.html#work" class="block px-4 py-2 hover:bg-blue-50">工作經驗</a>
+                    </div>
+                </div>
+
+                <div class="relative dropdown">
+                    <a href="#awards" class="hover:text-blue-600 transition flex items-center">榮譽 <i class="fas fa-chevron-down ml-1 text-[10px]"></i></a>
+                    <div class="dropdown-menu hidden absolute left-0 mt-2 w-40 bg-white border border-gray-100 shadow-xl rounded-lg py-2">
+                        <a href="awards.html" class="block px-4 py-2 hover:bg-blue-50">榮譽與成就</a>
+                    </div>
+                </div>
             </div>
         </div>
     </nav>
 
-    <header class="max-w-5xl mx-auto px-6 py-20 text-center">
+    <header class="max-w-5xl mx-auto px-6 py-24 text-center">
         <h1 class="text-5xl font-extrabold mb-4">梁釗豪 <span class="text-gray-400">|</span> Chiu-Ho Leung</h1>
-        <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-            長庚大學人工智慧學系。專注於自然語言處理、電腦視覺與全端 AI 應用開發。
+        <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto italic">
+            "紮實技術基礎，豐富專案實戰，卓越領袖溝通"
         </p>
         <div class="flex justify-center gap-4">
-            <a href="mailto:marcoleung.cgu@gmail.com" class="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition">聯絡我</a>
-            <a href="https://github.com/marcoleung052" target="_blank" class="border border-gray-300 px-6 py-2 rounded-full hover:bg-gray-100 transition"><i class="fab fa-github mr-2"></i>GitHub</a>
+            <a href="mailto:marcoleung.cgu@gmail.com" class="bg-blue-600 text-white px-8 py-3 rounded-full hover:bg-blue-700 transition shadow-lg shadow-blue-200">聯絡我</a>
+            <a href="https://github.com/marcoleung052" target="_blank" class="border border-gray-300 px-8 py-3 rounded-full hover:bg-gray-100 transition">GitHub</a>
         </div>
     </header>
 
     <main class="max-w-5xl mx-auto px-6">
         
-        <section id="about" class="py-12 border-t border-gray-200">
-            <h2 class="text-2xl font-bold mb-8">技術與基礎</h2>
+        <section class="py-12 border-t border-gray-200">
             <div class="grid md:grid-cols-3 gap-8">
-                <div class="p-6 bg-white rounded-2xl shadow-sm border border-gray-100">
-                    <h3 class="font-bold text-blue-600 mb-3 text-lg">程式語言</h3>
-                    <p class="text-gray-600">Python, C++, SQL, JavaScript, Java</p>
+                <div class="text-center">
+                    <h3 class="font-bold text-blue-600 mb-2">GPA 3.81 / 4.00</h3>
+                    <p class="text-sm text-gray-500 uppercase tracking-widest">Academic Excellence</p>
                 </div>
-                <div class="p-6 bg-white rounded-2xl shadow-sm border border-gray-100">
-                    <h3 class="font-bold text-blue-600 mb-3 text-lg">AI 專業</h3>
-                    <p class="text-gray-600">自然語言處理、電腦視覺、資料探勘、FAISS 向量檢索</p>
+                <div class="text-center border-x border-gray-200">
+                    <h3 class="font-bold text-blue-600 mb-2">Deep Learning & CV</h3>
+                    <p class="text-sm text-gray-500 uppercase tracking-widest">Core Expertise</p>
                 </div>
-                <div class="p-6 bg-white rounded-2xl shadow-sm border border-gray-100">
-                    <h3 class="font-bold text-blue-600 mb-3 text-lg">學術表現</h3>
-                    <p class="text-gray-600">GPA 3.81 / 4.00<br>系排第 4 名</p>
+                <div class="text-center">
+                    <h3 class="font-bold text-blue-600 mb-2">Python, C++, SQL</h3>
+                    <p class="text-sm text-gray-500 uppercase tracking-widest">Programming Languages</p>
                 </div>
             </div>
         </section>
 
-        <section id="projects" class="py-12">
-            <h2 class="text-2xl font-bold mb-8">近期實作專案</h2>
+        <section id="projects" class="py-20 border-t border-gray-200">
+            <h2 class="text-3xl font-bold mb-12 text-center">近期實作專案</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-xl border border-gray-200 overflow-hidden flex flex-col h-[450px] hover:shadow-xl transition">
+                    <div class="h-40 bg-slate-200 flex items-center justify-center text-gray-400 italic">Project Image</div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <div class="mb-2">
+                            <span class="bg-blue-50 text-blue-600 text-[10px] font-bold px-2 py-1 rounded">GRADUATE</span>
+                        </div>
+                        <h3 class="font-bold text-xl mb-3">護理紀錄補全系統</h3>
+                        <p class="text-gray-600 text-sm line-clamp-4 mb-auto">負責資料處理、模型訓練、UI 介面與後端部署，完成從資料前處理到模型部署的完整流程。</p>
+                        <a href="project-nursing.html" class="mt-6 inline-block text-blue-600 font-semibold text-sm hover:underline">了解更多 <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl border border-gray-200 overflow-hidden flex flex-col h-[450px] hover:shadow-xl transition text-left">
+                    <div class="h-40 bg-slate-200 flex items-center justify-center text-gray-400 italic">Project Image</div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <div class="mb-2">
+                            <span class="bg-green-50 text-green-600 text-[10px] font-bold px-2 py-1 rounded">AI AGENT</span>
+                        </div>
+                        <h3 class="font-bold text-xl mb-3">多模態 AI 機器人</h3>
+                        <p class="text-gray-600 text-sm line-clamp-4 mb-auto">具備即時搜尋、深度爬蟲與視覺記憶。自動判斷意圖並在查詢、生圖間無縫切換。</p>
+                        <a href="project-chatbot.html" class="mt-6 inline-block text-blue-600 font-semibold text-sm hover:underline">了解更多 <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl border border-gray-200 overflow-hidden flex flex-col h-[450px] hover:shadow-xl transition">
+                    <div class="h-40 bg-slate-200 flex items-center justify-center text-gray-400 italic">Project Image</div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <div class="mb-2">
+                            <span class="bg-purple-50 text-purple-600 text-[10px] font-bold px-2 py-1 rounded">FULL STACK</span>
+                        </div>
+                        <h3 class="font-bold text-xl mb-3">威秀訂票系統</h3>
+                        <p class="text-gray-600 text-sm line-clamp-4 mb-auto">建立 Aiven MySQL 與 HF Spaces 後端整合。開發會員資料修改功能與 AI 助手。</p>
+                        <a href="project-ticketing.html" class="mt-6 inline-block text-blue-600 font-semibold text-sm hover:underline">了解更多 <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-12 text-center">
+                <a href="#projects" class="text-gray-400 text-sm hover:text-blue-600">查看所有專案...</a>
+            </div>
+        </section>
+
+        <section id="experience" class="py-20 border-t border-gray-200">
+            <h2 class="text-3xl font-bold mb-12">經歷與領導力</h2>
             <div class="grid md:grid-cols-2 gap-6">
-                <div class="group p-6 bg-white rounded-2xl border border-gray-200 hover:border-blue-300 transition shadow-sm">
-                    <h3 class="font-bold text-xl mb-2">護理紀錄補全系統</h3>
-                    <p class="text-gray-600 text-sm mb-4">負責全棧開發：從資料分析、模型訓練至後端與資料庫部署，完整端對端流程實作。</p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="bg-blue-50 text-blue-600 px-3 py-1 rounded-md text-xs font-semibold">LLM</span>
-                        <span class="bg-blue-50 text-blue-600 px-3 py-1 rounded-md text-xs font-semibold">Medical AI</span>
+                <div class="p-6 bg-white border border-gray-100 rounded-xl flex justify-between items-center">
+                    <div>
+                        <h4 class="font-bold text-lg">113–114 學年度 學藝股長</h4>
+                        <p class="text-gray-500 text-sm italic">長庚大學</p>
                     </div>
+                    <a href="experience.html#cadre" class="text-blue-600 text-sm font-semibold">了解更多</a>
                 </div>
-                <div class="group p-6 bg-white rounded-2xl border border-gray-200 hover:border-blue-300 transition shadow-sm">
-                    <h3 class="font-bold text-xl mb-2">多模態工具增強型 AI 機器人</h3>
-                    <p class="text-gray-600 text-sm mb-4">整合即時搜尋、爬蟲與圖像生成。使用 Gradio 建立五階段推理流程與視覺記憶。</p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="bg-green-50 text-green-600 px-3 py-1 rounded-md text-xs font-semibold">Gradio</span>
-                        <span class="bg-green-50 text-green-600 px-3 py-1 rounded-md text-xs font-semibold">Multimodal</span>
+                <div class="p-6 bg-white border border-gray-100 rounded-xl flex justify-between items-center">
+                    <div>
+                        <h4 class="font-bold text-lg">光火藝術社 / 天文社 / 桌遊社 核心幹部</h4>
+                        <p class="text-gray-500 text-sm italic">副社長 / 總務長 / 儀器長</p>
                     </div>
+                    <a href="experience.html#clubs" class="text-blue-600 text-sm font-semibold">了解更多</a>
                 </div>
-                <div class="group p-6 bg-white rounded-2xl border border-gray-200 hover:border-blue-300 transition shadow-sm">
-                    <h3 class="font-bold text-xl mb-2">威秀訂票系統整合</h3>
-                    <p class="text-gray-600 text-sm mb-4">使用 MySQL (Aiven) 與 Hugging Face Spaces 架設後端，串接 Flask/FastAPI 實現 API 協作。</p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="bg-purple-50 text-purple-600 px-3 py-1 rounded-md text-xs font-semibold">MySQL</span>
-                        <span class="bg-purple-50 text-purple-600 px-3 py-1 rounded-md text-xs font-semibold">API</span>
+                <div class="p-6 bg-white border border-gray-100 rounded-xl flex justify-between items-center">
+                    <div>
+                        <h4 class="font-bold text-lg">香港駿龍跆拳道會 / 城東體育會 副教練</h4>
+                        <p class="text-gray-500 text-sm italic">運動指導與跨年齡溝通</p>
                     </div>
-                </div>
-                <div class="group p-6 bg-white rounded-2xl border border-gray-200 hover:border-blue-300 transition shadow-sm">
-                    <h3 class="font-bold text-xl mb-2">服飾以圖搜圖</h3>
-                    <p class="text-gray-600 text-sm mb-4">運用 FAISS 向量資料庫進行特徵檢索，結合互動式 UI 實現精準圖片匹配。</p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="bg-orange-50 text-orange-600 px-3 py-1 rounded-md text-xs font-semibold">FAISS</span>
-                        <span class="bg-orange-50 text-orange-600 px-3 py-1 rounded-md text-xs font-semibold">Computer Vision</span>
-                    </div>
+                    <a href="experience.html#work" class="text-blue-600 text-sm font-semibold">了解更多</a>
                 </div>
             </div>
         </section>
 
-        <section id="experience" class="py-12 border-t border-gray-200">
-            <h2 class="text-2xl font-bold mb-8">經歷與領導力</h2>
-            <div class="space-y-6">
-                <div class="flex gap-4">
-                    <div class="flex-none w-1 bg-blue-600 rounded"></div>
-                    <div>
-                        <h4 class="font-bold">社團核心幹部 (113-114 學年度)</h4>
-                        <p class="text-gray-600">光火藝術社 副社長 | 天文社 副社長 | 桌遊社 活動長</p>
-                        <p class="text-sm text-gray-500 mt-1 italic">具備預算控制、專案管理與跨領域溝通能力。</p>
-                    </div>
+        <section id="awards" class="py-20 border-t border-gray-200 mb-10">
+            <h2 class="text-3xl font-bold mb-12">榮譽與成就</h2>
+            <div class="bg-blue-600 p-10 rounded-3xl text-white flex flex-col md:flex-row justify-between items-center">
+                <div>
+                    <h3 class="text-2xl font-bold mb-2">獲獎無數，學系與社團雙修卓越</h3>
+                    <p class="text-blue-100">包含宏碁專題補助、學系總成績第一名及多項社團評鑑冠軍。</p>
                 </div>
-                <div class="flex gap-4">
-                    <div class="flex-none w-1 bg-gray-300 rounded"></div>
-                    <div>
-                        <h4 class="font-bold">體育副教練 (香港)</h4>
-                        <p class="text-gray-600">駿龍跆拳道會 | 城東體育會 跳水</p>
-                        <p class="text-sm text-gray-500 mt-1 italic">培養使用者導向思維，將複雜動作拆解為清晰的技術說明。</p>
-                    </div>
-                </div>
+                <a href="awards.html" class="mt-6 md:mt-0 bg-white text-blue-600 px-8 py-3 rounded-full font-bold hover:bg-gray-100 transition shadow-lg">了解更多獎項</a>
             </div>
         </section>
 
-        <section id="awards" class="py-12 bg-blue-50 -mx-6 px-6 rounded-3xl mb-20">
-            <h2 class="text-2xl font-bold mb-8">榮譽與成就</h2>
-            <ul class="grid md:grid-cols-2 gap-4">
-                <li class="flex items-start gap-2">
-                    <i class="fas fa-medal text-yellow-500 mt-1"></i>
-                    <span>宏碁大專生專題補助計劃</span>
-                </li>
-                <li class="flex items-start gap-2">
-                    <i class="fas fa-medal text-yellow-500 mt-1"></i>
-                    <span>長庚大學人工智慧學系成績第 1 名 (114-1)</span>
-                </li>
-                <li class="flex items-start gap-2">
-                    <i class="fas fa-medal text-yellow-500 mt-1"></i>
-                    <span>長庚大學社團評鑑總成績 第 1 名</span>
-                </li>
-                <li class="flex items-start gap-2">
-                    <i class="fas fa-medal text-yellow-500 mt-1"></i>
-                    <span>大專校院學生社團評選體育性甲等獎</span>
-                </li>
-            </ul>
-        </section>
     </main>
 
-    <footer class="text-center py-10 text-gray-500 border-t border-gray-200">
-        <p>© 2026 Chiu-Ho Leung. Built with Tailwind CSS.</p>
+    <footer class="text-center py-12 text-gray-500 border-t border-gray-200">
+        <p>© 2026 Chiu-Ho Leung | Marco Leung</p>
     </footer>
 
 </body>

@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 
                 <div class="relative dropdown nav-item cursor-pointer group">
                     <span class="hover:text-blue-600 transition flex items-center">專案 <i class="fas fa-chevron-down ml-1 text-[10px]"></i></span>
-                    <div class="dropdown-menu hidden group-hover:block absolute left-0 top-full bg-white border border-gray-100 shadow-xl rounded-lg py-2 w-48">
+                    <div class="dropdown-menu hidden group-hover:block absolute right-0 top-full bg-white border border-gray-100 shadow-xl rounded-lg py-2 w-48">
                         <a href="project-nursing.html" class="block px-4 py-2 hover:bg-blue-50 text-gray-700">護理紀錄補全系統</a>
                         <a href="project-chatbot.html" class="block px-4 py-2 hover:bg-blue-50 text-gray-700">多模態 AI 機器人</a>
                         <a href="project-weather.html" class="block px-4 py-2 hover:bg-blue-50 text-gray-700">澳洲天氣預測</a>
@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
                 <div class="relative dropdown nav-item cursor-pointer group">
                     <span class="hover:text-blue-600 transition flex items-center">經歷 <i class="fas fa-chevron-down ml-1 text-[10px]"></i></span>
-                    <div class="dropdown-menu hidden group-hover:block absolute left-0 top-full bg-white border border-gray-100 shadow-xl rounded-lg py-2 w-40">
+                    <div class="dropdown-menu hidden group-hover:block absolute right-0 top-full bg-white border border-gray-100 shadow-xl rounded-lg py-2 w-40">
                         <a href="experience.html#cadre" class="block px-4 py-2 hover:bg-blue-50 text-gray-700">班級幹部</a>
                         <a href="experience.html#clubs" class="block px-4 py-2 hover:bg-blue-50 text-gray-700">社團與活動</a>
                         <a href="experience.html#work" class="block px-4 py-2 hover:bg-blue-50 text-gray-700">工作經驗</a>
@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
                 <div class="relative dropdown nav-item cursor-pointer group">
                     <span class="hover:text-blue-600 transition flex items-center">榮譽 <i class="fas fa-chevron-down ml-1 text-[10px]"></i></span>
-                    <div class="dropdown-menu hidden group-hover:block absolute left-0 top-full bg-white border border-gray-100 shadow-xl rounded-lg py-2 w-40">
+                    <div class="dropdown-menu hidden group-hover:block absolute right-0 top-full bg-white border border-gray-100 shadow-xl rounded-lg py-2 w-40">
                         <a href="awards.html" class="block px-4 py-2 hover:bg-blue-50 text-gray-700">榮譽與成就</a>
                     </div>
                 </div>

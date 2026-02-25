@@ -52,11 +52,11 @@ document.addEventListener("DOMContentLoaded", function() {
                         專案 <i class="fas fa-chevron-down ml-1 text-[10px]"></i>
                     </span>
                     <div class="nav-dropdown-menu hidden absolute left-0 top-full bg-white border border-gray-100 shadow-xl rounded-xl py-2 w-48 mt-0 z-[10000]">
-                        <a href="project-nursing.html" class="block px-4 py-2 hover:bg-blue-50 text-gray-700 transition">護理紀錄補全系統</a>
-                        <a href="project-chatbot.html" class="block px-4 py-2 hover:bg-blue-50 text-gray-700 transition">多模態 AI 機器人</a>
-                        <a href="project-weather.html" class="block px-4 py-2 hover:bg-blue-50 text-gray-700 transition">澳洲天氣預測</a>
-                        <a href="project-retrieval.html" class="block px-4 py-2 hover:bg-blue-50 text-gray-700 transition">服飾以圖搜圖</a>
-                        <a href="project-ticketing.html" class="block px-4 py-2 hover:bg-blue-50 text-gray-700 transition">威秀訂票系統</a>
+                        <a href="project/nursing.html" class="block px-4 py-2 hover:bg-blue-50 text-gray-700 transition">護理紀錄補全系統</a>
+                        <a href="project/chatbot.html" class="block px-4 py-2 hover:bg-blue-50 text-gray-700 transition">多模態 AI 機器人</a>
+                        <a href="project/weather.html" class="block px-4 py-2 hover:bg-blue-50 text-gray-700 transition">澳洲天氣預測</a>
+                        <a href="project/retrieval.html" class="block px-4 py-2 hover:bg-blue-50 text-gray-700 transition">服飾以圖搜圖</a>
+                        <a href="project/ticketing.html" class="block px-4 py-2 hover:bg-blue-50 text-gray-700 transition">威秀訂票系統</a>
                     </div>
                 </div>
 

@@ -10,20 +10,29 @@
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
         body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
         .gradient-text { background: linear-gradient(90deg, #3b82f6, #8b5cf6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        
+        .nav-item { height: 40px; display: flex; align-items: center; }
         .dropdown:hover .dropdown-menu { display: block; }
+        .dropdown-menu { top: 100%; min-width: 200px; }
+
+        /* 隱藏捲動條但保留滑動功能 */
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-900 leading-relaxed" id="top">
 
-    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-200">
+    <nav class="sticky top-0 z-[100] bg-white/90 backdrop-blur-md border-b border-gray-200">
         <div class="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
             <a href="#top" class="text-xl font-bold gradient-text">MARCO LEUNG</a>
             <div class="flex space-x-8 text-sm font-medium">
-                <a href="#top" class="hover:text-blue-600 transition">關於</a>
+                <div class="nav-item">
+                    <a href="#top" class="hover:text-blue-600 transition">關於</a>
+                </div>
                 
-                <div class="relative dropdown">
-                    <a href="#projects" class="hover:text-blue-600 transition flex items-center">專案 <i class="fas fa-chevron-down ml-1 text-[10px]"></i></a>
-                    <div class="dropdown-menu hidden absolute left-0 mt-2 w-48 bg-white border border-gray-100 shadow-xl rounded-lg py-2">
+                <div class="relative dropdown nav-item cursor-pointer">
+                    <span class="hover:text-blue-600 transition flex items-center">專案 <i class="fas fa-chevron-down ml-1 text-[10px]"></i></span>
+                    <div class="dropdown-menu hidden absolute left-0 bg-white border border-gray-100 shadow-xl rounded-lg py-2">
                         <a href="project-nursing.html" class="block px-4 py-2 hover:bg-blue-50">護理紀錄補全系統</a>
                         <a href="project-chatbot.html" class="block px-4 py-2 hover:bg-blue-50">多模態 AI 機器人</a>
                         <a href="project-weather.html" class="block px-4 py-2 hover:bg-blue-50">澳洲天氣預測</a>
@@ -32,18 +41,18 @@
                     </div>
                 </div>
 
-                <div class="relative dropdown">
-                    <a href="#experience" class="hover:text-blue-600 transition flex items-center">經歷 <i class="fas fa-chevron-down ml-1 text-[10px]"></i></a>
-                    <div class="dropdown-menu hidden absolute left-0 mt-2 w-40 bg-white border border-gray-100 shadow-xl rounded-lg py-2">
+                <div class="relative dropdown nav-item cursor-pointer">
+                    <span class="hover:text-blue-600 transition flex items-center">經歷 <i class="fas fa-chevron-down ml-1 text-[10px]"></i></span>
+                    <div class="dropdown-menu hidden absolute left-0 bg-white border border-gray-100 shadow-xl rounded-lg py-2">
                         <a href="experience.html#cadre" class="block px-4 py-2 hover:bg-blue-50">班級幹部</a>
                         <a href="experience.html#clubs" class="block px-4 py-2 hover:bg-blue-50">社團與活動</a>
                         <a href="experience.html#work" class="block px-4 py-2 hover:bg-blue-50">工作經驗</a>
                     </div>
                 </div>
 
-                <div class="relative dropdown">
-                    <a href="#awards" class="hover:text-blue-600 transition flex items-center">榮譽 <i class="fas fa-chevron-down ml-1 text-[10px]"></i></a>
-                    <div class="dropdown-menu hidden absolute left-0 mt-2 w-40 bg-white border border-gray-100 shadow-xl rounded-lg py-2">
+                <div class="relative dropdown nav-item cursor-pointer">
+                    <span class="hover:text-blue-600 transition flex items-center">榮譽 <i class="fas fa-chevron-down ml-1 text-[10px]"></i></span>
+                    <div class="dropdown-menu hidden absolute left-0 bg-white border border-gray-100 shadow-xl rounded-lg py-2">
                         <a href="awards.html" class="block px-4 py-2 hover:bg-blue-50">榮譽與成就</a>
                     </div>
                 </div>
@@ -51,122 +60,161 @@
         </div>
     </nav>
 
-    <header class="max-w-5xl mx-auto px-6 py-24 text-center">
-        <h1 class="text-5xl font-extrabold mb-4">梁釗豪 <span class="text-gray-400">|</span> Chiu-Ho Leung</h1>
-        <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto italic">
-            "紮實技術基礎，豐富專案實戰，卓越領袖溝通"
-        </p>
-        <div class="flex justify-center gap-4">
-            <a href="mailto:marcoleung.cgu@gmail.com" class="bg-blue-600 text-white px-8 py-3 rounded-full hover:bg-blue-700 transition shadow-lg shadow-blue-200">聯絡我</a>
-            <a href="https://github.com/marcoleung052" target="_blank" class="border border-gray-300 px-8 py-3 rounded-full hover:bg-gray-100 transition">GitHub</a>
+    <header class="max-w-5xl mx-auto px-6 py-20 text-center">
+        <h1 class="text-5xl font-extrabold mb-4 text-slate-800 tracking-tight">梁釗豪 <span class="text-gray-400">|</span> Chiu-Ho Leung</h1>
+        <div class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto space-y-1">
+            <p>長庚大學人工智慧學系 ｜ 智慧型語言演算法實驗室</p>
+            <p class="text-base text-gray-500 font-medium tracking-wide">專注於自然語言處理、電腦視覺與全端 AI 應用開發</p>
+        </div>
+        <div class="flex justify-center gap-4 mt-10">
+            <a href="mailto:marcoleung.cgu@gmail.com" class="bg-blue-600 text-white px-8 py-3 rounded-full hover:bg-blue-700 transition shadow-lg shadow-blue-100">聯絡我</a>
+            <a href="https://github.com/marcoleung052" target="_blank" class="border border-gray-300 px-8 py-3 rounded-full hover:bg-gray-100 transition flex items-center gap-2"><i class="fab fa-github"></i> GitHub</a>
         </div>
     </header>
 
     <main class="max-w-5xl mx-auto px-6">
         
-        <section class="py-12 border-t border-gray-200">
+        <section id="about" class="py-12 border-t border-gray-200">
+            <h2 class="text-2xl font-bold mb-8">技術與基礎</h2>
             <div class="grid md:grid-cols-3 gap-8">
-                <div class="text-center">
-                    <h3 class="font-bold text-blue-600 mb-2">GPA 3.81 / 4.00</h3>
-                    <p class="text-sm text-gray-500 uppercase tracking-widest">Academic Excellence</p>
+                <div class="p-8 bg-white rounded-3xl shadow-sm border border-gray-100">
+                    <h3 class="font-bold text-blue-600 mb-3 text-lg">程式語言</h3>
+                    <p class="text-gray-600 font-medium">Python, C++, SQL, JavaScript, Java</p>
                 </div>
-                <div class="text-center border-x border-gray-200">
-                    <h3 class="font-bold text-blue-600 mb-2">Deep Learning & CV</h3>
-                    <p class="text-sm text-gray-500 uppercase tracking-widest">Core Expertise</p>
+                <div class="p-8 bg-white rounded-3xl shadow-sm border border-gray-100">
+                    <h3 class="font-bold text-blue-600 mb-3 text-lg">AI 專業</h3>
+                    <p class="text-gray-600 font-medium">自然語言處理、電腦視覺、資料探勘、FAISS 檢索</p>
                 </div>
-                <div class="text-center">
-                    <h3 class="font-bold text-blue-600 mb-2">Python, C++, SQL</h3>
-                    <p class="text-sm text-gray-500 uppercase tracking-widest">Programming Languages</p>
+                <div class="p-8 bg-white rounded-3xl shadow-sm border border-gray-100">
+                    <h3 class="font-bold text-blue-600 mb-3 text-lg">學術表現</h3>
+                    <p class="text-gray-600 font-medium">GPA 3.81 / 4.00<br>系排第 4 名</p>
                 </div>
             </div>
         </section>
 
-        <section id="projects" class="py-20 border-t border-gray-200">
-            <h2 class="text-3xl font-bold mb-12 text-center">近期實作專案</h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white rounded-xl border border-gray-200 overflow-hidden flex flex-col h-[450px] hover:shadow-xl transition">
-                    <div class="h-40 bg-slate-200 flex items-center justify-center text-gray-400 italic">Project Image</div>
-                    <div class="p-6 flex flex-col flex-grow">
-                        <div class="mb-2">
-                            <span class="bg-blue-50 text-blue-600 text-[10px] font-bold px-2 py-1 rounded">GRADUATE</span>
+        <section id="projects" class="py-12 border-t border-gray-200 overflow-hidden">
+            <div class="flex justify-between items-end mb-8">
+                <h2 class="text-2xl font-bold">近期實作專案</h2>
+                <p class="text-xs text-gray-400 mb-1 animate-pulse"><i class="fas fa-arrows-left-right mr-1"></i> 左右滑動瀏覽</p>
+            </div>
+            
+            <div class="flex gap-6 overflow-x-auto no-scrollbar pb-8 snap-x">
+                <div class="min-w-[300px] md:min-w-[320px] bg-white rounded-2xl border border-gray-200 flex flex-col snap-start hover:border-blue-300 transition shadow-sm overflow-hidden">
+                    <div class="p-5 flex flex-col h-full">
+                        <h3 class="font-bold text-lg mb-4 text-slate-800 h-14 overflow-hidden">護理紀錄補全系統</h3>
+                        <div class="h-44 bg-slate-100 rounded-xl mb-4 overflow-hidden">
+                            <img src="https://via.placeholder.com/400x300" alt="Project 1" class="w-full h-full object-cover">
                         </div>
-                        <h3 class="font-bold text-xl mb-3">護理紀錄補全系統</h3>
-                        <p class="text-gray-600 text-sm line-clamp-4 mb-auto">負責資料處理、模型訓練、UI 介面與後端部署，完成從資料前處理到模型部署的完整流程。</p>
-                        <a href="project-nursing.html" class="mt-6 inline-block text-blue-600 font-semibold text-sm hover:underline">了解更多 <i class="fas fa-arrow-right ml-1"></i></a>
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-xl border border-gray-200 overflow-hidden flex flex-col h-[450px] hover:shadow-xl transition text-left">
-                    <div class="h-40 bg-slate-200 flex items-center justify-center text-gray-400 italic">Project Image</div>
-                    <div class="p-6 flex flex-col flex-grow">
-                        <div class="mb-2">
-                            <span class="bg-green-50 text-green-600 text-[10px] font-bold px-2 py-1 rounded">AI AGENT</span>
+                        <div class="flex flex-wrap gap-1.5 mb-6">
+                            <span class="bg-blue-50 text-blue-600 px-2 py-0.5 rounded text-[10px] font-bold tracking-tight">NLP</span>
+                            <span class="bg-blue-50 text-blue-600 px-2 py-0.5 rounded text-[10px] font-bold tracking-tight">LLM</span>
+                            <span class="bg-slate-100 text-slate-500 px-2 py-0.5 rounded text-[10px] font-bold tracking-tight">FULL-STACK</span>
+                            <span class="bg-slate-100 text-slate-500 px-2 py-0.5 rounded text-[10px] font-bold tracking-tight">FASTAPI</span>
                         </div>
-                        <h3 class="font-bold text-xl mb-3">多模態 AI 機器人</h3>
-                        <p class="text-gray-600 text-sm line-clamp-4 mb-auto">具備即時搜尋、深度爬蟲與視覺記憶。自動判斷意圖並在查詢、生圖間無縫切換。</p>
-                        <a href="project-chatbot.html" class="mt-6 inline-block text-blue-600 font-semibold text-sm hover:underline">了解更多 <i class="fas fa-arrow-right ml-1"></i></a>
+                        <a href="project-nursing.html" class="text-blue-600 font-bold text-xs flex items-center justify-end group">
+                            了解更多 <i class="fas fa-arrow-right ml-1 group-hover:translate-x-1 transition"></i>
+                        </a>
                     </div>
                 </div>
 
-                <div class="bg-white rounded-xl border border-gray-200 overflow-hidden flex flex-col h-[450px] hover:shadow-xl transition">
-                    <div class="h-40 bg-slate-200 flex items-center justify-center text-gray-400 italic">Project Image</div>
-                    <div class="p-6 flex flex-col flex-grow">
-                        <div class="mb-2">
-                            <span class="bg-purple-50 text-purple-600 text-[10px] font-bold px-2 py-1 rounded">FULL STACK</span>
+                <div class="min-w-[300px] md:min-w-[320px] bg-white rounded-2xl border border-gray-200 flex flex-col snap-start hover:border-blue-300 transition shadow-sm overflow-hidden">
+                    <div class="p-5 flex flex-col h-full">
+                        <h3 class="font-bold text-lg mb-4 text-slate-800 h-14 overflow-hidden">多模態 AI 機器人</h3>
+                        <div class="h-44 bg-slate-100 rounded-xl mb-4 overflow-hidden">
+                            <img src="https://via.placeholder.com/400x300" alt="Project 2" class="w-full h-full object-cover">
                         </div>
-                        <h3 class="font-bold text-xl mb-3">威秀訂票系統</h3>
-                        <p class="text-gray-600 text-sm line-clamp-4 mb-auto">建立 Aiven MySQL 與 HF Spaces 後端整合。開發會員資料修改功能與 AI 助手。</p>
-                        <a href="project-ticketing.html" class="mt-6 inline-block text-blue-600 font-semibold text-sm hover:underline">了解更多 <i class="fas fa-arrow-right ml-1"></i></a>
+                        <div class="flex flex-wrap gap-1.5 mb-6">
+                            <span class="bg-green-50 text-green-600 px-2 py-0.5 rounded text-[10px] font-bold tracking-tight">AGENT</span>
+                            <span class="bg-green-50 text-green-600 px-2 py-0.5 rounded text-[10px] font-bold tracking-tight">CRAWLER</span>
+                            <span class="bg-slate-100 text-slate-500 px-2 py-0.5 rounded text-[10px] font-bold tracking-tight">GRADIO</span>
+                            <span class="bg-slate-100 text-slate-500 px-2 py-0.5 rounded text-[10px] font-bold tracking-tight">MULTIMODAL</span>
+                        </div>
+                        <a href="project-chatbot.html" class="text-blue-600 font-bold text-xs flex items-center justify-end group">
+                            了解更多 <i class="fas fa-arrow-right ml-1 group-hover:translate-x-1 transition"></i>
+                        </a>
                     </div>
                 </div>
-            </div>
-            <div class="mt-12 text-center">
-                <a href="#projects" class="text-gray-400 text-sm hover:text-blue-600">查看所有專案...</a>
+
+                <div class="min-w-[300px] md:min-w-[320px] bg-white rounded-2xl border border-gray-200 flex flex-col snap-start hover:border-blue-300 transition shadow-sm overflow-hidden">
+                    <div class="p-5 flex flex-col h-full">
+                        <h3 class="font-bold text-lg mb-4 text-slate-800 h-14 overflow-hidden">威秀訂票系統整合</h3>
+                        <div class="h-44 bg-slate-100 rounded-xl mb-4 overflow-hidden">
+                            <img src="https://via.placeholder.com/400x300" alt="Project 3" class="w-full h-full object-cover">
+                        </div>
+                        <div class="flex flex-wrap gap-1.5 mb-6">
+                            <span class="bg-purple-50 text-purple-600 px-2 py-0.5 rounded text-[10px] font-bold tracking-tight">AIVEN</span>
+                            <span class="bg-purple-50 text-purple-600 px-2 py-0.5 rounded text-[10px] font-bold tracking-tight">MYSQL</span>
+                            <span class="bg-slate-100 text-slate-500 px-2 py-0.5 rounded text-[10px] font-bold tracking-tight">HF SPACES</span>
+                            <span class="bg-slate-100 text-slate-500 px-2 py-0.5 rounded text-[10px] font-bold tracking-tight">API</span>
+                        </div>
+                        <a href="project-ticketing.html" class="text-blue-600 font-bold text-xs flex items-center justify-end group">
+                            了解更多 <i class="fas fa-arrow-right ml-1 group-hover:translate-x-1 transition"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="min-w-[300px] md:min-w-[320px] bg-white rounded-2xl border border-gray-200 flex flex-col snap-start hover:border-blue-300 transition shadow-sm overflow-hidden">
+                    <div class="p-5 flex flex-col h-full">
+                        <h3 class="font-bold text-lg mb-4 text-slate-800 h-14 overflow-hidden text-left">服飾以圖搜圖</h3>
+                        <div class="h-44 bg-slate-100 rounded-xl mb-4 overflow-hidden">
+                            <img src="https://via.placeholder.com/400x300" alt="Project 4" class="w-full h-full object-cover">
+                        </div>
+                        <div class="flex flex-wrap gap-1.5 mb-6 text-left">
+                            <span class="bg-orange-50 text-orange-600 px-2 py-0.5 rounded text-[10px] font-bold tracking-tight">CV</span>
+                            <span class="bg-orange-50 text-orange-600 px-2 py-0.5 rounded text-[10px] font-bold tracking-tight">FAISS</span>
+                            <span class="bg-slate-100 text-slate-500 px-2 py-0.5 rounded text-[10px] font-bold tracking-tight">VECTOR DB</span>
+                            <span class="bg-slate-100 text-slate-500 px-2 py-0.5 rounded text-[10px] font-bold tracking-tight">PYTHON</span>
+                        </div>
+                        <a href="project-retrieval.html" class="text-blue-600 font-bold text-xs flex items-center justify-end group">
+                            了解更多 <i class="fas fa-arrow-right ml-1 group-hover:translate-x-1 transition"></i>
+                        </a>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section id="experience" class="py-20 border-t border-gray-200">
-            <h2 class="text-3xl font-bold mb-12">經歷與領導力</h2>
-            <div class="grid md:grid-cols-2 gap-6">
-                <div class="p-6 bg-white border border-gray-100 rounded-xl flex justify-between items-center">
-                    <div>
-                        <h4 class="font-bold text-lg">113–114 學年度 學藝股長</h4>
-                        <p class="text-gray-500 text-sm italic">長庚大學</p>
-                    </div>
-                    <a href="experience.html#cadre" class="text-blue-600 text-sm font-semibold">了解更多</a>
+        <section id="experience" class="py-12 border-t border-gray-200">
+            <h2 class="text-2xl font-bold mb-8">經歷與領導力</h2>
+            <div class="grid md:grid-cols-3 gap-4">
+                <div class="p-6 bg-white rounded-2xl border border-gray-100 flex flex-col justify-between hover:bg-blue-50/30 transition shadow-sm">
+                    <h4 class="font-bold text-slate-700 leading-tight mb-4">113–114 學年度<br>學藝股長</h4>
+                    <a href="experience.html#cadre" class="text-blue-600 text-xs font-bold uppercase tracking-wider">Learn More</a>
                 </div>
-                <div class="p-6 bg-white border border-gray-100 rounded-xl flex justify-between items-center">
-                    <div>
-                        <h4 class="font-bold text-lg">光火藝術社 / 天文社 / 桌遊社 核心幹部</h4>
-                        <p class="text-gray-500 text-sm italic">副社長 / 總務長 / 儀器長</p>
-                    </div>
-                    <a href="experience.html#clubs" class="text-blue-600 text-sm font-semibold">了解更多</a>
+                <div class="p-6 bg-white rounded-2xl border border-gray-100 flex flex-col justify-between hover:bg-blue-50/30 transition shadow-sm">
+                    <h4 class="font-bold text-slate-700 leading-tight mb-4">多個學生社團<br>核心幹部</h4>
+                    <a href="experience.html#clubs" class="text-blue-600 text-xs font-bold uppercase tracking-wider">Learn More</a>
                 </div>
-                <div class="p-6 bg-white border border-gray-100 rounded-xl flex justify-between items-center">
-                    <div>
-                        <h4 class="font-bold text-lg">香港駿龍跆拳道會 / 城東體育會 副教練</h4>
-                        <p class="text-gray-500 text-sm italic">運動指導與跨年齡溝通</p>
-                    </div>
-                    <a href="experience.html#work" class="text-blue-600 text-sm font-semibold">了解更多</a>
+                <div class="p-6 bg-white rounded-2xl border border-gray-100 flex flex-col justify-between hover:bg-blue-50/30 transition shadow-sm">
+                    <h4 class="font-bold text-slate-700 leading-tight mb-4">運動指導<br>副教練</h4>
+                    <a href="experience.html#work" class="text-blue-600 text-xs font-bold uppercase tracking-wider">Learn More</a>
                 </div>
             </div>
         </section>
 
-        <section id="awards" class="py-20 border-t border-gray-200 mb-10">
-            <h2 class="text-3xl font-bold mb-12">榮譽與成就</h2>
-            <div class="bg-blue-600 p-10 rounded-3xl text-white flex flex-col md:flex-row justify-between items-center">
-                <div>
-                    <h3 class="text-2xl font-bold mb-2">獲獎無數，學系與社團雙修卓越</h3>
-                    <p class="text-blue-100">包含宏碁專題補助、學系總成績第一名及多項社團評鑑冠軍。</p>
+        <section id="awards" class="py-12 border-t border-gray-200 mb-20">
+            <h2 class="text-2xl font-bold mb-8">榮譽與成就</h2>
+            <div class="bg-white p-10 rounded-[2rem] border-2 border-slate-100 shadow-xl shadow-slate-200/50 flex flex-col md:flex-row items-center gap-10">
+                <div class="flex-grow">
+                    <h3 class="text-2xl font-bold text-slate-800 mb-4 tracking-tight">學術探索與團隊實踐的認可</h3>
+                    <p class="text-slate-500 mb-8 max-w-xl leading-relaxed font-medium">
+                        在學術研究上追求卓越，同時在社團領導中學習協作。這些榮譽代表了我對 AI 領域的熱情，以及與團隊共同克服困難的成長足跡。
+                    </p>
+                    <div class="flex flex-wrap gap-6 items-center text-sm font-semibold text-slate-400">
+                        <span class="flex items-center gap-2"><i class="fas fa-award text-blue-500"></i> 宏碁專案補助</span>
+                        <span class="flex items-center gap-2"><i class="fas fa-star text-yellow-500"></i> 成績第一名</span>
+                        <span class="flex items-center gap-2"><i class="fas fa-users text-purple-500"></i> 全國社團評選</span>
+                    </div>
                 </div>
-                <a href="awards.html" class="mt-6 md:mt-0 bg-white text-blue-600 px-8 py-3 rounded-full font-bold hover:bg-gray-100 transition shadow-lg">了解更多獎項</a>
+                <a href="awards.html" class="bg-slate-900 text-white px-10 py-4 rounded-2xl font-bold hover:bg-blue-600 transition shadow-lg shrink-0">
+                    查看完整清單
+                </a>
             </div>
         </section>
-
     </main>
 
-    <footer class="text-center py-12 text-gray-500 border-t border-gray-200">
-        <p>© 2026 Chiu-Ho Leung | Marco Leung</p>
+    <footer class="text-center py-12 text-gray-400 border-t border-gray-200">
+        <p class="text-sm">© 2026 Chiu-Ho Leung | 梁釗豪</p>
+        <p class="text-[10px] uppercase tracking-widest mt-2">Intelligent Language Algorithm Laboratory</p>
     </footer>
 
 </body>

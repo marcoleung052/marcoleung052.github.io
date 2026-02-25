@@ -48,8 +48,8 @@ document.addEventListener("DOMContentLoaded", function() {
                 <div class="relative nav-dropdown nav-item cursor-pointer group">
                     <span class="hover:text-blue-600 transition flex items-center py-2">經歷 <i class="fas fa-chevron-down ml-1 text-[10px]"></i></span>
                     <div class="nav-dropdown-menu hidden absolute left-0 top-full bg-white border border-gray-100 shadow-xl rounded-xl py-2 w-40 mt-0 z-[10000]">
-                        <a href="experience.html#cadre" class="block px-4 py-2 hover:bg-blue-50 text-gray-700 transition">學藝股長</a>
-                        <a href="experience.html#fire-club" class="block px-4 py-2 hover:bg-blue-50 text-gray-700 transition">社團幹部</a>
+                        <a href="experience.html#cadre" class="block px-4 py-2 hover:bg-blue-50 text-gray-700 transition">班級幹部</a>
+                        <a href="experience.html#fire-club" class="block px-4 py-2 hover:bg-blue-50 text-gray-700 transition">社團活動</a>
                         <a href="experience.html#work" class="block px-4 py-2 hover:bg-blue-50 text-gray-700 transition">工作經驗</a>
                     </div>
                 </div>

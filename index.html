@@ -92,82 +92,106 @@
             </div>
         </section>
 
-        <section id="projects" class="py-12 border-t border-gray-200 overflow-hidden">
+        <section id="projects" class="py-12 border-t border-gray-200">
             <div class="flex justify-between items-end mb-8">
-                <h2 class="text-2xl font-bold">近期實作專案</h2>
-                <p class="text-xs text-gray-400 mb-1 animate-pulse"><i class="fas fa-arrows-left-right mr-1"></i> 左右滑動瀏覽</p>
+                <div>
+                    <h2 class="text-2xl font-bold text-slate-800">近期實作專案</h2>
+                    <p class="text-xs text-gray-400 mt-1 uppercase tracking-widest">Recent Projects</p>
+                </div>
+                <div class="flex gap-2">
+                    <button onclick="document.getElementById('project-container').scrollBy({left: -200, behavior: 'smooth'})" class="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center hover:bg-white hover:shadow-md transition">
+                        <i class="fas fa-chevron-left text-gray-500"></i>
+                    </button>
+                    <button onclick="document.getElementById('project-container').scrollBy({left: 200, behavior: 'smooth'})" class="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center hover:bg-white hover:shadow-md transition">
+                        <i class="fas fa-chevron-right text-gray-500"></i>
+                    </button>
+                </div>
             </div>
             
-            <div class="flex gap-5 overflow-x-auto no-scrollbar pb-8 snap-x">
+            <div id="project-container" class="flex gap-4 overflow-x-auto no-scrollbar pb-8 snap-x scroll-smooth">
                 
-                <div class="min-w-[260px] md:min-w-[280px] bg-white rounded-2xl border border-gray-200 flex flex-col snap-start hover:border-blue-400 transition-all duration-300 shadow-sm overflow-hidden">
+                <div class="min-w-[220px] md:min-w-[240px] h-[480px] bg-white rounded-2xl border border-gray-200 flex flex-col snap-start hover:border-blue-500 hover:shadow-lg transition-all duration-300 overflow-hidden">
                     <div class="p-5 flex flex-col h-full">
-                        <h3 class="font-bold text-lg mb-4 text-slate-800 h-14 overflow-hidden leading-snug">護理紀錄補全系統</h3>
-                        <div class="h-40 bg-slate-100 rounded-xl mb-5 overflow-hidden">
+                        <h3 class="font-bold text-lg mb-4 text-slate-800 h-14 overflow-hidden leading-tight">護理紀錄補全系統</h3>
+                        <div class="h-44 bg-slate-100 rounded-xl mb-6 overflow-hidden flex-shrink-0">
                             <img src="https://via.placeholder.com/400x300" alt="Nursing Project" class="w-full h-full object-cover">
                         </div>
-                        <div class="flex flex-wrap gap-2 mb-6 flex-grow">
-                            <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-lg text-xs font-extrabold tracking-wide">NLP</span>
-                            <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-lg text-xs font-extrabold tracking-wide">LLM</span>
-                            <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-lg text-xs font-extrabold tracking-wide">FULL-STACK</span>
-                            <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-lg text-xs font-extrabold tracking-wide">FASTAPI</span>
+                        <div class="flex flex-wrap gap-2 mb-4 overflow-hidden h-28 items-start">
+                            <span class="bg-blue-600 text-white px-3 py-1 rounded-lg text-xs font-black tracking-wide">NLP</span>
+                            <span class="bg-blue-600 text-white px-3 py-1 rounded-lg text-xs font-black tracking-wide">LLM</span>
+                            <span class="bg-slate-800 text-white px-3 py-1 rounded-lg text-[10px] font-black tracking-wide">FASTAPI</span>
+                            <span class="bg-slate-800 text-white px-3 py-1 rounded-lg text-[10px] font-black tracking-wide">MYSQL</span>
+                            <span class="bg-slate-500 text-white px-3 py-1 rounded-lg text-[10px] font-black tracking-wide">REACT</span>
+                            <span class="bg-slate-500 text-white px-3 py-1 rounded-lg text-[10px] font-black tracking-wide">DOCKER</span>
                         </div>
-                        <a href="project-nursing.html" class="text-blue-600 font-black text-xs flex items-center justify-end group uppercase tracking-tighter">
-                            Learn More <i class="fas fa-arrow-right ml-1 group-hover:translate-x-1 transition"></i>
-                        </a>
+                        <div class="mt-auto pt-4 border-t border-gray-50">
+                            <a href="project-nursing.html" class="text-blue-600 font-black text-xs flex items-center justify-end group uppercase tracking-widest">
+                                Learn More <i class="fas fa-arrow-right ml-1.5 group-hover:translate-x-1 transition"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
 
-                <div class="min-w-[260px] md:min-w-[280px] bg-white rounded-2xl border border-gray-200 flex flex-col snap-start hover:border-blue-400 transition-all duration-300 shadow-sm overflow-hidden">
-                    <div class="p-5 flex flex-col h-full text-left">
-                        <h3 class="font-bold text-lg mb-4 text-slate-800 h-14 overflow-hidden leading-snug">多模態工具增強型 AI 機器人</h3>
-                        <div class="h-40 bg-slate-100 rounded-xl mb-5 overflow-hidden">
+                <div class="min-w-[220px] md:min-w-[240px] h-[480px] bg-white rounded-2xl border border-gray-200 flex flex-col snap-start hover:border-blue-500 hover:shadow-lg transition-all duration-300 overflow-hidden">
+                    <div class="p-5 flex flex-col h-full">
+                        <h3 class="font-bold text-lg mb-4 text-slate-800 h-14 overflow-hidden leading-tight">多模態 AI 機器人</h3>
+                        <div class="h-44 bg-slate-100 rounded-xl mb-6 overflow-hidden flex-shrink-0">
                             <img src="https://via.placeholder.com/400x300" alt="Chatbot Project" class="w-full h-full object-cover">
                         </div>
-                        <div class="flex flex-wrap gap-2 mb-6 flex-grow">
-                            <span class="bg-green-100 text-green-700 px-3 py-1 rounded-lg text-xs font-extrabold tracking-wide">AGENT</span>
-                            <span class="bg-green-100 text-green-700 px-3 py-1 rounded-lg text-xs font-extrabold tracking-wide">CRAWLER</span>
-                            <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-lg text-xs font-extrabold tracking-wide">GRADIO</span>
-                            <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-lg text-xs font-extrabold tracking-wide">VISION</span>
+                        <div class="flex flex-wrap gap-2 mb-4 overflow-hidden h-28 items-start">
+                            <span class="bg-green-600 text-white px-3 py-1 rounded-lg text-xs font-black tracking-wide">AGENT</span>
+                            <span class="bg-green-600 text-white px-3 py-1 rounded-lg text-xs font-black tracking-wide">CRAWLER</span>
+                            <span class="bg-slate-800 text-white px-3 py-1 rounded-lg text-[10px] font-black tracking-wide">VISION</span>
+                            <span class="bg-slate-800 text-white px-3 py-1 rounded-lg text-[10px] font-black tracking-wide">GRADIO</span>
+                            <span class="bg-slate-500 text-white px-3 py-1 rounded-lg text-[10px] font-black tracking-wide">DIFFUSION</span>
                         </div>
-                        <a href="project-chatbot.html" class="text-blue-600 font-black text-xs flex items-center justify-end group uppercase tracking-tighter">
-                            Learn More <i class="fas fa-arrow-right ml-1 group-hover:translate-x-1 transition"></i>
-                        </a>
+                        <div class="mt-auto pt-4 border-t border-gray-50">
+                            <a href="project-chatbot.html" class="text-blue-600 font-black text-xs flex items-center justify-end group uppercase tracking-widest">
+                                Learn More <i class="fas fa-arrow-right ml-1.5 group-hover:translate-x-1 transition"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
 
-                <div class="min-w-[260px] md:min-w-[280px] bg-white rounded-2xl border border-gray-200 flex flex-col snap-start hover:border-blue-400 transition-all duration-300 shadow-sm overflow-hidden text-left">
+                <div class="min-w-[220px] md:min-w-[240px] h-[480px] bg-white rounded-2xl border border-gray-200 flex flex-col snap-start hover:border-blue-500 hover:shadow-lg transition-all duration-300 overflow-hidden">
                     <div class="p-5 flex flex-col h-full">
-                        <h3 class="font-bold text-lg mb-4 text-slate-800 h-14 overflow-hidden leading-snug">威秀訂票系統整合</h3>
-                        <div class="h-40 bg-slate-100 rounded-xl mb-5 overflow-hidden">
+                        <h3 class="font-bold text-lg mb-4 text-slate-800 h-14 overflow-hidden leading-tight text-left">威秀訂票系統整合</h3>
+                        <div class="h-44 bg-slate-100 rounded-xl mb-6 overflow-hidden flex-shrink-0">
                             <img src="https://via.placeholder.com/400x300" alt="Ticketing Project" class="w-full h-full object-cover">
                         </div>
-                        <div class="flex flex-wrap gap-2 mb-6 flex-grow">
-                            <span class="bg-purple-100 text-purple-700 px-3 py-1 rounded-lg text-xs font-extrabold tracking-wide">MYSQL</span>
-                            <span class="bg-purple-100 text-purple-700 px-3 py-1 rounded-lg text-xs font-extrabold tracking-wide">AIVEN</span>
-                            <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-lg text-xs font-extrabold tracking-wide">HF SPACES</span>
-                            <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-lg text-xs font-extrabold tracking-wide">API</span>
+                        <div class="flex flex-wrap gap-2 mb-4 overflow-hidden h-28 items-start text-left">
+                            <span class="bg-purple-600 text-white px-3 py-1 rounded-lg text-xs font-black tracking-wide">MYSQL</span>
+                            <span class="bg-purple-600 text-white px-3 py-1 rounded-lg text-xs font-black tracking-wide">AIVEN</span>
+                            <span class="bg-slate-800 text-white px-3 py-1 rounded-lg text-[10px] font-black tracking-wide">API</span>
+                            <span class="bg-slate-800 text-white px-3 py-1 rounded-lg text-[10px] font-black tracking-wide">FLASK</span>
+                            <span class="bg-slate-500 text-white px-3 py-1 rounded-lg text-[10px] font-black tracking-wide">HF</span>
                         </div>
-                        <a href="project-ticketing.html" class="text-blue-600 font-black text-xs flex items-center justify-end group uppercase tracking-tighter">
-                            Learn More <i class="fas fa-arrow-right ml-1 group-hover:translate-x-1 transition"></i>
-                        </a>
+                        <div class="mt-auto pt-4 border-t border-gray-50">
+                            <a href="project-ticketing.html" class="text-blue-600 font-black text-xs flex items-center justify-end group uppercase tracking-widest">
+                                Learn More <i class="fas fa-arrow-right ml-1.5 group-hover:translate-x-1 transition"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
 
-                <div class="min-w-[260px] md:min-w-[280px] bg-white rounded-2xl border border-gray-200 flex flex-col snap-start hover:border-blue-400 transition-all duration-300 shadow-sm overflow-hidden text-left">
+                <div class="min-w-[220px] md:min-w-[240px] h-[480px] bg-white rounded-2xl border border-gray-200 flex flex-col snap-start hover:border-blue-500 hover:shadow-lg transition-all duration-300 overflow-hidden">
                     <div class="p-5 flex flex-col h-full">
-                        <h3 class="font-bold text-lg mb-4 text-slate-800 h-14 overflow-hidden leading-snug">服飾以圖搜圖</h3>
-                        <div class="h-40 bg-slate-100 rounded-xl mb-5 overflow-hidden">
+                        <h3 class="font-bold text-lg mb-4 text-slate-800 h-14 overflow-hidden leading-tight text-left">服飾以圖搜圖</h3>
+                        <div class="h-44 bg-slate-100 rounded-xl mb-6 overflow-hidden flex-shrink-0">
                             <img src="https://via.placeholder.com/400x300" alt="Search Project" class="w-full h-full object-cover">
                         </div>
-                        <div class="flex flex-wrap gap-2 mb-6 flex-grow">
-                            <span class="bg-orange-100 text-orange-700 px-3 py-1 rounded-lg text-xs font-extrabold tracking-wide">CV</span>
-                            <span class="bg-orange-100 text-orange-700 px-3 py-1 rounded-lg text-xs font-extrabold tracking-wide">FAISS</span>
-                            <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-lg text-xs font-extrabold tracking-wide">VECTOR DB</span>
+                        <div class="flex flex-wrap gap-2 mb-4 overflow-hidden h-28 items-start text-left">
+                            <span class="bg-orange-500 text-white px-3 py-1 rounded-lg text-xs font-black tracking-wide">CV</span>
+                            <span class="bg-orange-500 text-white px-3 py-1 rounded-lg text-xs font-black tracking-wide">FAISS</span>
+                            <span class="bg-slate-800 text-white px-3 py-1 rounded-lg text-[10px] font-black tracking-wide">VECTOR DB</span>
+                            <span class="bg-slate-800 text-white px-3 py-1 rounded-lg text-[10px] font-black tracking-wide">EMBEDDING</span>
+                            <span class="bg-slate-500 text-white px-3 py-1 rounded-lg text-[10px] font-black tracking-wide">PYTORCH</span>
                         </div>
-                        <a href="project-retrieval.html" class="text-blue-600 font-black text-xs flex items-center justify-end group uppercase tracking-tighter">
-                            Learn More <i class="fas fa-arrow-right ml-1 group-hover:translate-x-1 transition"></i>
-                        </a>
+                        <div class="mt-auto pt-4 border-t border-gray-200">
+                            <a href="project-retrieval.html" class="text-blue-600 font-black text-xs flex items-center justify-end group uppercase tracking-widest">
+                                Learn More <i class="fas fa-arrow-right ml-1.5 group-hover:translate-x-1 transition"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
 

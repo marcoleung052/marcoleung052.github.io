@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>榮譽與成就 | 梁釗豪 Chiu-Ho Leung</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="nav.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Noto+Sans+TC:wght@400;700&display=swap');
+        body { font-family: 'Inter', 'Noto Sans TC', sans-serif; background-color: #ffffff; scroll-behavior: smooth; }
+        
+        section { scroll-margin-top: 6rem; }
+        
+        /* 榮譽卡片升級動畫 */
+        .award-card { 
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); 
+            border: 1px solid #f1f5f9;
+        }
+        .award-card:hover { 
+            transform: translateY(-10px) scale(1.02); 
+            box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.08);
+            border-color: #e2e8f0;
+        }
+
+        .category-badge {
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+        }
+    </style>
+</head>
+<body class="text-slate-900 leading-relaxed">
+
+    <main class="max-w-5xl mx-auto px-6 py-20">
+        
+        <header class="mb-24 text-center">
+            <h1 class="text-5xl font-black text-slate-800 tracking-tight mb-4">榮譽與成就</h1>
+            <div class="flex items-center justify-center gap-3 text-left">
+                <div class="h-1.5 w-12 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full"></div>
+                <p class="text-slate-400 uppercase tracking-[0.3em] text-xs font-bold font-mono">Recognition of Academic & Personal Growth</p>
+            </div>
+        </header>
+
+        <div class="mb-32">
+            <div class="flex items-end gap-4 mb-12 border-b-2 border-blue-50 pb-6">
+                <h2 class="text-3xl font-black text-blue-600 tracking-tighter">UNIVERSITY</h2>
+                <p class="text-slate-400 font-bold text-sm uppercase tracking-widest pb-1">大學時期榮譽</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="award-card p-10 rounded-[2.5rem] bg-white relative overflow-hidden text-left">
+                    <div class="flex justify-between items-start mb-8">
+                        <div class="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center text-2xl text-blue-600">
+                            <i class="fas fa-microchip"></i>
+                        </div>
+                        <span class="text-xs font-black font-mono text-blue-200">2024</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-slate-800 mb-4 leading-tight">宏碁基金會<br>智慧城市與 AI 專案補助</h3>
+                    <p class="text-slate-500 text-base leading-loose mb-8">
+                        於校園提案競賽中獲得宏碁基金會青睞，針對 AI 醫療與智慧城市應用獲得實作補助經費，驗證了技術的可行性與社會價值。
+                    </p>
+                    <div class="flex flex-wrap gap-2 text-left">
+                        <span class="bg-blue-50 text-blue-700 px-3 py-1 rounded-lg text-[11px] font-bold">#AI專案實踐</span>
+                        <span class="bg-blue-50 text-blue-700 px-3 py-1 rounded-lg text-[11px] font-bold">#宏碁補助金</span>
+                    </div>
+                </div>
+
+                <div class="award-card p-10 rounded-[2.5rem] bg-white relative overflow-hidden text-left">
+                    <div class="flex justify-between items-start mb-8 text-left">
+                        <div class="w-16 h-16 bg-yellow-50 rounded-2xl flex items-center justify-center text-2xl text-yellow-600">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <span class="text-xs font-black font-mono text-yellow-200">2024</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-slate-800 mb-4 leading-tight">全國人工智慧應用<br>創意競賽 佳作</h3>
+                    <p class="text-slate-500 text-base leading-loose mb-8 text-left">
+                        開發「護理紀錄語音自動補全系統」，於全國性 AI 應用賽事中進入決賽並獲得佳作。
+                    </p>
+                    <div class="flex flex-wrap gap-2 text-left">
+                        <span class="bg-yellow-50 text-yellow-700 px-3 py-1 rounded-lg text-[11px] font-bold">#NLP技術</span>
+                        <span class="bg-yellow-50 text-yellow-700 px-3 py-1 rounded-lg text-[11px] font-bold">#全國性賽事</span>
+                    </div>
+                </div>
+
+                <div class="award-card p-10 rounded-[2.5rem] bg-white relative overflow-hidden text-left">
+                    <div class="flex justify-between items-start mb-8 text-left">
+                        <div class="w-16 h-16 bg-purple-50 rounded-2xl flex items-center justify-center text-2xl text-purple-600">
+                            <i class="fas fa-medal"></i>
+                        </div>
+                        <span class="text-xs font-black font-mono text-purple-200">2023–2024</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-slate-800 mb-4 leading-tight">學期成績優異<br>系排名第四名</h3>
+                    <p class="text-slate-500 text-base leading-loose mb-8 text-left">
+                        於長庚大學人工智慧學系維持高度學術水準，GPA 3.81 / 4.00，專業科目與演算法基礎紮實。
+                    </p>
+                    <div class="flex flex-wrap gap-2 text-left">
+                        <span class="bg-purple-50 text-purple-700 px-3 py-1 rounded-lg text-[11px] font-bold">#GPA 3.81</span>
+                        <span class="bg-purple-50 text-purple-700 px-3 py-1 rounded-lg text-[11px] font-bold">#學術卓越</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mb-20">
+            <div class="flex items-end gap-4 mb-12 border-b-2 border-purple-50 pb-6">
+                <h2 class="text-3xl font-black text-purple-600 tracking-tighter">HIGH SCHOOL</h2>
+                <p class="text-slate-400 font-bold text-sm uppercase tracking-widest pb-1 text-left">高中時期榮譽</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 text-left">
+                <div class="award-card p-10 rounded-[2.5rem] bg-white relative overflow-hidden text-left">
+                    <div class="flex justify-between items-start mb-8">
+                        <div class="w-16 h-16 bg-slate-50 rounded-2xl flex items-center justify-center text-2xl text-slate-600">
+                            <i class="fas fa-scroll"></i>
+                        </div>
+                        <span class="text-xs font-black font-mono text-slate-300">2022</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-slate-800 mb-4 leading-tight">香港青年獎勵計劃<br>銀章 / 銅章</h3>
+                    <p class="text-slate-500 text-base leading-loose mb-8 text-left">
+                        透過野外鍛鍊、技能學習與服務，展現了極高的自我管理能力與堅毅的體能素質。
+                    </p>
+                </div>
+
+                <div class="award-card p-10 rounded-[2.5rem] bg-white relative overflow-hidden text-left">
+                    <div class="flex justify-between items-start mb-8 text-left">
+                        <div class="w-16 h-16 bg-slate-50 rounded-2xl flex items-center justify-center text-2xl text-slate-600">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <span class="text-xs font-black font-mono text-slate-300">2021</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-slate-800 mb-4 leading-tight">校內學科傑出獎<br>數學/資訊科學</h3>
+                    <p class="text-slate-500 text-base leading-loose mb-8 text-left">
+                        展現對邏輯思考與數位工具應用的熱情，於校內競賽中獲得優異成績。
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+</body>
+</html>

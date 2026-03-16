@@ -133,21 +133,74 @@
             </div>
         </section>
 
-        <section class="mb-24">
-            <h2 class="text-2xl font-black text-slate-800 mb-8 text-left">技術設計細節</h2>
-            <div class="space-y-4">
-                <div class="p-8 border border-slate-100 rounded-[2rem] text-left">
-                    <h4 class="font-bold text-blue-600 mb-3">Agent-Based 動態路由架構</h4>
-                    <p class="text-sm text-slate-500 leading-loose">
-                        系統建立「觸發對照表 (Trigger Map)」，命中 GCS、生命徵象等結構化關鍵字時即時回傳規則模板；非結構化描述則切換至本地 LLM 推論，優化算力分配。
-                    </p>
+        <section class="mb-32">
+            <div class="flex items-center gap-4 mb-12">
+                <h2 class="text-3xl font-black text-slate-800">技術設計細節</h2>
+                <div class="h-px bg-slate-100 flex-grow"></div>
+            </div>
+        
+            <div class="grid md:grid-cols-3 gap-6">
+                
+                <div class="bg-white border border-slate-100 rounded-[2rem] p-8 shadow-sm hover:shadow-md transition-shadow flex flex-col">
+                    <div class="w-12 h-12 bg-blue-600 text-white rounded-xl flex items-center justify-center mb-6 shadow-lg shadow-blue-100">
+                        <i class="fas fa-route text-lg"></i>
+                    </div>
+                    <h4 class="font-bold text-slate-800 text-lg mb-3 text-left">Agent 動態路由</h4>
+                    <div class="flex-grow">
+                        <p class="text-[13px] text-slate-500 leading-loose mb-4 text-left">
+                            設計 Intelligent Router 建立全局「觸發對照表」，根據輸入特徵自動切換推論路徑：
+                        </p>
+                        <ul class="space-y-2">
+                            <li class="px-3 py-2 bg-blue-50/50 rounded-lg border border-blue-100 text-[11px] text-blue-700 font-medium">
+                                命中關鍵字：即時提取 .md 模板 (Rule-based)
+                            </li>
+                            <li class="px-3 py-2 bg-purple-50/50 rounded-lg border border-purple-100 text-[11px] text-purple-700 font-medium text-left">
+                                非結構化文字：啟動 LLM 深度預測 (Ghost Text)
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="p-8 border border-slate-100 rounded-[2rem] text-left">
-                    <h4 class="font-bold text-blue-600 mb-3 text-left">混合量化壓縮 (GGUF)</h4>
-                    <p class="text-sm text-slate-500 leading-loose text-left">
-                        透過 Q4_K_M 技術將 16.2GB 權重壓縮至 4.9GB (減少 69%)。此舉打破高階顯卡限制，使 AI 能夠在一般電腦甚至平板終端上流暢運行，確保病歷不出院。
-                    </p>
+        
+                <div class="bg-white border border-slate-100 rounded-[2rem] p-8 shadow-sm hover:shadow-md transition-shadow flex flex-col">
+                    <div class="w-12 h-12 bg-emerald-500 text-white rounded-xl flex items-center justify-center mb-6 shadow-lg shadow-emerald-100">
+                        <i class="fas fa-puzzle-piece text-lg"></i>
+                    </div>
+                    <h4 class="font-bold text-slate-800 text-lg mb-3 text-left">Skills 模組化管理</h4>
+                    <div class="flex-grow">
+                        <p class="text-[13px] text-slate-500 leading-loose mb-4 text-left">
+                            將各科別（ICU、急診）評估規範抽離為獨立 .md 技能檔，達成軟體架構高度解耦：
+                        </p>
+                        <ul class="space-y-2">
+                            <li class="flex items-center gap-2 text-[11px] text-slate-600">
+                                <i class="fas fa-check text-emerald-500"></i> 無需更動程式碼即可新增科別規範
+                            </li>
+                            <li class="flex items-center gap-2 text-[11px] text-slate-600">
+                                <i class="fas fa-check text-emerald-500 text-left"></i> 為未來 RAG 結合病歷預留知識接口
+                            </li>
+                        </ul>
+                    </div>
                 </div>
+        
+                <div class="bg-white border border-slate-100 rounded-[2rem] p-8 shadow-sm hover:shadow-md transition-shadow flex flex-col">
+                    <div class="w-12 h-12 bg-orange-500 text-white rounded-xl flex items-center justify-center mb-6 shadow-lg shadow-orange-100">
+                        <i class="fas fa-compress-arrows-alt text-lg"></i>
+                    </div>
+                    <h4 class="font-bold text-slate-800 text-lg mb-3 text-left text-left">GGUF 混合量化</h4>
+                    <div class="flex-grow">
+                        <p class="text-[13px] text-slate-500 leading-loose mb-4 text-left">
+                            採用 Q4_K_M 量化技術，將 16.2GB 模型壓縮至 4.9GB，降低 69% 儲存需求：
+                        </p>
+                        <ul class="space-y-2">
+                            <li class="flex items-center gap-2 text-[11px] text-slate-600">
+                                <i class="fas fa-microchip text-orange-500"></i> 使萬元級設備具備即時 AI 推論能力
+                            </li>
+                            <li class="flex items-center gap-2 text-[11px] text-slate-600">
+                                <i class="fas fa-shield-alt text-orange-500 text-left"></i> 確保 100% 本地運作，保障病歷隱私
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+        
             </div>
         </section>
 
@@ -170,14 +223,14 @@
                     </thead>
                     <tbody class="text-[13px] leading-relaxed">
                         <tr class="border-b border-slate-50">
-                            <td class="p-6 font-bold text-slate-700 bg-slate-50/50 border-r border-slate-100">生成模式與控制力</td>
-                            <td class="p-6 font-bold text-blue-700 bg-blue-50/30 border-r border-blue-100/50">漸進式補齊，人工即時審核，<br>沒有心理負擔</td>
+                            <td class="p-6 font-bold text-slate-700 bg-slate-50/50 border-r border-slate-100">生成模式與<br>控制力</td>
+                            <td class="p-6 font-bold text-blue-700 bg-blue-50/30 border-r border-blue-100/50">漸進式補齊，人工即時<br>審核，沒有心理負擔</td>
                             <td class="p-6 text-slate-500 border-r border-slate-50">純手工打字</td>
                             <td class="p-6 text-slate-500 border-r border-slate-50">對話式問答，需切換視窗，<br>中斷工作流</td>
                             <td class="p-6 text-slate-500">整篇黑箱生成，<br>事後校對負擔大</td>
                         </tr>
                         <tr class="border-b border-slate-50">
-                            <td class="p-6 font-bold text-slate-700 bg-slate-50/50 border-r border-slate-100">精準度與幻覺預防</td>
+                            <td class="p-6 font-bold text-slate-700 bg-slate-50/50 border-r border-slate-100">精準度與<br>幻覺預防</td>
                             <td class="p-6 font-bold text-blue-700 bg-blue-50/30 border-r border-blue-100/50">高：Agent 規則 + <br>在地化區域微調</td>
                             <td class="p-6 text-slate-500 border-r border-slate-50">無：缺乏語意理解與<br>預測功能</td>
                             <td class="p-6 text-slate-500 border-r border-slate-50">中：通用模型語意發散，<br>不符院內格式</td>
@@ -188,13 +241,13 @@
                             <td class="p-6 font-bold text-blue-700 bg-blue-50/30 border-r border-blue-100/50">高：本地運行，<br>數據不出院內網路</td>
                             <td class="p-6 text-slate-500 border-r border-slate-50">高：內網封閉系統</td>
                             <td class="p-6 text-slate-500 border-r border-slate-50 text-red-400">低：公有雲傳輸，<br>外洩風險高</td>
-                            <td class="p-6 text-slate-500 text-red-400">低：多依賴外部高算力雲端節點</td>
+                            <td class="p-6 text-slate-500 text-red-400">低：多依賴外部高算力<br>雲端節點</td>
                         </tr>
                         <tr>
                             <td class="p-6 font-bold text-slate-700 bg-slate-50/50 border-r border-slate-100">硬體與運算成本</td>
                             <td class="p-6 font-bold text-blue-700 bg-blue-50/30 border-r border-blue-100/50">低：量化技術，<br>現有一般電腦即可</td>
                             <td class="p-6 text-slate-500 border-r border-slate-50">低：無 AI 運算需求</td>
-                            <td class="p-6 text-slate-500 border-r border-slate-50">高：依 Token 數量持續付費</td>
+                            <td class="p-6 text-slate-500 border-r border-slate-50">高：依 Token 數量持續<br>付費</td>
                             <td class="p-6 text-slate-500 text-red-500">高：需建置昂貴<br>高階 GPU 伺服器機房</td>
                         </tr>
                     </tbody>

@@ -3,89 +3,182 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI 護理紀錄補全系統 | 梁釗豪 Leung Chiu-Ho </title>
+    <title>護理紀錄補全系統 | 畢業專題 | 梁釗豪 Chiu-Ho Leung</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script src="nav.js"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Noto+Sans+TC:wght@400;700&display=swap');
         body { font-family: 'Inter', 'Noto Sans TC', sans-serif; background-color: #ffffff; scroll-behavior: smooth; }
+        
+        /* 技術標籤樣式 */
         .tech-tag { background: #f1f5f9; border: 1px solid #e2e8f0; padding: 4px 14px; border-radius: 10px; font-size: 13px; font-weight: 600; color: #475569; }
+        
+        /* 區塊卡片樣式 */
         .section-card { border-radius: 32px; background: #ffffff; border: 1px solid #f1f5f9; padding: 48px; margin-bottom: 40px; }
-        .role-icon { width: 40px; height: 40px; background: #eff6ff; color: #2563eb; border-radius: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+        
+        /* 表格圓角修正 */
+        .custom-table { border-radius: 20px; overflow: hidden; border: 1px solid #f1f5f9; }
     </style>
 </head>
 <body class="text-slate-900 leading-relaxed text-left">
 
-    <main class="max-w-4xl mx-auto px-6 py-24">
+    <main class="max-w-5xl mx-auto px-6 py-24">
         
-        <header class="mb-16">
-            <div class="flex items-center gap-3 mb-6 text-left">
-                <span class="bg-blue-600 text-white text-[10px] px-2.5 py-1 rounded-full font-black uppercase tracking-wider">畢業專題 Graduation Project</span>
-                <span class="text-slate-400 text-sm font-medium">2025.05 – Present</span>
+        <header class="mb-12">
+            <div class="flex items-center gap-3 mb-6">
+                <span class="bg-blue-600 text-white text-[10px] px-3 py-1 rounded-full font-black tracking-widest uppercase">Graduation Project</span>
+                <span class="text-slate-400 text-sm font-mono">2025.05 - Present</span>
             </div>
-            <h1 class="text-4xl md:text-5xl font-black text-slate-800 tracking-tight mb-8 leading-tight">AI 護理紀錄補全系統<br><span class="text-blue-600">Nursing Record Completion</span></h1>
+            <h1 class="text-4xl md:text-5xl font-black text-slate-800 tracking-tight mb-8">AI 護理紀錄補全系統<br><span class="text-blue-600 italic">Edge AI x Agent Architecture</span></h1>
             
-            <div class="flex flex-wrap gap-3 mb-10 text-left">
-                <span class="tech-tag">Large Language Model</span>
-                <span class="tech-tag">Data Engineering</span>
+            <div class="flex flex-wrap gap-2 mb-10">
+                <span class="tech-tag">Llama-3.1 (8B)</span>
+                <span class="tech-tag">QLoRA / GGUF 量化</span>
                 <span class="tech-tag">FastAPI</span>
-                <span class="tech-tag">React.js</span>
-                <span class="tech-tag">MySQL</span>
+                <span class="tech-tag">Vanilla JS</span>
+                <span class="tech-tag">SQLite (Edge)</span>
             </div>
         </header>
 
-        <div class="w-full aspect-video bg-slate-100 rounded-[3rem] overflow-hidden shadow-2xl mb-24 border-4 border-slate-50">
-            <img src="images/project-nursing-main.jpg" alt="系統演示畫面" class="w-full h-full object-cover">
-        </div>
+        <section class="mb-24">
+            <div class="relative group">
+                <div class="absolute -inset-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-[3rem] blur opacity-10 group-hover:opacity-20 transition duration-1000"></div>
+                <div class="relative bg-slate-900 rounded-[2.5rem] p-2 shadow-2xl overflow-hidden border-4 border-slate-800">
+                    <div class="flex gap-1.5 px-6 py-4 bg-slate-800/50">
+                        <div class="w-3 h-3 rounded-full bg-red-500/20"></div>
+                        <div class="w-3 h-3 rounded-full bg-yellow-500/20"></div>
+                        <div class="w-3 h-3 rounded-full bg-green-500/20"></div>
+                        <div class="ml-4 text-[10px] font-mono text-slate-500 uppercase tracking-widest">System Live Demonstration</div>
+                    </div>
+                    <div class="aspect-video bg-slate-800 relative overflow-hidden">
+                        <video class="w-full h-full object-cover" controls poster="images/project-nursing-poster.jpg" muted loop>
+                            <source src="videos/nursing-demo.mp4" type="video/mp4">
+                            您的瀏覽器不支援影片播放。
+                        </video>
+                    </div>
+                </div>
+                <div class="mt-6 flex justify-between items-center px-4">
+                    <div class="flex items-center gap-2">
+                        <span class="relative flex h-3 w-3">
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-3 w-3 bg-blue-500"></span>
+                        </span>
+                        <span class="text-xs font-bold text-slate-400 uppercase tracking-widest">Real-time Inference on Edge Device</span>
+                    </div>
+                    <p class="text-xs text-slate-400 italic">展示內容：Ghost Text 隨打即預測、FDART 格式化</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="grid md:grid-cols-2 gap-8 mb-12">
+            <div class="bg-slate-50 p-10 rounded-[2rem] border border-slate-100">
+                <h3 class="text-xl font-bold text-slate-800 mb-4 flex items-center gap-2">
+                    <i class="fas fa-exclamation-circle text-red-500"></i> 產業痛點
+                </h3>
+                <p class="text-sm text-slate-600 leading-loose">
+                    臺灣護理人力短缺，紀錄佔工時 24.3%。單筆紀錄平均耗時 26.3 分鐘，繁瑣的 FDART 規範易導致職業倦怠，且多數機構無力負擔高昂雲端 AI 成本。
+                </p>
+            </div>
+            <div class="bg-blue-50/50 p-10 rounded-[2rem] border border-blue-100">
+                <h3 class="text-xl font-bold text-slate-800 mb-4 flex items-center gap-2 text-left">
+                    <i class="fas fa-check-circle text-blue-500"></i> 核心效益
+                </h3>
+                <p class="text-sm text-slate-600 leading-loose text-left">
+                    紀錄撰寫時間縮減至 **12 分鐘內**。模型量化至 **4.9GB**，讓中小型醫院僅需萬元級普通設備即可導入資安合規的本地 AI。
+                </p>
+            </div>
+        </section>
 
         <section class="section-card shadow-sm">
             <h2 class="text-2xl font-black text-slate-800 mb-10 flex items-center gap-4">
                 <span class="w-2 h-8 bg-blue-600 rounded-full"></span>
-                核心職責與技術貢獻
+                全棧開發貢獻 ｜ 個人職責
             </h2>
-            <div class="grid md:grid-cols-2 gap-x-12 gap-y-10">
-                
-                <div class="flex gap-4 text-left">
-                    <div class="role-icon"><i class="fas fa-database text-sm"></i></div>
-                    <div>
-                        <h4 class="font-bold text-slate-800 mb-1">資料工程與處理</h4>
-                        <p class="text-sm text-slate-500 leading-loose">負責醫療文本去識別化處理、清洗與標記，確保資料符合模型訓練規範並保護患者隱私。</p>
-                    </div>
-                </div>
-
-                <div class="flex gap-4 text-left">
-                    <div class="role-icon"><i class="fas fa-brain text-sm"></i></div>
-                    <div>
-                        <h4 class="font-bold text-slate-800 mb-1">模型訓練與評估</h4>
-                        <p class="text-sm text-slate-500 leading-loose">微調（Fine-tuning）大型語言模型，並建立多維度評估指標，確保補全結果的醫學專業度與精確度。</p>
-                    </div>
-                </div>
-
-                <div class="flex gap-4 text-left">
-                    <div class="role-icon"><i class="fas fa-server text-sm"></i></div>
-                    <div>
-                        <h4 class="font-bold text-slate-800 mb-1">後端與資料庫開發</h4>
-                        <p class="text-sm text-slate-500 leading-loose">基於 FastAPI 建構高效非同步 API，並設計 MySQL 資料庫架構以維護護理紀錄之完整性。</p>
-                    </div>
-                </div>
-
-                <div class="flex gap-4 text-left">
-                    <div class="role-icon"><i class="fas fa-desktop text-sm"></i></div>
-                    <div>
-                        <h4 class="font-bold text-slate-800 mb-1">UI 介面設計與開發</h4>
-                        <p class="text-sm text-slate-500 leading-loose">獨立開發前端 React 介面，優化護理人員操作流，完成從概念原型到正式部署的完整開發週期。</p>
-                    </div>
-                </div>
-
+            <div class="grid md:grid-cols-2 gap-12">
+                <ul class="space-y-6 text-slate-600">
+                    <li class="flex gap-4">
+                        <div class="w-8 h-8 bg-blue-50 text-blue-600 rounded-lg flex items-center justify-center shrink-0"><i class="fas fa-database text-xs"></i></div>
+                        <div class="text-left">
+                            <h4 class="font-bold text-slate-800 text-sm">資料工程與處理</h4>
+                            <p class="text-xs leading-relaxed text-slate-500">醫療文本去識別化、SFT (JSON) 格式化與特徵工程，確保資料符合微調規範。</p>
+                        </div>
+                    </li>
+                    <li class="flex gap-4">
+                        <div class="w-8 h-8 bg-blue-50 text-blue-600 rounded-lg flex items-center justify-center shrink-0 text-left"><i class="fas fa-brain text-xs"></i></div>
+                        <div class="text-left">
+                            <h4 class="font-bold text-slate-800 text-sm text-left">模型訓練與評估</h4>
+                            <p class="text-xs leading-relaxed text-slate-500 text-left">採用 QLoRA 微調 Llama-3，針對臺灣醫學縮寫與「中英夾雜」環境進行強化訓練。</p>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="space-y-6 text-slate-600">
+                    <li class="flex gap-4">
+                        <div class="w-8 h-8 bg-blue-50 text-blue-600 rounded-lg flex items-center justify-center shrink-0"><i class="fas fa-desktop text-xs"></i></div>
+                        <div>
+                            <h4 class="font-bold text-slate-800 text-sm">UI/UX 介面開發</h4>
+                            <p class="text-xs leading-relaxed text-slate-500">使用 Vanilla JS 實作「Ghost Text」智慧補全功能，提供護理師流暢的撰寫體驗。</p>
+                        </div>
+                    </li>
+                    <li class="flex gap-4">
+                        <div class="w-8 h-8 bg-blue-50 text-blue-600 rounded-lg flex items-center justify-center shrink-0 text-left"><i class="fas fa-server text-xs"></i></div>
+                        <div class="text-left">
+                            <h4 class="font-bold text-slate-800 text-sm text-left">後端與部署工程</h4>
+                            <p class="text-xs leading-relaxed text-slate-500 text-left">基於 FastAPI 構建非同步 API，整合 llama-cpp-python 推論引擎與 SQLite 本地存儲。</p>
+                        </div>
+                    </li>
+                </ul>
             </div>
         </section>
 
-        <section class="section-card">
-            <h2 class="text-2xl font-black text-slate-800 mb-6 text-left">專案背景</h2>
-            <p class="text-slate-600 leading-loose text-left">
-                在臨床環境中，護理師需處理大量病患資訊，頻繁的文書作業（護理紀錄）常佔據約 30% 的工時。本專案目標在於開發一套能理解關鍵字速記的 AI 系統，透過 LLM 技術將碎片資訊自動轉化為標準醫學格式，大幅降低醫療行政負擔。
-            </p>
+        <section class="mb-24">
+            <h2 class="text-2xl font-black text-slate-800 mb-8 text-left">技術設計細節</h2>
+            <div class="space-y-4">
+                <div class="p-8 border border-slate-100 rounded-[2rem] text-left">
+                    <h4 class="font-bold text-blue-600 mb-3">Agent-Based 動態路由架構</h4>
+                    <p class="text-sm text-slate-500 leading-loose">
+                        系統建立「觸發對照表 (Trigger Map)」，命中 GCS、生命徵象等結構化關鍵字時即時回傳規則模板；非結構化描述則切換至本地 LLM 推論，優化算力分配。
+                    </p>
+                </div>
+                <div class="p-8 border border-slate-100 rounded-[2rem] text-left">
+                    <h4 class="font-bold text-blue-600 mb-3 text-left">混合量化壓縮 (GGUF)</h4>
+                    <p class="text-sm text-slate-500 leading-loose text-left">
+                        透過 Q4_K_M 技術將 16.2GB 權重壓縮至 4.9GB (減少 69%)。此舉打破高階顯卡限制，使 AI 能夠在一般電腦甚至平板終端上流暢運行，確保病歷不出院。
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-24">
+            <h2 class="text-2xl font-black text-slate-800 mb-8 text-center">產業競爭力分析</h2>
+            <div class="custom-table">
+                <table class="w-full text-left">
+                    <thead class="bg-slate-900 text-white text-xs uppercase tracking-widest">
+                        <tr>
+                            <th class="p-6">比較維度</th>
+                            <th class="p-6">本系統 (Edge AI)</th>
+                            <th class="p-6">雲端商用 AI</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-sm">
+                        <tr class="border-b border-slate-50">
+                            <td class="p-6 font-bold text-slate-700">資安隱私</td>
+                            <td class="p-6 text-blue-600 font-bold bg-blue-50/30">極高 (本地運行，免上雲)</td>
+                            <td class="p-6 text-slate-500">極低 (公有雲外洩風險高)</td>
+                        </tr>
+                        <tr class="border-b border-slate-50">
+                            <td class="p-6 font-bold text-slate-700">運算成本</td>
+                            <td class="p-6 text-blue-600 font-bold bg-blue-50/30">極低 (現有 8GB GPU 即可)</td>
+                            <td class="p-6 text-slate-500">高 (依 Token 持續付費)</td>
+                        </tr>
+                        <tr class="border-b border-slate-50">
+                            <td class="p-6 font-bold text-slate-700 text-left">生成模式</td>
+                            <td class="p-6 text-blue-600 font-bold bg-blue-50/30 text-left">漸進式補齊，人工即時審核</td>
+                            <td class="p-6 text-slate-500 text-left text-left">對話式問答，中斷原有流</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </section>
 
         <section class="p-12 rounded-[2.5rem] bg-slate-900 text-white">

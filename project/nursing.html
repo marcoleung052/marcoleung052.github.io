@@ -33,8 +33,10 @@
             <h1 class="text-4xl md:text-5xl font-black text-slate-800 tracking-tight mb-8">AI 護理紀錄補全系統<br><span class="text-blue-600 italic">Edge AI x Agent Architecture</span></h1>
             
             <div class="flex flex-wrap gap-2 mb-10">
-                <span class="tech-tag">Llama-3.1 (8B)</span>
-                <span class="tech-tag">QLoRA / GGUF 量化</span>
+                <span class="tech-tag">LLM</span>
+                <span class="tech-tag">Agent</span>
+                <span class="tech-tag">Skills</span>
+                <span class="tech-tag">量化</span>
                 <span class="tech-tag">FastAPI</span>
                 <span class="tech-tag">Vanilla JS</span>
                 <span class="tech-tag">SQLite (Edge)</span>
@@ -85,7 +87,7 @@
                     <i class="fas fa-check-circle text-blue-500"></i> 核心效益
                 </h3>
                 <p class="text-sm text-slate-600 leading-loose text-left">
-                    紀錄撰寫時間縮減至 **12 分鐘內**。模型量化至 **4.9GB**，讓中小型醫院僅需萬元級普通設備即可導入資安合規的本地 AI。
+                    紀錄撰寫時間縮減至 12 分鐘內。模型量化至 4.9GB，讓中小型醫院僅需萬元級普通設備即可導入資安合規的本地 AI。
                 </p>
             </div>
         </section>
@@ -108,7 +110,7 @@
                         <div class="w-8 h-8 bg-blue-50 text-blue-600 rounded-lg flex items-center justify-center shrink-0 text-left"><i class="fas fa-brain text-xs"></i></div>
                         <div class="text-left">
                             <h4 class="font-bold text-slate-800 text-sm text-left">模型訓練與評估</h4>
-                            <p class="text-xs leading-relaxed text-slate-500 text-left">採用 QLoRA 微調 Llama-3，針對臺灣醫學縮寫與「中英夾雜」環境進行強化訓練。</p>
+                            <p class="text-xs leading-relaxed text-slate-500 text-left">採用 QLoRA 微調模型，針對臺灣醫學縮寫與「中英夾雜」環境進行強化訓練。</p>
                         </div>
                     </li>
                 </ul>
@@ -149,32 +151,51 @@
             </div>
         </section>
 
-        <section class="mb-24">
-            <h2 class="text-2xl font-black text-slate-800 mb-8 text-center">產業競爭力分析</h2>
-            <div class="custom-table">
-                <table class="w-full text-left">
-                    <thead class="bg-slate-900 text-white text-xs uppercase tracking-widest">
-                        <tr>
-                            <th class="p-6">比較維度</th>
-                            <th class="p-6">本系統 (Edge AI)</th>
-                            <th class="p-6">雲端商用 AI</th>
+        <section class="mb-32">
+            <div class="flex items-center gap-4 mb-10">
+                <h2 class="text-2xl font-black text-slate-800">產業競爭力分析</h2>
+                <div class="h-px bg-slate-100 flex-grow"></div>
+            </div>
+        
+            <div class="overflow-x-auto rounded-[2rem] border border-slate-100 shadow-sm">
+                <table class="w-full text-left border-collapse min-w-[800px]">
+                    <thead>
+                        <tr class="bg-slate-900 text-white">
+                            <th class="p-6 text-xs font-bold uppercase tracking-widest border-r border-slate-800">比較維度</th>
+                            <th class="p-6 text-xs font-bold uppercase tracking-widest bg-blue-600 border-r border-blue-500 text-center">本系統 (Edge AI)</th>
+                            <th class="p-6 text-xs font-bold uppercase tracking-widest border-r border-slate-800 text-center">傳統 HIS/NIS 系統</th>
+                            <th class="p-6 text-xs font-bold uppercase tracking-widest border-r border-slate-800 text-center">雲端商用 AI</th>
+                            <th class="p-6 text-xs font-bold uppercase tracking-widest text-center">一鍵整篇生成 AI</th>
                         </tr>
                     </thead>
-                    <tbody class="text-sm">
+                    <tbody class="text-[13px] leading-relaxed">
                         <tr class="border-b border-slate-50">
-                            <td class="p-6 font-bold text-slate-700">資安隱私</td>
-                            <td class="p-6 text-blue-600 font-bold bg-blue-50/30">極高 (本地運行，免上雲)</td>
-                            <td class="p-6 text-slate-500">極低 (公有雲外洩風險高)</td>
+                            <td class="p-6 font-bold text-slate-700 bg-slate-50/50 border-r border-slate-100">生成模式與控制力</td>
+                            <td class="p-6 font-bold text-blue-700 bg-blue-50/30 border-r border-blue-100/50">漸進式補齊，人工即時審核，<br>沒有心理負擔</td>
+                            <td class="p-6 text-slate-500 border-r border-slate-50">純手工打字</td>
+                            <td class="p-6 text-slate-500 border-r border-slate-50">對話式問答，需切換視窗，<br>中斷工作流</td>
+                            <td class="p-6 text-slate-500">整篇黑箱生成，<br>事後校對負擔大</td>
                         </tr>
                         <tr class="border-b border-slate-50">
-                            <td class="p-6 font-bold text-slate-700">運算成本</td>
-                            <td class="p-6 text-blue-600 font-bold bg-blue-50/30">極低 (現有 8GB GPU 即可)</td>
-                            <td class="p-6 text-slate-500">高 (依 Token 持續付費)</td>
+                            <td class="p-6 font-bold text-slate-700 bg-slate-50/50 border-r border-slate-100">精準度與幻覺預防</td>
+                            <td class="p-6 font-bold text-blue-700 bg-blue-50/30 border-r border-blue-100/50">高：Agent 規則 + <br>在地化區域微調</td>
+                            <td class="p-6 text-slate-500 border-r border-slate-50">無：缺乏語意理解與<br>預測功能</td>
+                            <td class="p-6 text-slate-500 border-r border-slate-50">中：通用模型語意發散，<br>不符院內格式</td>
+                            <td class="p-6 text-slate-500">低：長文本極易捏造<br>虛假醫療數據</td>
                         </tr>
                         <tr class="border-b border-slate-50">
-                            <td class="p-6 font-bold text-slate-700 text-left">生成模式</td>
-                            <td class="p-6 text-blue-600 font-bold bg-blue-50/30 text-left">漸進式補齊，人工即時審核</td>
-                            <td class="p-6 text-slate-500 text-left text-left">對話式問答，中斷原有流</td>
+                            <td class="p-6 font-bold text-slate-700 bg-slate-50/50 border-r border-slate-100">資安與隱私</td>
+                            <td class="p-6 font-bold text-blue-700 bg-blue-50/30 border-r border-blue-100/50">高：本地運行，<br>數據不出院內網路</td>
+                            <td class="p-6 text-slate-500 border-r border-slate-50">高：內網封閉系統</td>
+                            <td class="p-6 text-slate-500 border-r border-slate-50 text-red-400">低：公有雲傳輸，<br>外洩風險高</td>
+                            <td class="p-6 text-slate-500 text-red-400">低：多依賴外部高算力雲端節點</td>
+                        </tr>
+                        <tr>
+                            <td class="p-6 font-bold text-slate-700 bg-slate-50/50 border-r border-slate-100">硬體與運算成本</td>
+                            <td class="p-6 font-bold text-blue-700 bg-blue-50/30 border-r border-blue-100/50">低：量化技術，<br>現有一般電腦即可</td>
+                            <td class="p-6 text-slate-500 border-r border-slate-50">低：無 AI 運算需求</td>
+                            <td class="p-6 text-slate-500 border-r border-slate-50">高：依 Token 數量持續付費</td>
+                            <td class="p-6 text-slate-500 text-red-500">高：需建置昂貴<br>高階 GPU 伺服器機房</td>
                         </tr>
                     </tbody>
                 </table>

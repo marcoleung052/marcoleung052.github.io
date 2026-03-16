@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>服飾檢索系統 | Computer Vision 專題 | 梁劍豪 Chiu-Ho Leung</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="../nav.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Noto+Sans+TC:wght@400;700&display=swap');
+        body { font-family: 'Inter', 'Noto Sans TC', sans-serif; background-color: #ffffff; scroll-behavior: smooth; }
+        
+        .tech-tag { background: #fff7ed; border: 1px solid #ffedd5; padding: 4px 14px; border-radius: 10px; font-size: 13px; font-weight: 600; color: #9a3412; }
+        .section-card { border-radius: 32px; background: #ffffff; border: 1px solid #fed7aa; padding: 48px; margin-bottom: 40px; }
+    </style>
+</head>
+<body class="text-slate-900 leading-relaxed text-left">
+
+    <main class="max-w-5xl mx-auto px-6 py-24">
+        
+        <header class="mb-12">
+            <div class="flex items-center gap-3 mb-6">
+                <span class="bg-orange-500 text-white text-[10px] px-3 py-1 rounded-full font-black tracking-widest uppercase">Computer Vision Project</span>
+                <span class="text-slate-400 text-sm font-mono">2024.09 - 2025.01</span>
+            </div>
+            <h1 class="text-4xl md:text-5xl font-black text-slate-800 tracking-tight mb-8">DeepFashion 以圖搜圖系統<br><span class="text-orange-600 italic">In-Shop Clothes Retrieval</span></h1>
+            
+            <div class="flex flex-wrap gap-2 mb-10">
+                <span class="tech-tag">ResNet50</span>
+                <span class="tech-tag">Deep Learning</span>
+                <span class="tech-tag">FAISS</span>
+                <span class="tech-tag">Gradio UI</span>
+                <span class="tech-tag">PyTorch</span>
+                <span class="tech-tag">Feature Extraction</span>
+                <span class="tech-tag">Image Retrieval</span>
+            </div>
+        </header>
+
+        <section class="mb-24">
+            <div class="relative group">
+                <div class="absolute -inset-4 bg-gradient-to-r from-orange-400 to-amber-600 rounded-[3rem] blur opacity-10 group-hover:opacity-20 transition duration-1000"></div>
+                <div class="relative bg-slate-900 rounded-[2.5rem] p-2 shadow-2xl overflow-hidden border-4 border-slate-800">
+                    <div class="aspect-video bg-slate-800 relative overflow-hidden flex items-center justify-center">
+                        <img src="./assets/retrieval_ui_demo.png" alt="DeepFashion 雙模型比較 UI" class="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition">
+                    </div>
+                </div>
+                <div class="mt-6 flex justify-between items-center px-4">
+                    <div class="flex items-center gap-2">
+                        <span class="relative flex h-3 w-3">
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-3 w-3 bg-orange-500"></span>
+                        </span>
+                        <span class="text-xs font-bold text-slate-400 uppercase tracking-widest">Interface Preview: Dual-Model Comparison Demo</span>
+                    </div>
+                    <p class="text-xs text-slate-400 italic">展示內容：Baseline 模型與改動版模型檢索結果即時對比</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="grid md:grid-cols-2 gap-8 mb-20">
+            <div class="bg-slate-50 p-8 md:p-12 rounded-[2.5rem] border border-slate-100 transition-all hover:bg-white hover:shadow-xl hover:shadow-orange-200/50">
+                <h3 class="text-xl font-bold text-slate-800 mb-5 flex items-center gap-3">
+                    <i class="fas fa-layer-group text-orange-500"></i> ResNet50 特徵提取
+                </h3>
+                <p class="text-[15px] text-slate-600 leading-relaxed">
+                    使用 ResNet50 作為基礎架構，透過遷移學習 (Transfer Learning) 進行微調 。整合 torchvision 圖像增強技術，精準提取服飾影像的高維 Embedding，作為相似度計算的基礎 。
+                </p>
+            </div>
+            <div class="bg-orange-50/50 p-8 md:p-12 rounded-[2.5rem] border border-orange-100 transition-all hover:bg-white hover:shadow-xl hover:shadow-orange-200/50">
+                <h3 class="text-xl font-bold text-slate-800 mb-5 flex items-center gap-3 text-left">
+                    <i class="fas fa-bolt text-orange-500"></i> FAISS 高效向量檢索
+                </h3>
+                <p class="text-[15px] text-slate-600 leading-relaxed text-left">
+                    導入 Meta 開發的 FAISS 向量數據庫，實現百萬級資料量下的毫秒級檢索 。透過向量量化與 GPU 加速，大幅優化以圖搜圖的反應速度與擴展性 。
+                </p>
+            </div>
+        </section>
+
+        <section class="mb-32">
+            <div class="flex items-center gap-6 mb-16">
+                <h2 class="text-3xl font-black text-slate-800 shrink-0">系統開發流程</h2>
+                <div class="h-px bg-slate-200 flex-grow"></div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white border border-slate-100 rounded-[2.5rem] p-10 shadow-sm hover:shadow-xl transition-all flex flex-col group">
+                    <div class="w-14 h-14 bg-orange-500 text-white rounded-2xl flex items-center justify-center mb-8 shadow-lg shadow-orange-200 group-hover:-translate-y-1 transition-transform">
+                        <i class="fas fa-images text-xl"></i>
+                    </div>
+                    <h4 class="font-bold text-slate-800 text-xl mb-4 text-left">數據處理與增強</h4>
+                    <div class="flex-grow">
+                        <p class="text-[14px] text-slate-500 leading-relaxed mb-6 text-left">
+                            針對 DeepFashion 數據集進行隨機裁切、旋轉與色彩調整，增加樣本多樣性並防止模型過擬合 。
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-white border border-slate-100 rounded-[2.5rem] p-10 shadow-sm hover:shadow-xl transition-all flex flex-col group">
+                    <div class="w-14 h-14 bg-amber-500 text-white rounded-2xl flex items-center justify-center mb-8 shadow-lg shadow-amber-200 group-hover:-translate-y-1 transition-transform">
+                        <i class="fas fa-vial text-xl"></i>
+                    </div>
+                    <h4 class="font-bold text-slate-800 text-xl mb-4 text-left">模型訓練與評估</h4>
+                    <div class="flex-grow">
+                        <p class="text-[14px] text-slate-500 leading-relaxed mb-6 text-left">
+                            定義 Baseline 模型並進行特徵提取與儲存，透過 Top-K 檢索結果進行系統精準度驗證 。
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-white border border-slate-100 rounded-[2.5rem] p-10 shadow-sm hover:shadow-xl transition-all flex flex-col group">
+                    <div class="w-14 h-14 bg-orange-600 text-white rounded-2xl flex items-center justify-center mb-8 shadow-lg shadow-orange-300 group-hover:-translate-y-1 transition-transform">
+                        <i class="fas fa-window-restore text-xl"></i>
+                    </div>
+                    <h4 class="font-bold text-slate-800 text-xl mb-4 text-left">Gradio UI 展示</h4>
+                    <div class="flex-grow">
+                        <p class="text-[14px] text-slate-500 leading-relaxed mb-6 text-left">
+                            開發雙模型比較介面，支持圖片上傳與 Top K 數量調整，視覺化呈現檢索結果差異 。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-24 text-center">
+            <div class="inline-flex gap-4">
+                <a href="https://github.com/marcoleung052" target="_blank" class="bg-slate-800 text-white px-8 py-4 rounded-2xl font-bold hover:bg-slate-700 transition flex items-center gap-3">
+                    <i class="fab fa-github"></i> GitHub Source
+                </a>
+                <a href="#" class="border border-slate-200 px-8 py-4 rounded-2xl font-bold hover:bg-slate-50 transition flex items-center gap-3">
+                    <i class="fas fa-file-pdf"></i> View Report
+                </a>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>

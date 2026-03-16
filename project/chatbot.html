@@ -1,0 +1,349 @@
+<html lang="zh-Hant"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>護理紀錄補全系統 | 畢業專題 | 梁釗豪 Chiu-Ho Leung</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="../nav.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Noto+Sans+TC:wght@400;700&display=swap');
+        body { font-family: 'Inter', 'Noto Sans TC', sans-serif; background-color: #ffffff; scroll-behavior: smooth; }
+        
+        /* 技術標籤樣式 */
+        .tech-tag { background: #f1f5f9; border: 1px solid #e2e8f0; padding: 4px 14px; border-radius: 10px; font-size: 13px; font-weight: 600; color: #475569; }
+        
+        /* 區塊卡片樣式 */
+        .section-card { border-radius: 32px; background: #ffffff; border: 1px solid #f1f5f9; padding: 48px; margin-bottom: 40px; }
+        
+        /* 表格圓角修正 */
+        .custom-table { border-radius: 20px; overflow: hidden; border: 1px solid #f1f5f9; }
+    </style>
+<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.-inset-4{inset:-1rem}.left-0{left:0px}.right-0{right:0px}.top-0{top:0px}.top-full{top:100%}.z-\[10000\]{z-index:10000}.z-\[9999\]{z-index:9999}.mx-auto{margin-left:auto;margin-right:auto}.mb-1{margin-bottom:0.25rem}.mb-10{margin-bottom:2.5rem}.mb-12{margin-bottom:3rem}.mb-2{margin-bottom:0.5rem}.mb-24{margin-bottom:6rem}.mb-3{margin-bottom:0.75rem}.mb-32{margin-bottom:8rem}.mb-4{margin-bottom:1rem}.mb-6{margin-bottom:1.5rem}.mb-8{margin-bottom:2rem}.ml-1{margin-left:0.25rem}.ml-4{margin-left:1rem}.mt-0{margin-top:0px}.mt-20{margin-top:5rem}.mt-6{margin-top:1.5rem}.block{display:block}.flex{display:flex}.inline-flex{display:inline-flex}.grid{display:grid}.hidden{display:none}.aspect-video{aspect-ratio:16 / 9}.h-12{height:3rem}.h-16{height:4rem}.h-3{height:0.75rem}.h-8{height:2rem}.h-full{height:100%}.h-px{height:1px}.w-12{width:3rem}.w-2{width:0.5rem}.w-3{width:0.75rem}.w-40{width:10rem}.w-48{width:12rem}.w-8{width:2rem}.w-full{width:100%}.min-w-\[800px\]{min-width:800px}.max-w-5xl{max-width:64rem}.shrink-0{flex-shrink:0}.flex-grow{flex-grow:1}.border-collapse{border-collapse:collapse}@keyframes ping{75%, 100%{transform:scale(2);opacity:0}}.animate-ping{animation:ping 1s cubic-bezier(0, 0, 0.2, 1) infinite}.cursor-pointer{cursor:pointer}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-1\.5{gap:0.375rem}.gap-12{gap:3rem}.gap-2{gap:0.5rem}.gap-3{gap:0.75rem}.gap-4{gap:1rem}.gap-6{gap:1.5rem}.gap-8{gap:2rem}.space-x-8 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(2rem * var(--tw-space-x-reverse));margin-left:calc(2rem * calc(1 - var(--tw-space-x-reverse)))}.space-y-2 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.5rem * var(--tw-space-y-reverse))}.space-y-6 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.5rem * var(--tw-space-y-reverse))}.overflow-hidden{overflow:hidden}.overflow-x-auto{overflow-x:auto}.rounded-\[2\.5rem\]{border-radius:2.5rem}.rounded-\[2rem\]{border-radius:2rem}.rounded-\[3rem\]{border-radius:3rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:0.5rem}.rounded-xl{border-radius:0.75rem}.border{border-width:1px}.border-4{border-width:4px}.border-b{border-bottom-width:1px}.border-l-2{border-left-width:2px}.border-r{border-right-width:1px}.border-t{border-top-width:1px}.border-blue-100{--tw-border-opacity:1;border-color:rgb(219 234 254 / var(--tw-border-opacity, 1))}.border-blue-100\/50{border-color:rgb(219 234 254 / 0.5)}.border-blue-500{--tw-border-opacity:1;border-color:rgb(59 130 246 / var(--tw-border-opacity, 1))}.border-gray-100{--tw-border-opacity:1;border-color:rgb(243 244 246 / var(--tw-border-opacity, 1))}.border-purple-100{--tw-border-opacity:1;border-color:rgb(243 232 255 / var(--tw-border-opacity, 1))}.border-slate-100{--tw-border-opacity:1;border-color:rgb(241 245 249 / var(--tw-border-opacity, 1))}.border-slate-50{--tw-border-opacity:1;border-color:rgb(248 250 252 / var(--tw-border-opacity, 1))}.border-slate-700{--tw-border-opacity:1;border-color:rgb(51 65 85 / var(--tw-border-opacity, 1))}.border-slate-800{--tw-border-opacity:1;border-color:rgb(30 41 59 / var(--tw-border-opacity, 1))}.bg-blue-400{--tw-bg-opacity:1;background-color:rgb(96 165 250 / var(--tw-bg-opacity, 1))}.bg-blue-50{--tw-bg-opacity:1;background-color:rgb(239 246 255 / var(--tw-bg-opacity, 1))}.bg-blue-50\/30{background-color:rgb(239 246 255 / 0.3)}.bg-blue-50\/50{background-color:rgb(239 246 255 / 0.5)}.bg-blue-500{--tw-bg-opacity:1;background-color:rgb(59 130 246 / var(--tw-bg-opacity, 1))}.bg-blue-600{--tw-bg-opacity:1;background-color:rgb(37 99 235 / var(--tw-bg-opacity, 1))}.bg-emerald-500{--tw-bg-opacity:1;background-color:rgb(16 185 129 / var(--tw-bg-opacity, 1))}.bg-green-500\/20{background-color:rgb(34 197 94 / 0.2)}.bg-orange-500{--tw-bg-opacity:1;background-color:rgb(249 115 22 / var(--tw-bg-opacity, 1))}.bg-purple-50\/50{background-color:rgb(250 245 255 / 0.5)}.bg-red-500\/20{background-color:rgb(239 68 68 / 0.2)}.bg-slate-100{--tw-bg-opacity:1;background-color:rgb(241 245 249 / var(--tw-bg-opacity, 1))}.bg-slate-50{--tw-bg-opacity:1;background-color:rgb(248 250 252 / var(--tw-bg-opacity, 1))}.bg-slate-50\/50{background-color:rgb(248 250 252 / 0.5)}.bg-slate-800{--tw-bg-opacity:1;background-color:rgb(30 41 59 / var(--tw-bg-opacity, 1))}.bg-slate-800\/50{background-color:rgb(30 41 59 / 0.5)}.bg-slate-900{--tw-bg-opacity:1;background-color:rgb(15 23 42 / var(--tw-bg-opacity, 1))}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.bg-white\/80{background-color:rgb(255 255 255 / 0.8)}.bg-yellow-500\/20{background-color:rgb(234 179 8 / 0.2)}.bg-gradient-to-r{background-image:linear-gradient(to right, var(--tw-gradient-stops))}.from-blue-500{--tw-gradient-from:#3b82f6 var(--tw-gradient-from-position);--tw-gradient-to:rgb(59 130 246 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.to-purple-600{--tw-gradient-to:#9333ea var(--tw-gradient-to-position)}.object-cover{object-fit:cover}.p-10{padding:2.5rem}.p-12{padding:3rem}.p-2{padding:0.5rem}.p-6{padding:1.5rem}.p-8{padding:2rem}.px-3{padding-left:0.75rem;padding-right:0.75rem}.px-4{padding-left:1rem;padding-right:1rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.py-1{padding-top:0.25rem;padding-bottom:0.25rem}.py-12{padding-top:3rem;padding-bottom:3rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-24{padding-top:6rem;padding-bottom:6rem}.py-4{padding-top:1rem;padding-bottom:1rem}.pl-6{padding-left:1.5rem}.text-left{text-align:left}.text-center{text-align:center}.font-mono{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace}.text-2xl{font-size:1.5rem;line-height:2rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-4xl{font-size:2.25rem;line-height:2.5rem}.text-\[10px\]{font-size:10px}.text-\[11px\]{font-size:11px}.text-\[13px\]{font-size:13px}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:0.75rem;line-height:1rem}.font-black{font-weight:900}.font-bold{font-weight:700}.font-medium{font-weight:500}.uppercase{text-transform:uppercase}.italic{font-style:italic}.leading-relaxed{line-height:1.625}.leading-loose{line-height:2}.tracking-tight{letter-spacing:-0.025em}.tracking-widest{letter-spacing:0.1em}.text-slate-900{--tw-text-opacity:1;color:rgb(15 23 42 / var(--tw-text-opacity, 1))}.text-blue-400{--tw-text-opacity:1;color:rgb(96 165 250 / var(--tw-text-opacity, 1))}.text-blue-500{--tw-text-opacity:1;color:rgb(59 130 246 / var(--tw-text-opacity, 1))}.text-blue-600{--tw-text-opacity:1;color:rgb(37 99 235 / var(--tw-text-opacity, 1))}.text-blue-700{--tw-text-opacity:1;color:rgb(29 78 216 / var(--tw-text-opacity, 1))}.text-emerald-500{--tw-text-opacity:1;color:rgb(16 185 129 / var(--tw-text-opacity, 1))}.text-gray-400{--tw-text-opacity:1;color:rgb(156 163 175 / var(--tw-text-opacity, 1))}.text-gray-600{--tw-text-opacity:1;color:rgb(75 85 99 / var(--tw-text-opacity, 1))}.text-gray-700{--tw-text-opacity:1;color:rgb(55 65 81 / var(--tw-text-opacity, 1))}.text-orange-500{--tw-text-opacity:1;color:rgb(249 115 22 / var(--tw-text-opacity, 1))}.text-purple-700{--tw-text-opacity:1;color:rgb(126 34 206 / var(--tw-text-opacity, 1))}.text-red-400{--tw-text-opacity:1;color:rgb(248 113 113 / var(--tw-text-opacity, 1))}.text-red-500{--tw-text-opacity:1;color:rgb(239 68 68 / var(--tw-text-opacity, 1))}.text-slate-400{--tw-text-opacity:1;color:rgb(148 163 184 / var(--tw-text-opacity, 1))}.text-slate-500{--tw-text-opacity:1;color:rgb(100 116 139 / var(--tw-text-opacity, 1))}.text-slate-600{--tw-text-opacity:1;color:rgb(71 85 105 / var(--tw-text-opacity, 1))}.text-slate-700{--tw-text-opacity:1;color:rgb(51 65 85 / var(--tw-text-opacity, 1))}.text-slate-800{--tw-text-opacity:1;color:rgb(30 41 59 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.text-yellow-400{--tw-text-opacity:1;color:rgb(250 204 21 / var(--tw-text-opacity, 1))}.opacity-10{opacity:0.1}.opacity-75{opacity:0.75}.shadow-2xl{--tw-shadow:0 25px 50px -12px rgb(0 0 0 / 0.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-lg{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-sm{--tw-shadow:0 1px 2px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-xl{--tw-shadow:0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-blue-100{--tw-shadow-color:#dbeafe;--tw-shadow:var(--tw-shadow-colored)}.shadow-emerald-100{--tw-shadow-color:#d1fae5;--tw-shadow:var(--tw-shadow-colored)}.shadow-orange-100{--tw-shadow-color:#ffedd5;--tw-shadow:var(--tw-shadow-colored)}.blur{--tw-blur:blur(8px);filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.backdrop-blur-md{--tw-backdrop-blur:blur(12px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.transition{transition-property:color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-shadow{transition-property:box-shadow;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.duration-1000{transition-duration:1000ms}.hover\:bg-blue-50:hover{--tw-bg-opacity:1;background-color:rgb(239 246 255 / var(--tw-bg-opacity, 1))}.hover\:text-blue-600:hover{--tw-text-opacity:1;color:rgb(37 99 235 / var(--tw-text-opacity, 1))}.hover\:shadow-md:hover{--tw-shadow:0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.group:hover .group-hover\:opacity-20{opacity:0.2}@media (min-width: 768px){.md\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.md\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.md\:text-5xl{font-size:3rem;line-height:1}}</style>
+    <style>
+        .nav-gradient-text { 
+            background: linear-gradient(90deg, #3b82f6, #8b5cf6); 
+            -webkit-background-clip: text; 
+            -webkit-text-fill-color: transparent; 
+        }
+        /* 確保選單在最上層 */
+        .nav-dropdown:hover .nav-dropdown-menu { 
+            display: block !important; 
+            opacity: 1;
+            visibility: visible;
+        }
+        /* 增加填補空間防止選單閃退 */
+        .nav-dropdown-menu::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: 0;
+            right: 0;
+            height: 10px;
+        }
+        /* 統一所有導航項目的垂直對齊 */
+        .nav-flex-center {
+            display: flex;
+            align-items: center;
+            height: 100%;
+        }
+        /* 重要：防止導航欄遮住區塊標題 */
+        section, div[id] { scroll-margin-top: 100px; }
+    </style></head>
+<body class="text-slate-900 leading-relaxed text-left">
+    <nav class="fixed top-0 left-0 right-0 z-[9999] bg-white/80 backdrop-blur-md border-b border-gray-100">
+        <div class="max-w-5xl mx-auto px-6 h-16 flex justify-between items-center">
+            <div class="nav-flex-center">
+                <a href="../index.html#top" class="text-xl font-bold nav-gradient-text">MARCO LEUNG</a>
+            </div>
+
+            <div class="flex space-x-8 text-sm font-medium text-gray-600 h-full">
+                
+                <div class="nav-flex-center">
+                    <a href="../index.html#top" class="hover:text-blue-600 transition">關於</a>
+                </div>
+                
+                <div class="relative nav-dropdown nav-flex-center cursor-pointer group">
+                    <span class="hover:text-blue-600 transition flex items-center">
+                        專案 <i class="fas fa-chevron-down ml-1 text-[10px]"></i>
+                    </span>
+                    <div class="nav-dropdown-menu hidden absolute left-0 top-full bg-white border border-gray-100 shadow-xl rounded-xl py-2 w-48 mt-0 z-[10000]">
+                        <a href="../project/nursing.html" class="block px-4 py-2 hover:bg-blue-50 text-gray-700 transition">護理紀錄補全系統</a>
+                        <a href="../project/chatbot.html" class="block px-4 py-2 hover:bg-blue-50 text-gray-700 transition">多模態 AI 機器人</a>
+                        <a href="../project/weather.html" class="block px-4 py-2 hover:bg-blue-50 text-gray-700 transition">澳洲天氣預測</a>
+                        <a href="../project/retrieval.html" class="block px-4 py-2 hover:bg-blue-50 text-gray-700 transition">服飾以圖搜圖</a>
+                        <a href="../project/ticketing.html" class="block px-4 py-2 hover:bg-blue-50 text-gray-700 transition">威秀訂票系統</a>
+                    </div>
+                </div>
+
+                <div class="relative nav-dropdown nav-flex-center cursor-pointer group">
+                    <span class="hover:text-blue-600 transition flex items-center">
+                        經歷 <i class="fas fa-chevron-down ml-1 text-[10px]"></i>
+                    </span>
+                    <div class="nav-dropdown-menu hidden absolute left-0 top-full bg-white border border-gray-100 shadow-xl rounded-xl py-2 w-40 mt-0 z-[10000]">
+                        <a href="../experience.html#cadre" class="block px-4 py-2 hover:bg-blue-50 text-gray-700 transition">班級幹部</a>
+                        <a href="../experience.html#fire-club" class="block px-4 py-2 hover:bg-blue-50 text-gray-700 transition">社團活動</a>
+                        <a href="../experience.html#work" class="block px-4 py-2 hover:bg-blue-50 text-gray-700 transition">工作經驗</a>
+                    </div>
+                </div>
+
+                <div class="nav-flex-center">
+                    <a href="../awards.html" class="hover:text-blue-600 transition">榮譽</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-5xl mx-auto px-6 py-24">
+        
+        <header class="mb-12">
+            <div class="flex items-center gap-3 mb-6">
+                <span class="bg-blue-600 text-white text-[10px] px-3 py-1 rounded-full font-black tracking-widest uppercase">Graduation Project</span>
+                <span class="text-slate-400 text-sm font-mono">2025.05 - Present</span>
+            </div>
+            <h1 class="text-4xl md:text-5xl font-black text-slate-800 tracking-tight mb-8">AI 護理紀錄補全系統<br><span class="text-blue-600 italic"> Nursing Record Completion</span></h1>
+            
+            <div class="flex flex-wrap gap-2 mb-10">
+                <span class="tech-tag">LLM</span>
+                <span class="tech-tag">Agent</span>
+                <span class="tech-tag">Skills</span>
+                <span class="tech-tag">量化</span>
+                <span class="tech-tag">FastAPI</span>
+                <span class="tech-tag">Vanilla JS</span>
+                <span class="tech-tag">SQLite (Edge)</span>
+            </div>
+        </header>
+
+        <section class="mb-24">
+            <div class="relative group">
+                <div class="absolute -inset-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-[3rem] blur opacity-10 group-hover:opacity-20 transition duration-1000"></div>
+                <div class="relative bg-slate-900 rounded-[2.5rem] p-2 shadow-2xl overflow-hidden border-4 border-slate-800">
+                    <div class="flex gap-1.5 px-6 py-4 bg-slate-800/50">
+                        <div class="w-3 h-3 rounded-full bg-red-500/20"></div>
+                        <div class="w-3 h-3 rounded-full bg-yellow-500/20"></div>
+                        <div class="w-3 h-3 rounded-full bg-green-500/20"></div>
+                        <div class="ml-4 text-[10px] font-mono text-slate-500 uppercase tracking-widest">System Live Demonstration</div>
+                    </div>
+                    <div class="aspect-video bg-slate-800 relative overflow-hidden">
+                        <video class="w-full h-full object-cover" controls="" poster="images/project-nursing-poster.jpg" muted="" loop="">
+                            <source src="videos/nursing-demo.mp4" type="video/mp4">
+                            您的瀏覽器不支援影片播放。
+                        </video>
+                    </div>
+                </div>
+                <div class="mt-6 flex justify-between items-center px-4">
+                    <div class="flex items-center gap-2">
+                        <span class="relative flex h-3 w-3">
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-3 w-3 bg-blue-500"></span>
+                        </span>
+                        <span class="text-xs font-bold text-slate-400 uppercase tracking-widest">Real-time Inference on Edge Device</span>
+                    </div>
+                    <p class="text-xs text-slate-400 italic">展示內容：Ghost Text 隨打即預測、FDART 格式化</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="grid md:grid-cols-2 gap-8 mb-12">
+            <div class="bg-slate-50 p-10 rounded-[2rem] border border-slate-100">
+                <h3 class="text-xl font-bold text-slate-800 mb-4 flex items-center gap-2">
+                    <i class="fas fa-exclamation-circle text-red-500"></i> 產業痛點
+                </h3>
+                <p class="text-sm text-slate-600 leading-loose">
+                    臺灣護理人力短缺，紀錄佔工時 24.3%。單筆紀錄平均耗時 26.3 分鐘，繁瑣的 FDART 規範易導致職業倦怠，且多數機構無力負擔高昂雲端 AI 成本。
+                </p>
+            </div>
+            <div class="bg-blue-50/50 p-10 rounded-[2rem] border border-blue-100">
+                <h3 class="text-xl font-bold text-slate-800 mb-4 flex items-center gap-2 text-left">
+                    <i class="fas fa-check-circle text-blue-500"></i> 核心效益
+                </h3>
+                <p class="text-sm text-slate-600 leading-loose text-left">
+                    紀錄撰寫時間縮減至 12 分鐘內。模型量化至 4.9GB，讓中小型醫院僅需萬元級普通設備即可導入資安合規的本地 AI。
+                </p>
+            </div>
+        </section>
+
+        <section class="section-card shadow-sm">
+            <h2 class="text-2xl font-black text-slate-800 mb-10 flex items-center gap-4">
+                <span class="w-2 h-8 bg-blue-600 rounded-full"></span>
+                全棧開發貢獻 ｜ 個人職責
+            </h2>
+            <div class="grid md:grid-cols-2 gap-12">
+                <ul class="space-y-6 text-slate-600">
+                    <li class="flex gap-4">
+                        <div class="w-8 h-8 bg-blue-50 text-blue-600 rounded-lg flex items-center justify-center shrink-0"><i class="fas fa-database text-xs"></i></div>
+                        <div class="text-left">
+                            <h4 class="font-bold text-slate-800 text-sm">資料工程與處理</h4>
+                            <p class="text-xs leading-relaxed text-slate-500">醫療文本去識別化、SFT (JSON) 格式化與特徵工程，確保資料符合微調規範。</p>
+                        </div>
+                    </li>
+                    <li class="flex gap-4">
+                        <div class="w-8 h-8 bg-blue-50 text-blue-600 rounded-lg flex items-center justify-center shrink-0 text-left"><i class="fas fa-brain text-xs"></i></div>
+                        <div class="text-left">
+                            <h4 class="font-bold text-slate-800 text-sm text-left">模型訓練與評估</h4>
+                            <p class="text-xs leading-relaxed text-slate-500 text-left">採用 QLoRA 微調模型，針對臺灣醫學縮寫與「中英夾雜」環境進行強化訓練。</p>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="space-y-6 text-slate-600">
+                    <li class="flex gap-4">
+                        <div class="w-8 h-8 bg-blue-50 text-blue-600 rounded-lg flex items-center justify-center shrink-0"><i class="fas fa-desktop text-xs"></i></div>
+                        <div>
+                            <h4 class="font-bold text-slate-800 text-sm">UI/UX 介面開發</h4>
+                            <p class="text-xs leading-relaxed text-slate-500">使用 Vanilla JS 實作「Ghost Text」智慧補全功能，提供護理師流暢的撰寫體驗。</p>
+                        </div>
+                    </li>
+                    <li class="flex gap-4">
+                        <div class="w-8 h-8 bg-blue-50 text-blue-600 rounded-lg flex items-center justify-center shrink-0 text-left"><i class="fas fa-server text-xs"></i></div>
+                        <div class="text-left">
+                            <h4 class="font-bold text-slate-800 text-sm text-left">後端與部署工程</h4>
+                            <p class="text-xs leading-relaxed text-slate-500 text-left">基於 FastAPI 構建非同步 API，整合 llama-cpp-python 推論引擎與 SQLite 本地存儲。</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="mb-32">
+            <div class="flex items-center gap-4 mb-12">
+                <h2 class="text-3xl font-black text-slate-800">技術設計細節</h2>
+                <div class="h-px bg-slate-100 flex-grow"></div>
+            </div>
+        
+            <div class="grid md:grid-cols-3 gap-6">
+                
+                <div class="bg-white border border-slate-100 rounded-[2rem] p-8 shadow-sm hover:shadow-md transition-shadow flex flex-col">
+                    <div class="w-12 h-12 bg-blue-600 text-white rounded-xl flex items-center justify-center mb-6 shadow-lg shadow-blue-100">
+                        <i class="fas fa-route text-lg"></i>
+                    </div>
+                    <h4 class="font-bold text-slate-800 text-lg mb-3 text-left">Agent 動態路由</h4>
+                    <div class="flex-grow">
+                        <p class="text-[13px] text-slate-500 leading-loose mb-4 text-left">
+                            設計 Intelligent Router 建立全局「觸發對照表」，根據輸入特徵自動切換推論路徑：
+                        </p>
+                        <ul class="space-y-2">
+                            <li class="px-3 py-2 bg-blue-50/50 rounded-lg border border-blue-100 text-[11px] text-blue-700 font-medium">
+                                命中關鍵字：即時提取 .md 模板 (Rule-based)
+                            </li>
+                            <li class="px-3 py-2 bg-purple-50/50 rounded-lg border border-purple-100 text-[11px] text-purple-700 font-medium text-left">
+                                非結構化文字：啟動 LLM 深度預測 (Ghost Text)
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+        
+                <div class="bg-white border border-slate-100 rounded-[2rem] p-8 shadow-sm hover:shadow-md transition-shadow flex flex-col">
+                    <div class="w-12 h-12 bg-emerald-500 text-white rounded-xl flex items-center justify-center mb-6 shadow-lg shadow-emerald-100">
+                        <i class="fas fa-puzzle-piece text-lg"></i>
+                    </div>
+                    <h4 class="font-bold text-slate-800 text-lg mb-3 text-left">Skills 模組化管理</h4>
+                    <div class="flex-grow">
+                        <p class="text-[13px] text-slate-500 leading-loose mb-4 text-left">
+                            將各科別（ICU、急診）評估規範抽離為獨立 .md 技能檔，達成軟體架構高度解耦：
+                        </p>
+                        <ul class="space-y-2">
+                            <li class="flex items-center gap-2 text-[11px] text-slate-600">
+                                <i class="fas fa-check text-emerald-500"></i> 無需更動程式碼即可新增科別規範
+                            </li>
+                            <li class="flex items-center gap-2 text-[11px] text-slate-600">
+                                <i class="fas fa-check text-emerald-500 text-left"></i> 為未來 RAG 結合病歷預留知識接口
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+        
+                <div class="bg-white border border-slate-100 rounded-[2rem] p-8 shadow-sm hover:shadow-md transition-shadow flex flex-col">
+                    <div class="w-12 h-12 bg-orange-500 text-white rounded-xl flex items-center justify-center mb-6 shadow-lg shadow-orange-100">
+                        <i class="fas fa-compress-arrows-alt text-lg"></i>
+                    </div>
+                    <h4 class="font-bold text-slate-800 text-lg mb-3 text-left text-left">GGUF 混合量化</h4>
+                    <div class="flex-grow">
+                        <p class="text-[13px] text-slate-500 leading-loose mb-4 text-left">
+                            採用 Q4_K_M 量化技術，將 16.2GB 模型壓縮至 4.9GB，降低 69% 儲存需求：
+                        </p>
+                        <ul class="space-y-2">
+                            <li class="flex items-center gap-2 text-[11px] text-slate-600">
+                                <i class="fas fa-microchip text-orange-500"></i> 使萬元級設備具備即時 AI 推論能力
+                            </li>
+                            <li class="flex items-center gap-2 text-[11px] text-slate-600">
+                                <i class="fas fa-shield-alt text-orange-500 text-left"></i> 確保 100% 本地運作，保障病歷隱私
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+        
+            </div>
+        </section>
+
+        <section class="mb-32">
+            <div class="flex items-center gap-4 mb-10">
+                <h2 class="text-2xl font-black text-slate-800">產業競爭力分析</h2>
+                <div class="h-px bg-slate-100 flex-grow"></div>
+            </div>
+        
+            <div class="overflow-x-auto rounded-[2rem] border border-slate-100 shadow-sm">
+                <table class="w-full text-left border-collapse min-w-[800px]">
+                    <thead>
+                        <tr class="bg-slate-900 text-white">
+                            <th class="p-6 text-xs font-bold uppercase tracking-widest border-r border-slate-800">比較維度</th>
+                            <th class="p-6 text-xs font-bold uppercase tracking-widest bg-blue-600 border-r border-blue-500 text-center">本系統 (Edge AI)</th>
+                            <th class="p-6 text-xs font-bold uppercase tracking-widest border-r border-slate-800 text-center">傳統 HIS/NIS 系統</th>
+                            <th class="p-6 text-xs font-bold uppercase tracking-widest border-r border-slate-800 text-center">雲端商用 AI</th>
+                            <th class="p-6 text-xs font-bold uppercase tracking-widest text-center">一鍵整篇生成 AI</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-[13px] leading-relaxed">
+                        <tr class="border-b border-slate-50">
+                            <td class="p-6 font-bold text-slate-700 bg-slate-50/50 border-r border-slate-100">生成模式與<br>控制力</td>
+                            <td class="p-6 font-bold text-blue-700 bg-blue-50/30 border-r border-blue-100/50">漸進式補齊，人工即時<br>審核，沒有心理負擔</td>
+                            <td class="p-6 text-slate-500 border-r border-slate-50">純手工打字</td>
+                            <td class="p-6 text-slate-500 border-r border-slate-50">對話式問答，需切換視窗，<br>中斷工作流</td>
+                            <td class="p-6 text-slate-500">整篇黑箱生成，<br>事後校對負擔大</td>
+                        </tr>
+                        <tr class="border-b border-slate-50">
+                            <td class="p-6 font-bold text-slate-700 bg-slate-50/50 border-r border-slate-100">精準度與<br>幻覺預防</td>
+                            <td class="p-6 font-bold text-blue-700 bg-blue-50/30 border-r border-blue-100/50">高：Agent 規則 + <br>在地化區域微調</td>
+                            <td class="p-6 text-slate-500 border-r border-slate-50">無：缺乏語意理解與<br>預測功能</td>
+                            <td class="p-6 text-slate-500 border-r border-slate-50">中：通用模型語意發散，<br>不符院內格式</td>
+                            <td class="p-6 text-slate-500">低：長文本極易捏造<br>虛假醫療數據</td>
+                        </tr>
+                        <tr class="border-b border-slate-50">
+                            <td class="p-6 font-bold text-slate-700 bg-slate-50/50 border-r border-slate-100">資安與隱私</td>
+                            <td class="p-6 font-bold text-blue-700 bg-blue-50/30 border-r border-blue-100/50">高：本地運行，<br>數據不出院內網路</td>
+                            <td class="p-6 text-slate-500 border-r border-slate-50">高：內網封閉系統</td>
+                            <td class="p-6 text-slate-500 border-r border-slate-50 text-red-400">低：公有雲傳輸，<br>外洩風險高</td>
+                            <td class="p-6 text-slate-500 text-red-400">低：多依賴外部高算力<br>雲端節點</td>
+                        </tr>
+                        <tr>
+                            <td class="p-6 font-bold text-slate-700 bg-slate-50/50 border-r border-slate-100">硬體與運算成本</td>
+                            <td class="p-6 font-bold text-blue-700 bg-blue-50/30 border-r border-blue-100/50">低：量化技術，<br>現有一般電腦即可</td>
+                            <td class="p-6 text-slate-500 border-r border-slate-50">低：無 AI 運算需求</td>
+                            <td class="p-6 text-slate-500 border-r border-slate-50">高：依 Token 數量持續<br>付費</td>
+                            <td class="p-6 text-slate-500 text-red-500">高：需建置昂貴<br>高階 GPU 伺服器機房</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="p-12 rounded-[2.5rem] bg-slate-900 text-white">
+            <div class="flex items-center gap-3 mb-8 text-left">
+                <i class="fas fa-medal text-yellow-400 text-2xl"></i>
+                <h2 class="text-2xl font-black">獲得獎項與肯定</h2>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8 text-left">
+                <div class="border-l-2 border-slate-700 pl-6">
+                    <h4 class="text-blue-400 font-bold mb-2 uppercase text-xs tracking-widest">Selected Project</h4>
+                    <p class="text-lg font-bold mb-1">宏碁大專生專題補助計劃</p>
+                    <p class="text-slate-400 text-sm">獲專案研發經費支持，肯定系統之產業價值。</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+
+
+
+    <footer class="text-center py-12 text-gray-400 border-t border-gray-100 mt-20">
+        <p class="text-sm">© 2026 Chiu-Ho Leung | 梁釗豪</p>
+    </footer></body></html>

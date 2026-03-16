@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>澳洲降雨預測系統 | 數據科學專題 | 梁劍豪 Chiu-Ho Leung</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Noto+Sans+TC:wght@400;700&display=swap');
+        body { font-family: 'Inter', 'Noto Sans TC', sans-serif; background-color: #ffffff; scroll-behavior: smooth; }
+        .tech-tag { background: #f1f5f9; border: 1px solid #e2e8f0; padding: 4px 14px; border-radius: 10px; font-size: 13px; font-weight: 600; color: #475569; }
+        .section-card { border-radius: 32px; background: #ffffff; border: 1px solid #f1f5f9; padding: 48px; margin-bottom: 40px; }
+    </style>
+</head>
+<body class="text-slate-900 leading-relaxed text-left">
+
+    <main class="max-w-5xl mx-auto px-6 py-24">
+        
+        <header class="mb-12">
+            <div class="flex items-center gap-3 mb-6">
+                <span class="bg-blue-600 text-white text-[10px] px-3 py-1 rounded-full font-black tracking-widest uppercase">Data Science Project</span>
+                <span class="text-slate-400 text-sm font-mono">2024.12 - 2025.01</span>
+            </div>
+            <h1 class="text-4xl md:text-5xl font-black text-slate-800 tracking-tight mb-8">澳洲降雨預測系統<br><span class="text-blue-600 italic">Rain in Australia Prediction</span></h1>
+            
+            <div class="flex flex-wrap gap-2 mb-10">
+                <span class="tech-tag">Random Forest</span>
+                <span class="tech-tag">Data Mining</span>
+                <span class="tech-tag">OpenWeatherMap API</span>
+                <span class="tech-tag">Gradio UI</span>
+                <span class="tech-tag">SMOTE</span>
+                <span class="tech-tag">Scikit-learn</span>
+                <span class="tech-tag">Feature Engineering</span>
+            </div>
+        </header>
+
+        <section class="grid md:grid-cols-2 gap-8 mb-20">
+            <div class="bg-slate-50 p-8 md:p-12 rounded-[2.5rem] border border-slate-100 transition-all hover:bg-white hover:shadow-xl hover:shadow-slate-200/50">
+                <h3 class="text-xl font-bold text-slate-800 mb-5 flex items-center gap-3">
+                    <i class="fas fa-microchip text-blue-500"></i> 隨機森林模型最佳化
+                </h3>
+                <p class="text-[15px] text-slate-600 leading-relaxed">
+                    採用隨機森林（Random Forest）分類器進行澳洲 49 個氣象站數據訓練，並透過 Grid Search 與 SMOTE 過採樣技術解決原始資料類別不均問題，提升對「降雨」類別的預測精準度。
+                </p>
+            </div>
+            <div class="bg-blue-50/50 p-8 md:p-12 rounded-[2.5rem] border border-blue-100 transition-all hover:bg-white hover:shadow-xl hover:shadow-blue-200/50">
+                <h3 class="text-xl font-bold text-slate-800 mb-5 flex items-center gap-3 text-left">
+                    <i class="fas fa-cloud-sun text-blue-500"></i> 即時氣象 API 整合
+                </h3>
+                <p class="text-[15px] text-slate-600 leading-relaxed text-left">
+                    串接 OpenWeatherMap API 獲取全球即時氣象資訊，將實時溫度、濕度及風速數據自動映射至模型特徵，實現「輸入城市，立即預測」的無縫體驗。
+                </p>
+            </div>
+        </section>
+
+        <section class="mb-32">
+            <div class="flex items-center gap-6 mb-16">
+                <h2 class="text-3xl font-black text-slate-800 shrink-0">預測與實作流程</h2>
+                <div class="h-px bg-slate-200 flex-grow"></div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white border border-slate-100 rounded-[2.5rem] p-10 shadow-sm hover:shadow-xl transition-all flex flex-col group">
+                    <div class="w-14 h-14 bg-blue-600 text-white rounded-2xl flex items-center justify-center mb-8 shadow-lg shadow-blue-200 group-hover:-translate-y-1 transition-transform">
+                        <i class="fas fa-database text-xl"></i>
+                    </div>
+                    <h4 class="font-bold text-slate-800 text-xl mb-4 text-left">數據清洗與工程</h4>
+                    <div class="flex-grow">
+                        <p class="text-[14px] text-slate-500 leading-relaxed mb-6 text-left">
+                            處理 10 年份的澳洲氣象日誌，包含缺失值插補、異常值剔除，並提取年份與月份作為季節性特徵。
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-white border border-slate-100 rounded-[2.5rem] p-10 shadow-sm hover:shadow-xl transition-all flex flex-col group">
+                    <div class="w-14 h-14 bg-emerald-500 text-white rounded-2xl flex items-center justify-center mb-8 shadow-lg shadow-emerald-200 group-hover:-translate-y-1 transition-transform">
+                        <i class="fas fa-chart-line text-xl"></i>
+                    </div>
+                    <h4 class="font-bold text-slate-800 text-xl mb-4 text-left">特徵重要性分析</h4>
+                    <div class="flex-grow">
+                        <p class="text-[14px] text-slate-500 leading-relaxed mb-6 text-left">
+                            分析影響降雨的關鍵因素，如濕度（Humidity3pm）、氣壓及風向，優化模型特徵組合以提升預測效率。
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-white border border-slate-100 rounded-[2.5rem] p-10 shadow-sm hover:shadow-xl transition-all flex flex-col group">
+                    <div class="w-14 h-14 bg-orange-500 text-white rounded-2xl flex items-center justify-center mb-8 shadow-lg shadow-orange-200 group-hover:-translate-y-1 transition-transform">
+                        <i class="fas fa-desktop text-xl"></i>
+                    </div>
+                    <h4 class="font-bold text-slate-800 text-xl mb-4 text-left">Gradio 介面開發</h4>
+                    <div class="flex-grow">
+                        <p class="text-[14px] text-slate-500 leading-relaxed mb-6 text-left">
+                            建構直觀的 UI 介面，支援地圖選點或城市搜尋，動態呈現預測機率與氣象趨勢視覺化。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-24 text-center">
+            <div class="inline-flex gap-4">
+                <a href="https://colab.research.google.com/drive/1sYNP1qaiEpmchRlUHxKjeRbxe05SK1FC?usp=sharing" target="_blank" class="bg-slate-800 text-white px-8 py-4 rounded-2xl font-bold hover:bg-slate-700 transition flex items-center gap-3">
+                    <i class="fab fa-google"></i> Run on Colab
+                </a>
+                <a href="https://github.com/marcoleung052" target="_blank" class="border border-slate-200 px-8 py-4 rounded-2xl font-bold hover:bg-slate-50 transition flex items-center gap-3">
+                    <i class="fab fa-github"></i> GitHub Code
+                </a>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>

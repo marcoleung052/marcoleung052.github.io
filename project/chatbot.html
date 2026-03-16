@@ -71,88 +71,95 @@
             </div>
         </section>
 
-        <section class="grid md:grid-cols-2 gap-8 mb-12">
-            <div class="bg-slate-50 p-10 rounded-[2rem] border border-slate-100">
-                <h3 class="text-xl font-bold text-slate-800 mb-4 flex items-center gap-2">
-                    <i class="fas fa-brain text-purple-500"></i> 解耦式 AI 思維
-                </h3>
-                <p class="text-sm text-slate-600 leading-loose">
-                    捨棄昂貴且笨重的「大一統」模型，採用「大腦(Llama 3)指揮手腳(工具)」的模組化架構。這種方式不僅大幅降低運算成本，且能更換各領域的最佳模型，達成高度的可維護性。
-                </p>
-            </div>
-            <div class="bg-purple-50/50 p-10 rounded-[2rem] border border-purple-100">
-                <h3 class="text-xl font-bold text-slate-800 mb-4 flex items-center gap-2 text-left">
-                    <i class="fas fa-bolt text-purple-500"></i> 突破時效與幻覺
-                </h3>
-                <p class="text-sm text-slate-600 leading-loose text-left">
-                    透過全網頁深度爬蟲解決 LLM 知識截止日期過時的問題，並利用 RAG 檢索增強生成機制，要求 AI 必須根據真實網頁內文回答，將虛假資訊（幻覺）機率降至最低。
-                </p>
-            </div>
-        </section>
-
-        <section class="mb-32">
-            <div class="flex items-center gap-4 mb-12">
-                <h2 class="text-3xl font-black text-slate-800">五階段推理 Pipeline</h2>
-                <div class="h-px bg-slate-100 flex-grow"></div>
-            </div>
-        
-            <div class="grid md:grid-cols-3 gap-6">
-                <div class="bg-white border border-slate-100 rounded-[2rem] p-8 shadow-sm hover:shadow-md transition-shadow flex flex-col">
-                    <div class="w-12 h-12 bg-purple-600 text-white rounded-xl flex items-center justify-center mb-6 shadow-lg shadow-purple-100">
-                        <i class="fas fa-filter text-lg"></i>
-                    </div>
-                    <h4 class="font-bold text-slate-800 text-lg mb-3 text-left">意圖判斷與參數化</h4>
-                    <div class="flex-grow text-left">
-                        <p class="text-[13px] text-slate-500 leading-loose mb-4">
-                            利用 Llama 3 作為中央調度，將自然語言轉化為 JSON 參數：
-                        </p>
-                        <ul class="space-y-2">
-                            <li class="px-3 py-2 bg-blue-50/50 rounded-lg border border-blue-100 text-[11px] text-blue-700 font-medium">
-                                分類系統：image_gen, search, chat, modify
-                            </li>
-                        </ul>
+        <section class="grid md:grid-cols-2 gap-8 mb-20"> <div class="bg-slate-50 p-8 md:p-12 rounded-[2.5rem] border border-slate-100 transition-all hover:bg-white hover:shadow-xl hover:shadow-slate-200/50">
+            <h3 class="text-xl font-bold text-slate-800 mb-5 flex items-center gap-3">
+                <i class="fas fa-brain text-purple-500"></i> 解耦式 AI 思維
+            </h3>
+            <p class="text-[15px] text-slate-600 leading-relaxed">
+                捨棄昂貴且笨重的「大一統」模型，採用「大腦(Llama 3)指揮手腳(工具)」的模組化架構。大幅降低運算成本，且能更換各領域最佳模型，達成高度可維護性。
+            </p>
+        </div>
+        <div class="bg-purple-50/50 p-8 md:p-12 rounded-[2.5rem] border border-purple-100 transition-all hover:bg-white hover:shadow-xl hover:shadow-purple-200/50">
+            <h3 class="text-xl font-bold text-slate-800 mb-5 flex items-center gap-3 text-left">
+                <i class="fas fa-bolt text-purple-500"></i> 突破時效與幻覺
+            </h3>
+            <p class="text-[15px] text-slate-600 leading-relaxed text-left">
+                透過全網頁深度爬蟲解決 LLM 知識過時問題，並利用 RAG 檢索增強生成機制，要求 AI 必須根據真實網頁內文回答，將虛假資訊（幻覺）機率降至最低。
+            </p>
+        </div>
+    </section>
+    
+    <section class="mb-32">
+        <div class="flex items-center gap-6 mb-16">
+            <h2 class="text-3xl font-black text-slate-800 shrink-0">五階段推理 Pipeline</h2>
+            <div class="h-px bg-slate-200 flex-grow"></div>
+        </div>
+    
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-white border border-slate-100 rounded-[2.5rem] p-10 shadow-sm hover:shadow-xl transition-all flex flex-col group">
+                <div class="w-14 h-14 bg-purple-600 text-white rounded-2xl flex items-center justify-center mb-8 shadow-lg shadow-purple-200 group-hover:-translate-y-1 transition-transform">
+                    <i class="fas fa-filter text-xl"></i>
+                </div>
+                <h4 class="font-bold text-slate-800 text-xl mb-4 text-left">意圖判斷與參數化</h4>
+                <div class="flex-grow">
+                    <p class="text-[14px] text-slate-500 leading-relaxed mb-6 text-left">
+                        利用 Llama 3 作為中央調度，將自然語言轉化為結構化的 JSON 指令參數：
+                    </p>
+                    <div class="space-y-3">
+                        <div class="px-4 py-2.5 bg-blue-50/50 rounded-xl border border-blue-100 text-[12px] text-blue-700 font-semibold italic">
+                            Tag: image_gen, search, chat...
+                        </div>
                     </div>
                 </div>
-        
-                <div class="bg-white border border-slate-100 rounded-[2rem] p-8 shadow-sm hover:shadow-md transition-shadow flex flex-col">
-                    <div class="w-12 h-12 bg-emerald-500 text-white rounded-xl flex items-center justify-center mb-6 shadow-lg shadow-emerald-100">
-                        <i class="fas fa-search-plus text-lg"></i>
-                    </div>
-                    <h4 class="font-bold text-slate-800 text-lg mb-3 text-left">深度 RAG 檢索</h4>
-                    <div class="flex-grow text-left">
-                        <p class="text-[13px] text-slate-500 leading-loose mb-4">
-                            超越傳統摘要搜尋，實際進入網頁解析全文本：
-                        </p>
-                        <ul class="space-y-2">
-                            <li class="flex items-center gap-2 text-[11px] text-slate-600">
-                                <i class="fas fa-spider text-emerald-500"></i> BeautifulSoup4 深度爬蟲解析內文
-                            </li>
-                            <li class="flex items-center gap-2 text-[11px] text-slate-600 text-left">
-                                <i class="fas fa-link text-emerald-500 text-left"></i> 回答時自動附上原始連結來源
-                            </li>
-                        </ul>
-                    </div>
+            </div>
+    
+            <div class="bg-white border border-slate-100 rounded-[2.5rem] p-10 shadow-sm hover:shadow-xl transition-all flex flex-col group">
+                <div class="w-14 h-14 bg-emerald-500 text-white rounded-2xl flex items-center justify-center mb-8 shadow-lg shadow-emerald-200 group-hover:-translate-y-1 transition-transform">
+                    <i class="fas fa-search-plus text-xl"></i>
                 </div>
-        
-                <div class="bg-white border border-slate-100 rounded-[2rem] p-8 shadow-sm hover:shadow-md transition-shadow flex flex-col">
-                    <div class="w-12 h-12 bg-orange-500 text-white rounded-xl flex items-center justify-center mb-6 shadow-lg shadow-orange-100">
-                        <i class="fas fa-palette text-lg"></i>
-                    </div>
-                    <h4 class="font-bold text-slate-800 text-lg mb-3 text-left">視覺記憶管理</h4>
-                    <div class="flex-grow text-left">
-                        <p class="text-[13px] text-slate-500 leading-loose mb-4">
-                            透過對話歷史注入，賦予 AI 修改圖片的連貫記憶：
-                        </p>
-                        <ul class="space-y-2">
-                            <li class="flex items-center gap-2 text-[11px] text-slate-600">
-                                <i class="fas fa-history text-orange-500"></i> Img2Img 技術達成連貫風格遷移
-                            </li>
-                            <li class="flex items-center gap-2 text-[11px] text-slate-600">
-                                <i class="fas fa-image text-orange-500 text-left"></i> 以真實圖片為「視覺錨點」防崩壞
-                            </li>
-                        </ul>
-                    </div>
+                <h4 class="font-bold text-slate-800 text-xl mb-4 text-left">深度 RAG 檢索</h4>
+                <div class="flex-grow">
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3 text-[14px] text-slate-600 text-left">
+                            <i class="fas fa-spider text-emerald-500 mt-1"></i> 
+                            <span>BeautifulSoup4 深度解析全網頁文本內容</span>
+                        </li>
+                        <li class="flex items-start gap-3 text-[14px] text-slate-600 text-left">
+                            <i class="fas fa-link text-emerald-500 mt-1"></i> 
+                            <span>精準引用：自動附上原始連結來源</span>
+                        </li>
+                    </ul>
                 </div>
+            </div>
+    
+            <div class="bg-white border border-slate-100 rounded-[2.5rem] p-10 shadow-sm hover:shadow-xl transition-all flex flex-col group">
+                <div class="w-14 h-14 bg-orange-500 text-white rounded-2xl flex items-center justify-center mb-8 shadow-lg shadow-orange-200 group-hover:-translate-y-1 transition-transform">
+                    <i class="fas fa-palette text-xl"></i>
+                </div>
+                <h4 class="font-bold text-slate-800 text-xl mb-4 text-left">視覺記憶管理</h4>
+                <div class="flex-grow">
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3 text-[14px] text-slate-600 text-left">
+                            <i class="fas fa-history text-orange-500 mt-1"></i> 
+                            <span>Img2Img 技術達成跨回合風格遷移</span>
+                        </li>
+                        <li class="flex items-start gap-3 text-[14px] text-slate-600 text-left">
+                            <i class="fas fa-image text-orange-500 mt-1"></i> 
+                            <span>以真實圖片為視覺錨點，防止生圖崩壞</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+        <section class="mb-24 text-center">
+            <div class="inline-flex gap-4">
+                <a href="https://colab.research.google.com/drive/1cZedrOcstM9ZJ47pFqqOFqdjWHO6FL6G?usp=sharing" target="_blank" class="bg-slate-800 text-white px-8 py-4 rounded-2xl font-bold hover:bg-slate-700 transition flex items-center gap-3">
+                    <i class="fab fa-google"></i> Open in Colab
+                </a>
+                <a href="https://github.com/marcoleung052" target="_blank" class="border border-slate-200 px-8 py-4 rounded-2xl font-bold hover:bg-slate-50 transition flex items-center gap-3">
+                    <i class="fab fa-github"></i> GitHub Source
+                </a>
             </div>
         </section>
     </main>

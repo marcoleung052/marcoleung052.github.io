@@ -23,6 +23,30 @@
             border-left-color: currentColor;
             transform: translateX(5px);
         }
+        /* 展開式卡片基礎設定 */
+        .expandable-card {
+            max-height: 120px; /* 初始高度 */
+            overflow: hidden;
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .expandable-card:hover {
+            max-height: 600px; /* 展開後高度 */
+            background-color: #f8fafc;
+            border-left-color: #8b5cf6; /* 紫色側邊條 */
+        }
+        
+        /* 內容漸現效果 */
+        .expand-content {
+            opacity: 0;
+            transform: translateY(-10px);
+            transition: all 0.4s ease 0.1s;
+        }
+        
+        .expandable-card:hover .expand-content {
+            opacity: 1;
+            transform: translateY(0);
+        }
     </style>
 </head>
 <body class="text-slate-900 leading-relaxed text-left">
@@ -140,6 +164,35 @@
                     </div>
                     <span class="text-xs font-mono font-bold text-slate-300 mt-2 md:mt-0">2021-2022</span>
                 </div>
+                <div class="space-y-6">
+                <div class="award-item expandable-card p-6 rounded-2xl border border-slate-100 flex flex-col text-purple-600">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center w-full mb-4">
+                        <div class="flex items-center gap-6">
+                            <div class="text-2xl"><i class="fas fa-university"></i></div>
+                            <div>
+                                <h3 class="text-lg font-bold text-slate-800">獲得香港城市大學 BOLD 刊登</h3>
+                                <p class="text-slate-500 text-sm">卓越學習經驗分享與學術成就認可</p>
+                            </div>
+                        </div>
+                        <span class="text-xs font-mono font-bold text-slate-300 mt-2 md:mt-0">2022-2023</span>
+                    </div>
+                    
+                    <div class="expand-content pt-6 border-t border-slate-100">
+                        <div class="flex flex-col md:flex-row gap-6">
+                            <div class="md:w-1/2 overflow-hidden rounded-xl shadow-md border border-slate-200">
+                                <img src="images/awards-bold.jpg" alt="CityU BOLD 刊登照片" class="w-full h-auto hover:scale-105 transition-transform duration-500">
+                            </div>
+                            <div class="md:w-1/2 flex flex-col justify-center">
+                                <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                                    BOLD (Be Original, Learn Differently) 旨在表揚具備創新思維與卓越表現的學生。此刊登記錄了我在 STEM 領域的探索歷程與實踐成果。
+                                </p>
+                                <a href="https://github.com/marcoleung052/marcoleung052.github.io/blob/fa8b7ef942bd2f01923deb0ac50149751001c8df/images/BOLD-Mag-Issue-2-compressed.pdf" target="_blank" class="inline-flex items-center gap-2 text-purple-600 font-bold text-sm hover:text-purple-700 transition">
+                                    <i class="fas fa-external-link-alt"></i> 閱讀完整刊登內容
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
                 <div class="award-item p-6 rounded-2xl flex flex-col md:flex-row justify-between items-start md:items-center text-blue-400">
                     <div class="flex items-center gap-6 text-left">
@@ -150,6 +203,35 @@
                         </div>
                     </div>
                     <span class="text-xs font-mono font-bold text-slate-300 mt-2 md:mt-0">2020-2021</span>
+                </div>
+
+                <div class="award-item expandable-card p-6 rounded-2xl border border-slate-100 flex flex-col text-purple-600">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center w-full mb-4">
+                        <div class="flex items-center gap-6 text-left">
+                            <div class="text-2xl"><i class="fas fa-newspaper"></i></div>
+                            <div>
+                                <h3 class="text-lg font-bold text-slate-800 text-left">獲得香港教區天主教公教報 刊登</h3>
+                                <p class="text-slate-500 text-sm text-left"> 跳水與STEAM潛能 </p>
+                            </div>
+                        </div>
+                        <span class="text-xs font-mono font-bold text-slate-300 mt-2 md:mt-0">2022-2023</span>
+                    </div>
+
+                    <div class="expand-content pt-6 border-t border-slate-100">
+                        <div class="flex flex-col md:flex-row gap-6">
+                            <div class="md:w-1/2 overflow-hidden rounded-xl shadow-md border border-slate-200">
+                                <img src="images/awards/kungkaopo.jpg" alt="公教報刊登照片" class="w-full h-auto hover:scale-105 transition-transform duration-500">
+                            </div>
+                            <div class="md:w-1/2 flex flex-col justify-center text-left">
+                                <p class="text-slate-600 text-sm leading-relaxed mb-6 text-left">
+                                    接受《公教報》專訪，分享十年跳水生涯的心路歷程。報導中詳述了我如何從跳水運動中學會堅持與解難，並將這份精神轉化為對 STEAM 科技的熱情。希望未來能結合人工智慧與運動科技，開發輔助系統以發掘更多人的運動潛能，這也是我選擇投入 AI 領域的初心。
+                                </p>
+                                <a href="https://jy.catholic.org.hk/archive/detail/7032/" target="_blank" class="inline-flex items-center gap-2 text-purple-600 font-bold text-sm hover:text-purple-700 transition">
+                                    <i class="fas fa-link"></i> 訪問公教報官網
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="award-item p-6 rounded-2xl flex flex-col md:flex-row justify-between items-start md:items-center text-cyan-600">

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>平行化巨量向量檢索 | 平行程式設計專題 | 梁劍豪 Chiu-Ho Leung</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="../nav.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Noto+Sans+TC:wght@400;700&display=swap');
+        body { font-family: 'Inter', 'Noto Sans TC', sans-serif; background-color: #ffffff; scroll-behavior: smooth; }
+        
+        .tech-tag { background: #f0fdfa; border: 1px solid #ccfbf1; padding: 4px 14px; border-radius: 10px; font-size: 13px; font-weight: 600; color: #0f766e; }
+        .section-card { border-radius: 32px; background: #ffffff; border: 1px solid #f1f5f9; padding: 48px; margin-bottom: 40px; }
+    </style>
+</head>
+<body class="text-slate-900 leading-relaxed text-left">
+
+    <main class="max-w-5xl mx-auto px-6 py-24">
+        
+        <header class="mb-12">
+            <div class="flex items-center gap-3 mb-6">
+                <span class="bg-teal-600 text-white text-[10px] px-3 py-1 rounded-full font-black tracking-widest uppercase">Parallel Computing Project</span>
+                <span class="text-slate-400 text-sm font-mono">2024.02 - 2024.06</span>
+            </div>
+            <h1 class="text-4xl md:text-5xl font-black text-slate-800 tracking-tight mb-8">平行化巨量向量檢索<br><span class="text-teal-600 italic">Massive Vector Retrieval</span></h1>
+            
+            <div class="flex flex-wrap gap-2 mb-10">
+                <span class="tech-tag">OpenMP</span>
+                <span class="tech-tag">MPI</span>
+                <span class="tech-tag">Hybrid Architecture</span>
+                <span class="tech-tag">C++</span>
+                <span class="tech-tag">Performance Tuning</span>
+            </div>
+        </header>
+
+        <section class="mb-24">
+            <div class="relative group">
+                <div class="absolute -inset-4 bg-gradient-to-r from-teal-400 to-cyan-600 rounded-[3rem] blur opacity-10 group-hover:opacity-20 transition duration-1000"></div>
+                <div class="relative bg-slate-900 rounded-[2.5rem] p-2 shadow-2xl overflow-hidden border-4 border-slate-800">
+                    <div class="aspect-video bg-slate-800 relative overflow-hidden flex items-center justify-center">
+                        <img src="../images/pro-mpi.jpg" alt="平行化效能分析圖表" class="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition">
+                    </div>
+                </div>
+                <div class="mt-6 flex justify-between items-center px-4">
+                    <div class="flex items-center gap-2">
+                        <span class="relative flex h-3 w-3">
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-teal-400 opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-3 w-3 bg-teal-500"></span>
+                        </span>
+                        <span class="text-xs font-bold text-slate-400 uppercase tracking-widest">Performance Analysis: Up to 36.4x Speedup</span>
+                    </div>
+                    <p class="text-xs text-slate-400 italic">展示內容：600 萬筆高維度資料的平行運算加速比分析</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="grid md:grid-cols-2 gap-8 mb-20">
+            <div class="bg-slate-50 p-8 md:p-12 rounded-[2.5rem] border border-slate-100 transition-all hover:bg-white hover:shadow-xl hover:shadow-teal-200/50">
+                <h3 class="text-xl font-bold text-slate-800 mb-5 flex items-center gap-3">
+                    <i class="fas fa-network-wired text-teal-500"></i> 混合平行運算架構
+                </h3>
+                <p class="text-[15px] text-slate-600 leading-relaxed">
+                    結合 OpenMP（共享記憶體）與 MPI（分散式記憶體）的 Hybrid 架構。透過靜態與動態任務排程（Static / Dynamic Scheduling）的深度比較，找出最佳的運算資源配置策略。
+                </p>
+            </div>
+            <div class="bg-teal-50/50 p-8 md:p-12 rounded-[2.5rem] border border-teal-100 transition-all hover:bg-white hover:shadow-xl hover:shadow-teal-200/50">
+                <h3 class="text-xl font-bold text-slate-800 mb-5 flex items-center gap-3 text-left">
+                    <i class="fas fa-tachometer-alt text-teal-500"></i> 巨量維度資料處理
+                </h3>
+                <p class="text-[15px] text-slate-600 leading-relaxed text-left">
+                    針對 Fashion-MNIST 等高維度（784維）影像特徵，實作從 6 萬筆到最高 600 萬筆資料的極限壓力測試，成功將單機序列運算時間大幅壓縮，達成 36.4 倍以上的加速比。
+                </p>
+            </div>
+        </section>
+
+        <section class="mb-32">
+            <div class="flex items-center gap-6 mb-16">
+                <h2 class="text-3xl font-black text-slate-800 shrink-0">架構演進與測試流程</h2>
+                <div class="h-px bg-slate-200 flex-grow"></div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white border border-slate-100 rounded-[2.5rem] p-10 shadow-sm hover:shadow-xl transition-all flex flex-col group">
+                    <div class="w-14 h-14 bg-teal-500 text-white rounded-2xl flex items-center justify-center mb-8 shadow-lg shadow-teal-200 group-hover:-translate-y-1 transition-transform">
+                        <i class="fas fa-laptop text-xl"></i>
+                    </div>
+                    <h4 class="font-bold text-slate-800 text-xl mb-4 text-left">單機與共享記憶體</h4>
+                    <div class="flex-grow">
+                        <p class="text-[14px] text-slate-500 leading-relaxed mb-6 text-left">
+                            以 C++ 實作循序運算（Serial）作為基準基準點，接著導入 OpenMP 進行多執行緒加速，突破單核運算瓶頸。
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-white border border-slate-100 rounded-[2.5rem] p-10 shadow-sm hover:shadow-xl transition-all flex flex-col group">
+                    <div class="w-14 h-14 bg-cyan-500 text-white rounded-2xl flex items-center justify-center mb-8 shadow-lg shadow-cyan-200 group-hover:-translate-y-1 transition-transform">
+                        <i class="fas fa-server text-xl"></i>
+                    </div>
+                    <h4 class="font-bold text-slate-800 text-xl mb-4 text-left">分散式 MPI 排程</h4>
+                    <div class="flex-grow">
+                        <p class="text-[14px] text-slate-500 leading-relaxed mb-6 text-left">
+                            實作 Master-Worker 架構，深入測試 MPI 的靜態（Static）與動態（Dynamic）任務分配，分析龐大通訊開銷（Comm Time）對整體效能的影響。
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-white border border-slate-100 rounded-[2.5rem] p-10 shadow-sm hover:shadow-xl transition-all flex flex-col group">
+                    <div class="w-14 h-14 bg-teal-700 text-white rounded-2xl flex items-center justify-center mb-8 shadow-lg shadow-teal-300 group-hover:-translate-y-1 transition-transform">
+                        <i class="fas fa-chart-line text-xl"></i>
+                    </div>
+                    <h4 class="font-bold text-slate-800 text-xl mb-4 text-left">混合架構與效能分析</h4>
+                    <div class="flex-grow">
+                        <p class="text-[14px] text-slate-500 leading-relaxed mb-6 text-left">
+                            整合 MPI 與 OpenMP（Hybrid 架構），在節點間分配任務並在節點內使用多執行緒，計算出最終的 Efficiency 與 Speedup 成長曲線。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-24 text-center">
+            <div class="inline-flex gap-4">
+                <a href="https://github.com/marcoleung052" target="_blank" class="bg-slate-800 text-white px-8 py-4 rounded-2xl font-bold hover:bg-slate-700 transition flex items-center gap-3">
+                    <i class="fab fa-github"></i> 檢視原始碼
+                </a>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>

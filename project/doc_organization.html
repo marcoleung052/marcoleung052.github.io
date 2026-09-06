@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>企業雲端知識庫整合與自動化管線 | 梁釗豪 Chiu-Ho Leung</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="../nav.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Noto+Sans+TC:wght@400;700&display=swap');
+        body { font-family: 'Inter', 'Noto Sans TC', sans-serif; background-color: #ffffff; scroll-behavior: smooth; }
+        .tech-tag { background: #f8fafc; border: 1px solid #e2e8f0; padding: 4px 14px; border-radius: 10px; font-size: 13px; font-weight: 600; color: #334155; }
+    </style>
+</head>
+<body class="text-slate-900 leading-relaxed text-left">
+
+    <main class="max-w-5xl mx-auto px-6 py-24">
+        
+        <header class="mb-12">
+            <div class="flex items-center gap-3 mb-6">
+                <span class="bg-slate-800 text-white text-[10px] px-3 py-1 rounded-full font-black tracking-widest uppercase">Internal Knowledge Integration</span>
+                <span class="text-slate-400 text-sm font-mono">2026.07-2026.09</span>
+            </div>
+            <h1 class="text-4xl md:text-5xl font-black text-slate-800 tracking-tight mb-8">企業雲端知識庫整合與自動化管線<br><span class="text-slate-600 italic">Cloud Workspace Knowledge Automation & RAG Architecture</span></h1>
+            
+            <div class="flex flex-wrap gap-2 mb-10">
+                <span class="tech-tag">Workspace LLM</span>
+                <span class="tech-tag">Google Apps Script</span>
+                <span class="tech-tag">Automated ETL</span>
+                <span class="tech-tag">Agentic Tool-Use</span>
+                <span class="tech-tag">Enterprise RAG</span>
+            </div>
+        </header>
+
+        <!-- 專題預覽圖區域 -->
+        <section class="mb-24">
+            <div class="relative group">
+                <div class="absolute -inset-4 bg-gradient-to-r from-slate-400 to-slate-700 rounded-[3rem] blur opacity-10 group-hover:opacity-20 transition duration-1000"></div>
+                <div class="relative bg-slate-900 rounded-[2.5rem] p-2 shadow-2xl overflow-hidden border-4 border-slate-800">
+                    <div class="aspect-video bg-slate-800 relative overflow-hidden flex items-center justify-center">
+                        <img src="../images/pro-doc-ai.jpg" alt="內部文件整理與自動化管線展示" class="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition">
+                    </div>
+                </div>
+                <div class="mt-6 flex justify-between items-center px-4">
+                    <div class="flex items-center gap-2">
+                        <span class="relative flex h-3 w-3">
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-slate-400 opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-3 w-3 bg-slate-600"></span>
+                        </span>
+                        <span class="text-xs font-bold text-slate-400 uppercase tracking-widest">Enterprise Knowledge Integration Pipeline</span>
+                    </div>
+                    <p class="text-xs text-slate-400 italic">展示內容：多格式文字抽取、排程更新與指令工程對話介面</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 核心亮點：四大痛點與對應解法 -->
+        <section class="grid md:grid-cols-2 gap-8 mb-24">
+            <div class="bg-slate-50 p-8 md:p-10 rounded-[2.5rem] border border-slate-100 transition-all hover:bg-white hover:shadow-xl hover:shadow-slate-200/50 flex flex-col justify-between">
+                <div>
+                    <div class="w-12 h-12 bg-rose-50 text-rose-600 rounded-2xl flex items-center justify-center mb-6 text-lg">
+                        <i class="fas fa-sitemap"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-4">跨團隊知識孤島</h3>
+                    <p class="text-[15px] text-slate-600 leading-relaxed">
+                        產品各模組由不同工程團隊分工維護，規格散落於多個部門空間，缺乏具備全域架構視角的單一窗口。成員在跨領域排查時難以拼湊完整全貌，造成嚴重的溝通成本。
+                    </p>
+                </div>
+            </div>
+
+            <div class="bg-slate-50 p-8 md:p-10 rounded-[2.5rem] border border-slate-100 transition-all hover:bg-white hover:shadow-xl hover:shadow-slate-200/50 flex flex-col justify-between">
+                <div>
+                    <div class="w-12 h-12 bg-amber-50 text-amber-600 rounded-2xl flex items-center justify-center mb-6 text-lg">
+                        <i class="fas fa-file-excel"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-4">複合格式檢索盲區</h3>
+                    <p class="text-[15px] text-slate-600 leading-relaxed">
+                        大量核心規格保存在非純文字格式（如舊版試算表、多頁手冊、架構截圖）。雲端原生檢索工具難以穿透其結構，查詢時頻繁回傳「查無來源」，導致模型推理斷層。
+                    </p>
+                </div>
+            </div>
+
+            <div class="bg-slate-50/70 p-8 md:p-10 rounded-[2.5rem] border border-slate-200 transition-all hover:bg-white hover:shadow-xl hover:shadow-slate-200/50 flex flex-col justify-between">
+                <div>
+                    <div class="w-12 h-12 bg-sky-50 text-sky-600 rounded-2xl flex items-center justify-center mb-6 text-lg">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-4">檢索推理指令工程</h3>
+                    <p class="text-[15px] text-slate-600 leading-relaxed">
+                        在工作區對話端訂定嚴謹的系統行為準則（System Directives），約束模型在回答前必須依序執行意圖解析、關鍵字擴展與來源比對，確保推論全程具備嚴格的佐證依據。
+                    </p>
+                </div>
+            </div>
+
+            <div class="bg-slate-50/70 p-8 md:p-10 rounded-[2.5rem] border border-slate-200 transition-all hover:bg-white hover:shadow-xl hover:shadow-slate-200/50 flex flex-col justify-between">
+                <div>
+                    <div class="w-12 h-12 bg-emerald-50 text-emerald-600 rounded-2xl flex items-center justify-center mb-6 text-lg">
+                        <i class="fas fa-sync-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-4">排程自動化 ETL 管線</h3>
+                    <p class="text-[15px] text-slate-600 leading-relaxed">
+                        建立無伺服器自動化排程任務，定時遞歸掃描指定目錄，將無法直接被引擎解析的圖文與表格內容抽取出乾淨文本，持續匯流至統一的技術快照中，確保資料新鮮度。
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 技術架構探索：精簡總結區塊 -->
+        <section class="mb-24 p-10 bg-slate-50 rounded-[2.5rem] border border-slate-100 text-left">
+            <h3 class="text-xl font-bold text-slate-800 mb-8 flex items-center gap-3">
+                <i class="fas fa-compass text-slate-700"></i> 技術架構拓展與選型研析
+            </h3>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm flex flex-col">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="w-8 h-8 rounded-lg bg-slate-800 text-white flex items-center justify-center text-xs font-mono">01</span>
+                        <h4 class="text-lg font-bold text-slate-800">本地 Agentic CLI 工作流</h4>
+                    </div>
+                    <p class="text-sm text-slate-600 leading-relaxed mb-4">
+                        參考現代開發導向 Agent 的設計思維，建立「意圖決策 → 系統工具調用 → 預算評估 → 按需讀取」的四階管線：
+                    </p>
+                    <ul class="space-y-2 text-xs text-slate-500 leading-relaxed mt-auto">
+                        <li class="flex items-start gap-2">
+                            <span class="text-slate-400">•</span>
+                            <span><strong>大腦決策：</strong>由 LLM 擴充同義詞並產生檢索指令（如比對檔名或全文檢索）。</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-slate-400">•</span>
+                            <span><strong>輕量執行：</strong>自動過濾無關二進位檔，產生結構化摘要供模型裁量。</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-slate-400">•</span>
+                            <span><strong>按需讀取：</strong>精準控管 Context Window 預算，僅針對高關聯檔案發起追蹤讀取。</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm flex flex-col">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="w-8 h-8 rounded-lg bg-slate-800 text-white flex items-center justify-center text-xs font-mono">02</span>
+                        <h4 class="text-lg font-bold text-slate-800">企業級 RAG 部署範式歸納</h4>
+                    </div>
+                    <p class="text-sm text-slate-600 leading-relaxed mb-4">
+                        橫向梳理業界主流落地架構，將其核心技術維度歸納為三種主要路線，作為不同業務場景的選型基準：
+                    </p>
+                    <ul class="space-y-2 text-xs text-slate-500 leading-relaxed mt-auto">
+                        <li class="flex items-start gap-2">
+                            <span class="text-slate-400">•</span>
+                            <span><strong>託管型多模態雲端：</strong>適用於運維資源精簡且具備超長上下文需求的雲端環境。</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-slate-400">•</span>
+                            <span><strong>混合式私有化部署：</strong>結合密集向量、關鍵字與精排重模，滿足高數據主權與內部權限審計。</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-slate-400">•</span>
+                            <span><strong>輕量端側概念驗證：</strong>採用滑動窗口分塊與本機嵌入庫，專注於敏捷驗證與個人開發。</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-24 text-center">
+            <div class="inline-flex gap-4">
+                <a href="../index.html#projects" class="bg-slate-800 text-white px-8 py-4 rounded-2xl font-bold hover:bg-slate-700 transition flex items-center gap-3">
+                    <i class="fas fa-arrow-left"></i> 返回專案總覽
+                </a>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>

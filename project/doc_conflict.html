@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>通用型多模態文件衝突檢測系統 | 梁釗豪 Chiu-Ho Leung</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="../nav.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Noto+Sans+TC:wght@400;700&display=swap');
+        body { font-family: 'Inter', 'Noto Sans TC', sans-serif; background-color: #ffffff; scroll-behavior: smooth; }
+        .tech-tag { background: #fff1f2; border: 1px solid #ffe4e6; padding: 4px 14px; border-radius: 10px; font-size: 13px; font-weight: 600; color: #be123c; }
+    </style>
+</head>
+<body class="text-slate-900 leading-relaxed text-left">
+
+    <main class="max-w-5xl mx-auto px-6 py-24">
+        
+        <header class="mb-12">
+            <div class="flex items-center gap-3 mb-6">
+                <span class="bg-rose-600 text-white text-[10px] px-3 py-1 rounded-full font-black tracking-widest uppercase">Document Intelligence System</span>
+                <span class="text-slate-400 text-sm font-mono">2024</span>
+            </div>
+            <h1 class="text-4xl md:text-5xl font-black text-slate-800 tracking-tight mb-8">通用型多模態文件衝突檢測系統<br><span class="text-rose-600 italic">Universal Multimodal Document Conflict Checker</span></h1>
+            
+            <div class="flex flex-wrap gap-2 mb-10">
+                <span class="tech-tag">Multimodal Alignment</span>
+                <span class="tech-tag">Visual & Text Consistency</span>
+                <span class="tech-tag">Conflict Classification</span>
+                <span class="tech-tag">Hallucination Suppression</span>
+                <span class="tech-tag">Cross-Domain Documents</span>
+            </div>
+        </header>
+
+        <section class="mb-24">
+            <div class="relative group">
+                <div class="absolute -inset-4 bg-gradient-to-r from-rose-500 to-amber-500 rounded-[3rem] blur opacity-10 group-hover:opacity-20 transition duration-1000"></div>
+                <div class="relative bg-slate-900 rounded-[2.5rem] p-2 shadow-2xl overflow-hidden border-4 border-slate-800">
+                    <div class="aspect-video bg-slate-800 relative overflow-hidden flex items-center justify-center">
+                        <img src="../images/pro-conflict.jpg" alt="多模態文件衝突檢測展示" class="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition">
+                    </div>
+                </div>
+                <div class="mt-6 flex justify-between items-center px-4">
+                    <div class="flex items-center gap-2">
+                        <span class="relative flex h-3 w-3">
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-rose-400 opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-3 w-3 bg-rose-500"></span>
+                        </span>
+                        <span class="text-xs font-bold text-slate-400 uppercase tracking-widest">Universal Consistency Verification</span>
+                    </div>
+                    <p class="text-xs text-slate-400 italic">展示內容：合約、規範、章程、計畫書之圖文跨模態邏輯矛盾比對</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 核心亮點：四大痛點與解法 -->
+        <section class="grid md:grid-cols-2 gap-8 mb-24">
+            <div class="bg-slate-50 p-8 md:p-10 rounded-[2.5rem] border border-slate-100 transition-all hover:bg-white hover:shadow-xl hover:shadow-rose-100 flex flex-col justify-between">
+                <div>
+                    <div class="w-12 h-12 bg-rose-50 text-rose-600 rounded-2xl flex items-center justify-center mb-6 text-lg">
+                        <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-4">跨版本內容不同步</h3>
+                    <p class="text-[15px] text-slate-600 leading-relaxed">
+                        各類商業合約、法規規章、技術手冊與計畫書在多次修訂後，常因多人協作導致關鍵條款、數值承諾或責任定義前後矛盾，人工逐頁審閱難以全面覆蓋。
+                    </p>
+                </div>
+            </div>
+
+            <div class="bg-slate-50 p-8 md:p-10 rounded-[2.5rem] border border-slate-100 transition-all hover:bg-white hover:shadow-xl hover:shadow-rose-100 flex flex-col justify-between">
+                <div>
+                    <div class="w-12 h-12 bg-amber-50 text-amber-600 rounded-2xl flex items-center justify-center mb-6 text-lg">
+                        <i class="fas fa-ghost"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-4">商用模型幻覺誤判</h3>
+                    <p class="text-[15px] text-slate-600 leading-relaxed">
+                        直接運用現成大型語言模型審閱長文時，極易在計算加總、相似名詞或句意指涉上產生幻覺，回傳大量錯誤的假矛盾，造成審核人員嚴重的二次查核負擔。
+                    </p>
+                </div>
+            </div>
+
+            <div class="bg-slate-50/70 p-8 md:p-10 rounded-[2.5rem] border border-slate-200 transition-all hover:bg-white hover:shadow-xl hover:shadow-rose-100 flex flex-col justify-between">
+                <div>
+                    <div class="w-12 h-12 bg-sky-50 text-sky-600 rounded-2xl flex items-center justify-center mb-6 text-lg">
+                        <i class="fas fa-photo-video"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-4">全場景圖文多模態整合</h3>
+                    <p class="text-[15px] text-slate-600 leading-relaxed">
+                        突破純文字限制，整合圖表、結構示意圖與內文說明進行跨模態對齊，無論是商業合約、組織章程、專案計畫書或工程規範，皆能精確鎖定實質衝突。
+                    </p>
+                </div>
+            </div>
+
+            <div class="bg-slate-50/70 p-8 md:p-10 rounded-[2.5rem] border border-slate-200 transition-all hover:bg-white hover:shadow-xl hover:shadow-rose-100 flex flex-col justify-between">
+                <div>
+                    <div class="w-12 h-12 bg-emerald-50 text-emerald-600 rounded-2xl flex items-center justify-center mb-6 text-lg">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-4">比肩頂尖模型成效</h3>
+                    <p class="text-[15px] text-slate-600 leading-relaxed">
+                        自研檢測管線在多維度評測中展現高判斷穩定度，整體準確度與效果等於甚至優於商用大型模型，同時顯著收斂不必要的誤報。
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 系統比對管線架構 -->
+        <section class="mb-32">
+            <div class="flex items-center gap-6 mb-16">
+                <h2 class="text-3xl font-black text-slate-800 shrink-0">衝突檢測與驗證流程</h2>
+                <div class="h-px bg-slate-200 flex-grow"></div>
+            </div>
+
+            <div class="grid md:grid-cols-4 gap-6">
+                <div class="bg-white border border-slate-100 rounded-3xl p-8 shadow-sm flex flex-col">
+                    <div class="w-12 h-12 bg-rose-600 text-white rounded-xl flex items-center justify-center mb-6 font-bold font-mono">01</div>
+                    <h4 class="font-bold text-slate-800 mb-3">多模態拆解清洗</h4>
+                    <p class="text-xs text-slate-500 leading-relaxed">
+                        解析多格式文檔中的文字與圖像資訊，濾除排版雜訊並建立跨模態結構化單元。
+                    </p>
+                </div>
+
+                <div class="bg-white border border-slate-100 rounded-3xl p-8 shadow-sm flex flex-col">
+                    <div class="w-12 h-12 bg-slate-700 text-white rounded-xl flex items-center justify-center mb-6 font-bold font-mono">02</div>
+                    <h4 class="font-bold text-slate-800 mb-3">跨版本對齊匹配</h4>
+                    <p class="text-xs text-slate-500 leading-relaxed">
+                        比對跨版本中相對應的章節條款與關聯圖表，確保對等內容建立精準對照。
+                    </p>
+                </div>
+
+                <div class="bg-white border border-slate-100 rounded-3xl p-8 shadow-sm flex flex-col">
+                    <div class="w-12 h-12 bg-amber-500 text-white rounded-xl flex items-center justify-center mb-6 font-bold font-mono">03</div>
+                    <h4 class="font-bold text-slate-800 mb-3">圖文邏輯仲裁</h4>
+                    <p class="text-xs text-slate-500 leading-relaxed">
+                        檢驗條款陳述、數值與圖像標示間的一致性，有效排除模型易誤判的假性衝突。
+                    </p>
+                </div>
+
+                <div class="bg-white border border-slate-100 rounded-3xl p-8 shadow-sm flex flex-col">
+                    <div class="w-12 h-12 bg-emerald-600 text-white rounded-xl flex items-center justify-center mb-6 font-bold font-mono">04</div>
+                    <h4 class="font-bold text-slate-800 mb-3">差異報表匯出</h4>
+                    <p class="text-xs text-slate-500 leading-relaxed">
+                        將一致項、增刪變更及實質衝突條目進行清晰分類，產出直觀報表輔助審閱決策。
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 效能成果 -->
+        <section class="mb-24 p-10 bg-slate-50 rounded-[2.5rem] border border-slate-100 text-left">
+            <h3 class="text-xl font-bold text-slate-800 mb-8 flex items-center gap-3">
+                <i class="fas fa-chart-pie text-rose-600"></i> 綜合檢測成效表現
+            </h3>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center mb-6">
+                <div class="p-4 bg-white rounded-2xl border border-slate-100 shadow-sm">
+                    <span class="text-xs text-slate-400 font-mono block mb-1">衝突檢出表現</span>
+                    <span class="text-2xl font-black text-rose-600">高靈敏識別</span>
+                </div>
+                <div class="p-4 bg-white rounded-2xl border border-slate-100 shadow-sm">
+                    <span class="text-xs text-slate-400 font-mono block mb-1">綜合指標 F1</span>
+                    <span class="text-2xl font-black text-rose-600">等於或優於大模型</span>
+                </div>
+                <div class="p-4 bg-white rounded-2xl border border-slate-100 shadow-sm">
+                    <span class="text-xs text-slate-400 font-mono block mb-1">誤報抑制</span>
+                    <span class="text-2xl font-black text-slate-700">顯著收斂</span>
+                </div>
+                <div class="p-4 bg-white rounded-2xl border border-slate-100 shadow-sm">
+                    <span class="text-xs text-slate-400 font-mono block mb-1">支援模態</span>
+                    <span class="text-2xl font-black text-emerald-600">圖文多模態</span>
+                </div>
+            </div>
+
+            <p class="text-xs text-slate-500 leading-relaxed">
+                * 在實際跨版本多模態驗證中，系統展現了高度一致的判斷穩定度，克服了傳統大模型容易產生圖文理解幻覺的痛點，達成商用落地水準。
+            </p>
+        </section>
+
+        <section class="mb-24 text-center">
+            <div class="inline-flex gap-4">
+                <a href="../index.html#projects" class="bg-slate-800 text-white px-8 py-4 rounded-2xl font-bold hover:bg-slate-700 transition flex items-center gap-3">
+                    <i class="fas fa-arrow-left"></i> 返回專案總覽
+                </a>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>

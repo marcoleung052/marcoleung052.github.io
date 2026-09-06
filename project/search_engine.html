@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>技術手冊語意搜尋引擎 | Kontex 實習專案 | 梁釗豪 Chiu-Ho Leung</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="../nav.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Noto+Sans+TC:wght@400;700&display=swap');
+        body { font-family: 'Inter', 'Noto Sans TC', sans-serif; background-color: #ffffff; scroll-behavior: smooth; }
+        
+        .tech-tag { background: #f0f9ff; border: 1px solid #e0f2fe; padding: 4px 14px; border-radius: 10px; font-size: 13px; font-weight: 600; color: #0369a1; }
+        .section-card { border-radius: 32px; background: #ffffff; border: 1px solid #f1f5f9; padding: 48px; margin-bottom: 40px; }
+    </style>
+</head>
+<body class="text-slate-900 leading-relaxed text-left">
+
+    <main class="max-w-5xl mx-auto px-6 py-24">
+        
+        <header class="mb-12">
+            <div class="flex items-center gap-3 mb-6">
+                <span class="bg-sky-700 text-white text-[10px] px-3 py-1 rounded-full font-black tracking-widest uppercase">Internship Project @ Kontex</span>
+                <span class="text-slate-400 text-sm font-mono">2026.07-2026.09</span>
+            </div>
+            <h1 class="text-4xl md:text-5xl font-black text-slate-800 tracking-tight mb-8">技術手冊語意搜尋引擎<br><span class="text-sky-700 italic">User Manual Semantic Search Engine</span></h1>
+            
+            <div class="flex flex-wrap gap-2 mb-10">
+                <span class="tech-tag">Vector Search</span>
+                <span class="tech-tag">Hybrid Search</span>
+                <span class="tech-tag">Embedding Model</span>
+                <span class="tech-tag">Multimodal Retrieval</span>
+                <span class="tech-tag">Client-Side Edge Inference</span>
+            </div>
+        </header>
+
+        <section class="mb-24">
+            <div class="relative group">
+                <div class="absolute -inset-4 bg-gradient-to-r from-sky-500 to-cyan-600 rounded-[3rem] blur opacity-10 group-hover:opacity-20 transition duration-1000"></div>
+                <div class="relative bg-slate-900 rounded-[2.5rem] p-2 shadow-2xl overflow-hidden border-4 border-slate-800">
+                    <div class="aspect-video bg-slate-800 relative overflow-hidden flex items-center justify-center">
+                        <img src="../images/pro-kontex.jpg" alt="技術手冊語意搜尋引擎展示" class="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition">
+                    </div>
+                </div>
+                <div class="mt-6 flex justify-between items-center px-4">
+                    <div class="flex items-center gap-2">
+                        <span class="relative flex h-3 w-3">
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-3 w-3 bg-sky-500"></span>
+                        </span>
+                        <span class="text-xs font-bold text-slate-400 uppercase tracking-widest">Enterprise Semantic Search Architecture</span>
+                    </div>
+                    <p class="text-xs text-slate-400 italic">展示內容：高精準度向量匹配與多模態技術手冊檢索</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 核心亮點 1: 語意比對與多模態排序 -->
+        <section class="grid md:grid-cols-2 gap-8 mb-12">
+            <div class="bg-slate-50 p-8 md:p-12 rounded-[2.5rem] border border-slate-100 transition-all hover:bg-white hover:shadow-xl hover:shadow-sky-100">
+                <h3 class="text-xl font-bold text-slate-800 mb-5 flex items-center gap-3">
+                    <i class="fas fa-search text-sky-600"></i> 語意向量比對架構
+                </h3>
+                <p class="text-[15px] text-slate-600 leading-relaxed">
+                    打破傳統關鍵字搜尋易受精確字詞限制的痛點，將工程技術查詢與專業手冊轉化為高維度語意特徵[cite: 4]，使工程人員與終端使用者能迅速對齊規格解答[cite: 4]。
+                </p>
+            </div>
+            <div class="bg-sky-50/40 p-8 md:p-12 rounded-[2.5rem] border border-sky-100 transition-all hover:bg-white hover:shadow-xl hover:shadow-sky-100">
+                <h3 class="text-xl font-bold text-slate-800 mb-5 flex items-center gap-3 text-left">
+                    <i class="fas fa-layer-group text-sky-600"></i> 多模態與混合排序
+                </h3>
+                <p class="text-[15px] text-slate-600 leading-relaxed text-left">
+                    結合圖文多模態特徵轉換[cite: 4]，綜合文字關鍵特徵與深層語意維度進行全域排序調整，大幅降低查無解答的機率並提升重點段落的命中表現[cite: 4]。
+                </p>
+            </div>
+        </section>
+
+        <!-- 核心亮點 2: 痛點突破與端側部署 -->
+        <section class="grid md:grid-cols-2 gap-8 mb-20">
+            <div class="bg-slate-50 p-8 md:p-12 rounded-[2.5rem] border border-slate-100 transition-all hover:bg-white hover:shadow-xl hover:shadow-sky-100">
+                <h3 class="text-xl font-bold text-slate-800 mb-5 flex items-center gap-3">
+                    <i class="fas fa-crosshairs text-sky-600"></i> 突破專業檢索痛點
+                </h3>
+                <p class="text-[15px] text-slate-600 leading-relaxed">
+                    消弭「科研問法」與「工程規格」間的語意鴻溝，徹底解決傳統搜尋因字詞微差導致無結果或混雜大量雜訊的困境[cite: 4]。透過高維語意對齊規格，精準命中解答，顯著釋放人工諮詢的支援成本[cite: 4]。
+                </p>
+            </div>
+            <div class="bg-sky-50/40 p-8 md:p-12 rounded-[2.5rem] border border-sky-100 transition-all hover:bg-white hover:shadow-xl hover:shadow-sky-100">
+                <h3 class="text-xl font-bold text-slate-800 mb-5 flex items-center gap-3 text-left">
+                    <i class="fas fa-microchip text-sky-600"></i> 端側輕量化即時部署
+                </h3>
+                <p class="text-[15px] text-slate-600 leading-relaxed text-left">
+                    摒除對昂貴雲端伺服器的重度依賴，將微型化模型與向量資料庫直接內嵌於使用者端運作[cite: 4]。背景僅需 2~3 秒預載即可達到毫秒級即時響應[cite: 4]，同時兼顧資料隱私保護與零伺服器維護開銷。
+                </p>
+            </div>
+        </section>
+
+        <section class="mb-32">
+            <div class="flex items-center gap-6 mb-16">
+                <h2 class="text-3xl font-black text-slate-800 shrink-0">系統設計與評估流程</h2>
+                <div class="h-px bg-slate-200 flex-grow"></div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white border border-slate-100 rounded-[2.5rem] p-10 shadow-sm hover:shadow-xl transition-all flex flex-col group">
+                    <div class="w-14 h-14 bg-orange-500 text-white rounded-2xl flex items-center justify-center mb-8 shadow-lg shadow-orange-200 group-hover:-translate-y-1 transition-transform">
+                        <i class="fas fa-file-alt text-xl"></i>
+                    </div>
+                    <h4 class="font-bold text-slate-800 text-xl mb-4 text-left">手冊特徵結構化</h4>
+                    <div class="flex-grow">
+                        <p class="text-[14px] text-slate-500 leading-relaxed mb-6 text-left">
+                            針對技術手冊建立章節分塊機制，並將介面圖與接線圖轉換為高維特徵標註，完善非結構化技術文檔的檢索完整性[cite: 4]。
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-white border border-slate-100 rounded-[2.5rem] p-10 shadow-sm hover:shadow-xl transition-all flex flex-col group">
+                    <div class="w-14 h-14 bg-sky-500 text-white rounded-2xl flex items-center justify-center mb-8 shadow-lg shadow-sky-200 group-hover:-translate-y-1 transition-transform">
+                        <i class="fas fa-sliders-h text-xl"></i>
+                    </div>
+                    <h4 class="font-bold text-slate-800 text-xl mb-4 text-left">模型微調與選型</h4>
+                    <div class="flex-grow">
+                        <p class="text-[14px] text-slate-500 leading-relaxed mb-6 text-left">
+                            評估多組輕量化 Embedding 模型[cite: 4]，導入專業領域詞彙進行微調優化[cite: 4]，使模型適應科研與工程術語的細緻語意差異[cite: 4]。
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-white border border-slate-100 rounded-[2.5rem] p-10 shadow-sm hover:shadow-xl transition-all flex flex-col group">
+                    <div class="w-14 h-14 bg-teal-600 text-white rounded-2xl flex items-center justify-center mb-8 shadow-lg shadow-teal-200 group-hover:-translate-y-1 transition-transform">
+                        <i class="fas fa-project-diagram text-xl"></i>
+                    </div>
+                    <h4 class="font-bold text-slate-800 text-xl mb-4 text-left">多源特徵動態聚合</h4>
+                    <div class="flex-grow">
+                        <p class="text-[14px] text-slate-500 leading-relaxed mb-6 text-left">
+                            整合字面索引與語意向量的多維評分機制，消除重複碎片資訊並聚合上下文關聯，實現即時且精確的搜尋定位。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-24 p-10 bg-slate-50 rounded-[2.5rem] border border-slate-100 text-left">
+            <h3 class="text-xl font-bold text-slate-800 mb-8 flex items-center gap-3">
+                <i class="fas fa-chart-pie text-sky-600"></i> 效能升級成果指標
+            </h3>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                <div class="p-4 bg-white rounded-2xl border border-slate-100 shadow-sm">
+                    <span class="text-xs text-slate-400 font-mono block mb-1">MRR Score</span>
+                    <span class="text-2xl font-black text-sky-700">0.200 → 0.787</span>
+                </div>
+                <div class="p-4 bg-white rounded-2xl border border-slate-100 shadow-sm">
+                    <span class="text-xs text-slate-400 font-mono block mb-1">Hit@5 Accuracy</span>
+                    <span class="text-2xl font-black text-sky-700">28.0% → 86.2%</span>
+                </div>
+                <div class="p-4 bg-white rounded-2xl border border-slate-100 shadow-sm">
+                    <span class="text-xs text-slate-400 font-mono block mb-1">Zero Hit Rate</span>
+                    <span class="text-2xl font-black text-teal-600">50.0% → 10.6%</span>
+                </div>
+                <div class="p-4 bg-white rounded-2xl border border-slate-100 shadow-sm">
+                    <span class="text-xs text-slate-400 font-mono block mb-1">NDCG@5</span>
+                    <span class="text-2xl font-black text-slate-800">0.203 → 0.776</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-24 text-center">
+            <div class="inline-flex gap-4">
+                <a href="../index.html#projects" class="bg-slate-800 text-white px-8 py-4 rounded-2xl font-bold hover:bg-slate-700 transition flex items-center gap-3">
+                    <i class="fas fa-arrow-left"></i> 返回專案總覽
+                </a>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>

@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function() {
             align-items: center;
             height: 100%;
         }
-        /* 重要：防止導航欄遮住區塊標題 */
+        /* 防止導航欄遮住區塊標題 */
         section, div[id] { scroll-margin-top: 100px; }
     </style>`;
     document.head.insertAdjacentHTML('beforeend', styleHTML);
@@ -51,13 +51,41 @@ document.addEventListener("DOMContentLoaded", function() {
                     <span class="hover:text-blue-600 transition flex items-center">
                         專案 <i class="fas fa-chevron-down ml-1 text-[10px]"></i>
                     </span>
-                    <div class="nav-dropdown-menu hidden absolute left-0 top-full bg-white border border-gray-100 shadow-xl rounded-xl py-2 w-48 mt-0 z-[10000]"><a href="../project/nursing.html" class="block px-4 py-2 hover:bg-blue-50 text-gray-700 transition">護理紀錄補全系統</a>
-                        <a href="../project/chatbot.html" class="block px-4 py-2 hover:bg-blue-50 text-gray-700 transition">多模態 AI 機器人</a>
-                        <a href="../project/ticketing.html" class="block px-4 py-2 hover:bg-blue-50 text-gray-700 transition">威秀訂票系統</a>
-                        <a href="../project/retrieval.html" class="block px-4 py-2 hover:bg-blue-50 text-gray-700 transition">服飾以圖搜圖</a>
-                        <a href="../project/weather.html" class="block px-4 py-2 hover:bg-blue-50 text-gray-700 transition">澳洲降雨預測系統</a>
-                        <a href="../project/ledger.html" class="block px-4 py-2 hover:bg-blue-50 text-gray-700 transition">分散式共享帳本</a>
-                        <a href="../project/mpi.html" class="block px-4 py-2 hover:bg-blue-50 text-gray-700 transition">平行化巨量向量檢索</a>
+                    <div class="nav-dropdown-menu hidden absolute left-0 top-full bg-white border border-gray-100 shadow-2xl rounded-2xl py-3 w-64 mt-0 z-[10000] text-xs">
+                        
+                        <!-- 類別 1：多模態與智慧互動 -->
+                        <div class="px-4 pt-1 pb-1 font-bold text-[10px] text-rose-600 uppercase tracking-wider">多模態與智慧互動</div>
+                        <a href="../project/doc_conflict.html" class="block px-4 py-1.5 hover:bg-blue-50 text-slate-700 hover:text-blue-600 transition">通用多模態文件衝突檢測</a>
+                        <a href="../project/search_engine.html" class="block px-4 py-1.5 hover:bg-blue-50 text-slate-700 hover:text-blue-600 transition">技術手冊語意搜尋引擎</a>
+                        <a href="../project/neural_system.html" class="block px-4 py-1.5 hover:bg-blue-50 text-slate-700 hover:text-blue-600 transition">神經訊號標籤與閉迴路操控</a>
+                        <a href="../project/chatbot.html" class="block px-4 py-1.5 hover:bg-blue-50 text-slate-700 hover:text-blue-600 transition">多模態 AI 機器人</a>
+
+                        <div class="my-2 border-t border-slate-100"></div>
+
+                        <!-- 類別 2：自然語言處理 (NLP) -->
+                        <div class="px-4 pt-1 pb-1 font-bold text-[10px] text-blue-600 uppercase tracking-wider">自然語言處理 (NLP)</div>
+                        <a href="../project/nursing.html" class="block px-4 py-1.5 hover:bg-blue-50 text-slate-700 hover:text-blue-600 transition">護理紀錄補全系統</a>
+                        <a href="../project/ticketing.html" class="block px-4 py-1.5 hover:bg-blue-50 text-slate-700 hover:text-blue-600 transition">威秀訂票系統</a>
+
+                        <div class="my-2 border-t border-slate-100"></div>
+
+                        <!-- 類別 3：數據工程與自動化管線 -->
+                        <div class="px-4 pt-1 pb-1 font-bold text-[10px] text-emerald-600 uppercase tracking-wider">數據工程與自動化管線</div>
+                        <a href="../project/doc_organization.html" class="block px-4 py-1.5 hover:bg-blue-50 text-slate-700 hover:text-blue-600 transition">企業雲端知識庫整理管線</a>
+                        <a href="../project/weather.html" class="block px-4 py-1.5 hover:bg-blue-50 text-slate-700 hover:text-blue-600 transition">澳洲降雨預測系統</a>
+
+                        <div class="my-2 border-t border-slate-100"></div>
+
+                        <!-- 類別 4：電腦視覺 (CV) -->
+                        <div class="px-4 pt-1 pb-1 font-bold text-[10px] text-orange-600 uppercase tracking-wider">電腦視覺 (CV)</div>
+                        <a href="../project/retrieval.html" class="block px-4 py-1.5 hover:bg-blue-50 text-slate-700 hover:text-blue-600 transition">服飾以圖搜圖</a>
+
+                        <div class="my-2 border-t border-slate-100"></div>
+
+                        <!-- 類別 5：系統與分散式運算 -->
+                        <div class="px-4 pt-1 pb-1 font-bold text-[10px] text-slate-500 uppercase tracking-wider">系統與分散式運算</div>
+                        <a href="../project/mpi.html" class="block px-4 py-1.5 hover:bg-blue-50 text-slate-700 hover:text-blue-600 transition">平行化巨量向量檢索</a>
+                        <a href="../project/ledger.html" class="block px-4 py-1.5 hover:bg-blue-50 text-slate-700 hover:text-blue-600 transition">分散式共享帳本</a>
                     </div>
                 </div>
 
@@ -65,7 +93,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     <span class="hover:text-blue-600 transition flex items-center">
                         經歷 <i class="fas fa-chevron-down ml-1 text-[10px]"></i>
                     </span>
-                    <div class="nav-dropdown-menu hidden absolute left-0 top-full bg-white border border-gray-100 shadow-xl rounded-xl py-2 w-40 mt-0 z-[10000]">
+                    <div class="nav-dropdown-menu hidden absolute left-0 top-full bg-white border border-gray-100 shadow-xl rounded-xl py-2 w-44 mt-0 z-[10000]">
                         <a href="../experience.html#cadre" class="block px-4 py-2 hover:bg-blue-50 text-gray-700 transition">班級幹部</a>
                         <a href="../experience.html#fire-club" class="block px-4 py-2 hover:bg-blue-50 text-gray-700 transition">社團活動</a>
                         <a href="../experience.html#work" class="block px-4 py-2 hover:bg-blue-50 text-gray-700 transition">工作經驗</a>

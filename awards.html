@@ -67,6 +67,96 @@
                 <div class="h-px bg-slate-100 flex-grow"></div>
             </div>
 
+            <div class="award-item p-6 rounded-2xl flex flex-col md:flex-row justify-between items-start md:items-center text-slate-700 border border-slate-200 bg-slate-50/70">
+                <div class="flex items-center gap-6">
+                    <div class="text-2xl text-slate-700"><i class="fas fa-graduation-cap"></i></div>
+                    <div>
+                        <div class="flex items-center gap-3">
+                            <h3 class="text-lg font-bold text-slate-800">資訊工程學系 輔系</h3>
+                            <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-slate-200 text-slate-800">已完成修讀</span>
+                        </div>
+                        <p class="text-slate-500 text-sm mt-0.5">扎實建立計算機結構、演算法與大型軟體架構實作能力。</p>
+                    </div>
+                </div>
+                <span class="text-xs font-mono font-bold text-slate-500 mt-2 md:mt-0">COMPLETED</span>
+            </div>
+
+            <!-- 學分學程與微學程：懸停展開式卡片 -->
+            <div class="award-item expandable-card p-6 rounded-2xl border border-indigo-100 flex flex-col text-indigo-600 transition-all hover:shadow-lg cursor-pointer bg-slate-50/50">
+                <!-- 預設顯示頂部（未展開時） -->
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-center w-full mb-4">
+                    <div class="flex items-center gap-6">
+                        <div class="text-2xl text-indigo-600"><i class="fas fa-layer-group"></i></div>
+                        <div>
+                            <div class="flex items-center gap-3">
+                                <h3 class="text-lg font-bold text-slate-800">跨領域專業學程與微學程修讀</h3>
+                                <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-indigo-100 text-indigo-700">即將完成修讀</span>
+                            </div>
+                            <p class="text-slate-500 text-sm mt-0.5">多維度深化 AI 核心技術應用與跨領域工程協作實務（共 5 項）</p>
+                        </div>
+                    </div>
+                    <span class="text-xs font-mono font-bold text-indigo-600/70 mt-2 md:mt-0">IN PROGRESS</span>
+                </div>
+            
+                <!-- 懸停後展開的內容 -->
+                <div class="expand-content pt-4 border-t border-indigo-100 space-y-3">
+                    <!-- 學分學程 1 -->
+                    <div class="p-3.5 rounded-xl bg-white border border-slate-100 shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-1">
+                        <div>
+                            <span class="text-sm font-bold text-slate-800 flex items-center gap-2">
+                                <i class="fas fa-eye text-sky-500"></i> 人工智慧視覺技術學分學程
+                            </span>
+                            <p class="text-xs text-slate-500 mt-0.5">深入電腦視覺與空間姿態估計模型研發，奠定多模態特徵比對的底層演算法基礎。</p>
+                        </div>
+                        <span class="text-[11px] font-mono text-slate-400 font-semibold self-start md:self-center shrink-0">學分學程</span>
+                    </div>
+            
+                    <!-- 學分學程 2 -->
+                    <div class="p-3.5 rounded-xl bg-white border border-slate-100 shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-1">
+                        <div>
+                            <span class="text-sm font-bold text-slate-800 flex items-center gap-2">
+                                <i class="fas fa-language text-indigo-500"></i> 人工智慧自然語言技術學分學程
+                            </span>
+                            <p class="text-xs text-slate-500 mt-0.5">專注大型語言模型微調、語意向量檢索與推論邏輯檢驗，直接支撐衝突檢測與 RAG 系統設計。</p>
+                        </div>
+                        <span class="text-[11px] font-mono text-slate-400 font-semibold self-start md:self-center shrink-0">學分學程</span>
+                    </div>
+            
+                    <!-- 學分學程 3 -->
+                    <div class="p-3.5 rounded-xl bg-white border border-slate-100 shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-1">
+                        <div>
+                            <span class="text-sm font-bold text-slate-800 flex items-center gap-2">
+                                <i class="fas fa-brain text-blue-500"></i> 人工智慧探索應用學分學程
+                            </span>
+                            <p class="text-xs text-slate-500 mt-0.5">貫通機器學習工程架構與實務數據挖掘，培養端到端快速驗證與技術落地的能力。</p>
+                        </div>
+                        <span class="text-[11px] font-mono text-slate-400 font-semibold self-start md:self-center shrink-0">學分學程</span>
+                    </div>
+            
+                    <!-- 微學程 1 -->
+                    <div class="p-3.5 rounded-xl bg-white border border-slate-100 shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-1">
+                        <div>
+                            <span class="text-sm font-bold text-slate-800 flex items-center gap-2">
+                                <i class="fas fa-heartbeat text-rose-500"></i> 生醫影像暨人工智慧微學程
+                            </span>
+                            <p class="text-xs text-slate-500 mt-0.5">聚焦醫學訊號與臨床影像分析，強化對生理波形解碼與神經驅動系統的跨領域敏銳度。</p>
+                        </div>
+                        <span class="text-[11px] font-mono text-slate-400 font-semibold self-start md:self-center shrink-0">微學程</span>
+                    </div>
+            
+                    <!-- 微學程 2 -->
+                    <div class="p-3.5 rounded-xl bg-white border border-slate-100 shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-1">
+                        <div>
+                            <span class="text-sm font-bold text-slate-800 flex items-center gap-2">
+                                <i class="fas fa-users-cog text-amber-500"></i> 領導統御與團隊溝通微學程
+                            </span>
+                            <p class="text-xs text-slate-500 mt-0.5">提煉跨部門溝通策略與專案推動心法，確保技術成果能精準轉化並賦能團隊開發協作。</p>
+                        </div>
+                        <span class="text-[11px] font-mono text-slate-400 font-semibold self-start md:self-center shrink-0">微學程</span>
+                    </div>
+                </div>
+            </div>
+
             <!-- 2026 全國健康科技創新創意競賽 (紫羅蘭科技色系) -->
                 <div class="award-item expandable-card p-6 rounded-2xl border border-violet-100 flex flex-col text-violet-600 transition-all hover:shadow-lg cursor-pointer">
                     <div class="flex flex-col md:flex-row justify-between items-start md:items-center w-full mb-4">

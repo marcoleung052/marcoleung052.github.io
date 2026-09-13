@@ -11,7 +11,7 @@
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Noto+Sans+TC:wght@400;700&display=swap');
         body { font-family: 'Inter', 'Noto Sans TC', sans-serif; background-color: #ffffff; scroll-behavior: smooth; }
         
-        /* 重要：修正導航偏移，避免標題被 fixed nav 遮住 */
+        /* 修正導航偏移，避免標題被 fixed nav 遮住 */
         div[id], section[id] { scroll-margin-top: 100px; }
         
         .category-header { position: sticky; top: 70px; z-index: 40; background: rgba(255,255,255,0.8); backdrop-filter: blur(10px); }
@@ -31,6 +31,7 @@
             </div>
         </header>
 
+        <!-- 班級幹部 -->
         <div id="cadre" class="mb-32">
             <div class="category-header py-6 border-b border-slate-100 mb-16">
                 <h2 class="text-blue-600 text-base font-black uppercase tracking-[0.4em]">Class cadres / 班級幹部</h2>
@@ -40,8 +41,8 @@
                 <section class="exp-card flex flex-col md:flex-row gap-12 items-center">
                     <div class="w-full md:w-1/2 order-2 md:order-1 text-left">
                         <span class="text-blue-600 font-mono text-sm font-bold">#ITEM_01</span>
-                        <h3 class="text-2xl font-bold text-slate-800 mb-6 mt-2 leading-tight text-left">113–114 學年度<br>人工智慧學系｜學藝股長</h3>
-                        <p class="text-slate-600 text-base leading-loose mb-6 text-left">
+                        <h3 class="text-2xl font-bold text-slate-800 mb-6 mt-2 leading-tight">113–114 學年度<br>人工智慧學系｜學藝股長</h3>
+                        <p class="text-slate-600 text-base leading-loose mb-6">
                             作為教授與同學間的正式溝通橋樑，我負責統籌班級學術事務與實驗資料分發。在 AI 學系龐雜的課業壓力下，我致力於建立透明的資訊流，確保每位同學都能同步獲取最新的技術文件與開發資源。
                         </p>
                         <div class="flex gap-2">
@@ -56,6 +57,7 @@
             </div>
         </div>
 
+        <!-- 社團與活動 -->
         <div id="fire-club" class="mb-32">
             <div class="category-header py-6 border-b border-slate-100 mb-16">
                 <h2 class="text-purple-600 text-base font-black uppercase tracking-[0.4em]">Societies & Activities / 社團與活動</h2>
@@ -68,11 +70,11 @@
                     </div>
                     <div class="w-full md:w-1/2 text-left">
                         <span class="text-purple-600 font-mono text-sm font-bold">#ITEM_02</span>
-                        <h3 class="text-2xl font-bold text-slate-800 mb-6 mt-2 leading-tight text-left">113 學年度<br>光火藝術社｜副社長兼總務長</h3>
-                        <p class="text-slate-600 text-base leading-loose mb-6 text-left">
+                        <h3 class="text-2xl font-bold text-slate-800 mb-6 mt-2 leading-tight">113 學年度<br>光火藝術社｜副社長兼總務長</h3>
+                        <p class="text-slate-600 text-base leading-loose mb-6">
                             在火舞表演的高壓現場負責風險評估與安全控管。作為總務長，我優化了社團的報帳流程與物資調度，協助團隊在多場校外大型演出中穩定運作，展現了卓越的行政協調與領導力。
                         </p>
-                        <div class="flex gap-2 text-left">
+                        <div class="flex gap-2">
                             <span class="bg-purple-50 text-purple-700 px-3 py-1 rounded-lg text-xs font-bold italic">#行政領導</span>
                             <span class="bg-purple-50 text-purple-700 px-3 py-1 rounded-lg text-xs font-bold italic">#風險控制</span>
                         </div>
@@ -82,8 +84,8 @@
                 <section id="astro-club" class="exp-card flex flex-col md:flex-row gap-12 items-center">
                     <div class="w-full md:w-1/2 order-2 md:order-1 text-left">
                         <span class="text-purple-600 font-mono text-sm font-bold">#ITEM_03</span>
-                        <h3 class="text-2xl font-bold text-slate-800 mb-6 mt-2 leading-tight text-left">113 學年度<br>天文社｜副社長兼儀器長</h3>
-                        <p class="text-slate-600 text-base leading-loose mb-6 text-left">
+                        <h3 class="text-2xl font-bold text-slate-800 mb-6 mt-2 leading-tight">113 學年度<br>天文社｜副社長兼儀器長</h3>
+                        <p class="text-slate-600 text-base leading-loose mb-6">
                             管理精密光學設備，負責日常校準與校內觀測活動的教學。這份經歷培養了我對儀器運作的高度敏銳度，並能將深奧的天文物理概念轉化為對初學者極具吸引力的實作課程。
                         </p>
                         <div class="flex gap-2">
@@ -102,8 +104,8 @@
                     </div>
                     <div class="w-full md:w-1/2 text-left">
                         <span class="text-purple-600 font-mono text-sm font-bold">#ITEM_04</span>
-                        <h3 class="text-2xl font-bold text-slate-800 mb-6 mt-2 leading-tight text-left">113 學年度<br>桌遊社｜活動長</h3>
-                        <p class="text-slate-600 text-base leading-loose mb-6 text-left">
+                        <h3 class="text-2xl font-bold text-slate-800 mb-6 mt-2 leading-tight">113 學年度<br>桌遊社｜活動長</h3>
+                        <p class="text-slate-600 text-base leading-loose mb-6">
                             負責全校性活動策劃，設計互動機制以提升新進社員的參與感。透過對活動流程的精確調度，成功建立了一個兼具趣味性與邏輯挑戰的社團氛圍。
                         </p>
                         <div class="flex gap-2">
@@ -113,11 +115,11 @@
                     </div>
                 </section>
 
-                <section id="camp" class="exp-card flex flex-col md:flex-row gap-12 items-center text-left">
+                <section id="camp" class="exp-card flex flex-col md:flex-row gap-12 items-center">
                     <div class="w-full md:w-1/2 order-2 md:order-1 text-left">
                         <span class="text-purple-600 font-mono text-sm font-bold">#ITEM_05</span>
-                        <h3 class="text-2xl font-bold text-slate-800 mb-6 mt-2 leading-tight text-left text-left">2024 清華大學<br>星空之子天文營｜教學股</h3>
-                        <p class="text-slate-600 text-base leading-loose mb-6 text-left text-left">
+                        <h3 class="text-2xl font-bold text-slate-800 mb-6 mt-2 leading-tight">2024 清華大學<br>星空之子天文營｜教學股</h3>
+                        <p class="text-slate-600 text-base leading-loose mb-6">
                             在全國性大型營隊中擔任教學重任。我負責編寫與講授天文物理課程，練習如何在極短時間內將複雜知識傳遞給不同背景的學員，深化了跨領域溝通的軟實力。
                         </p>
                         <div class="flex gap-2">
@@ -132,20 +134,43 @@
             </div>
         </div>
 
+        <!-- 工作經驗 -->
         <div id="work" class="mb-32">
             <div class="category-header py-6 border-b border-slate-100 mb-16">
                 <h2 class="text-orange-600 text-base font-black uppercase tracking-[0.4em]">Work Experience / 工作經驗</h2>
             </div>
             
             <div class="space-y-32">
-                <section id="tkd" class="exp-card flex flex-col md:flex-row gap-12 items-center text-left">
+                <!-- 實習：Kontex Neuroscience -->
+                <section id="kontex" class="exp-card flex flex-col md:flex-row gap-12 items-center text-left">
                     <div class="w-full md:w-1/2 photo-box rounded-[2.5rem] overflow-hidden shadow-xl border-4 border-white aspect-[4/3] transition duration-500 bg-slate-50">
-                        <img src="images/exp-tkd.jpg" alt="跆拳道" class="w-full h-full object-cover">
+                        <img src="images/exp-kontex.jpg" alt="Kontex 實習" class="w-full h-full object-cover">
                     </div>
                     <div class="w-full md:w-1/2 text-left">
                         <span class="text-orange-600 font-mono text-sm font-bold">#ITEM_06</span>
-                        <h3 class="text-2xl font-bold text-slate-800 mb-6 mt-2 leading-tight text-left">香港駿龍跆拳道會｜副教練</h3>
-                        <p class="text-slate-600 text-base leading-loose mb-6 text-left">
+                        <h3 class="text-2xl font-bold text-slate-800 mb-4 mt-2 leading-tight">
+                            Kontex Neuroscience（2026 暑期實習）<br>
+                            <span class="text-lg text-slate-600 font-semibold">AI 軟體工程實習生</span>
+                        </h3>
+                        <p class="text-slate-600 text-[15px] leading-relaxed mb-4">
+                            在實習期間全勤並高規格完成指派任務。針對客戶端查詢痛點，主導研發<strong>技術手冊語意搜尋引擎</strong>，導入端側輕量化模型實現毫秒級規格精準檢索，大幅改善使用者查閱手冊的體驗；在內部協作方面，搭建<strong>企業雲端知識庫整理管線</strong>，以定時自動化 ETL 克服多種舊版與複合文件格式的檢索盲區。此外，打造<strong>通用多模態文件衝突檢測系統</strong>，有效抑制商用模型幻覺；進一步將公司產品與 AI 深度結合，完成<strong>神經訊號標籤與閉迴路操控系統</strong>，並封裝為模組化 AI Coding Skills，開創全新產品方向。
+                        </p>
+
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-orange-50 text-orange-700 px-3 py-1 rounded-lg text-xs font-bold italic">#語意搜尋引擎</span>
+                            <span class="bg-orange-50 text-orange-700 px-3 py-1 rounded-lg text-xs font-bold italic">#多模態衝突檢測</span>
+                            <span class="bg-orange-50 text-orange-700 px-3 py-1 rounded-lg text-xs font-bold italic">#神經訊號閉迴路</span>
+                            <span class="bg-orange-50 text-orange-700 px-3 py-1 rounded-lg text-xs font-bold italic">#自動化知識庫</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 跆拳道副教練 -->
+                <section id="tkd" class="exp-card flex flex-col md:flex-row gap-12 items-center text-left">
+                    <div class="w-full md:w-1/2 order-2 md:order-1 text-left">
+                        <span class="text-orange-600 font-mono text-sm font-bold">#ITEM_07</span>
+                        <h3 class="text-2xl font-bold text-slate-800 mb-6 mt-2 leading-tight">香港駿龍跆拳道會<br>副教練</h3>
+                        <p class="text-slate-600 text-base leading-loose mb-6">
                             指導學生動作並提供即時糾錯。教練工作讓我學會如何精準拆解複雜的技術細節，並運用個別化回饋幫助學生快速進步，培養了細膩的觀察力。
                         </p>
                         <div class="flex gap-2">
@@ -153,22 +178,26 @@
                             <span class="bg-orange-50 text-orange-700 px-3 py-1 rounded-lg text-xs font-bold italic">#技術指導</span>
                         </div>
                     </div>
+                    <div class="w-full md:w-1/2 order-1 md:order-2 photo-box rounded-[2.5rem] overflow-hidden shadow-xl border-4 border-white aspect-[4/3] transition duration-500 bg-slate-50">
+                        <img src="images/exp-tkd.jpg" alt="跆拳道" class="w-full h-full object-cover">
+                    </div>
                 </section>
 
+                <!-- 跳水副教練 -->
                 <section id="diving" class="exp-card flex flex-col md:flex-row gap-12 items-center text-left">
-                    <div class="w-full md:w-1/2 order-2 md:order-1 text-left text-left">
-                        <span class="text-orange-600 font-mono text-sm font-bold">#ITEM_07</span>
-                        <h3 class="text-2xl font-bold text-slate-800 mb-6 mt-2 leading-tight text-left text-left">香港城東體育會｜跳水副教練</h3>
-                        <p class="text-slate-600 text-base leading-loose mb-6 text-left text-left">
+                    <div class="w-full md:w-1/2 photo-box rounded-[2.5rem] overflow-hidden shadow-xl border-4 border-white aspect-[4/3] transition duration-500 bg-slate-50">
+                        <img src="images/exp-diving.jpg" alt="跳水" class="w-full h-full object-cover">
+                    </div>
+                    <div class="w-full md:w-1/2 text-left">
+                        <span class="text-orange-600 font-mono text-sm font-bold">#ITEM_08</span>
+                        <h3 class="text-2xl font-bold text-slate-800 mb-6 mt-2 leading-tight">香港城東體育會<br>跳水副教練</h3>
+                        <p class="text-slate-600 text-base leading-loose mb-6">
                             在高壓且具風險的環境下進行教學。必須在極短時間內捕捉學員動作中的瑕疵並給予明確建議，這段經歷鍛鍊了我強大的觀察力與即時問題排查能力。
                         </p>
                         <div class="flex gap-2">
                             <span class="bg-orange-50 text-orange-700 px-3 py-1 rounded-lg text-xs font-bold italic">#即時決策</span>
                             <span class="bg-orange-50 text-orange-700 px-3 py-1 rounded-lg text-xs font-bold italic">#細節觀察</span>
                         </div>
-                    </div>
-                    <div class="w-full md:w-1/2 order-1 md:order-2 photo-box rounded-[2.5rem] overflow-hidden shadow-xl border-4 border-white aspect-[4/3] transition duration-500 bg-slate-50">
-                        <img src="images/exp-diving.jpg" alt="跳水" class="w-full h-full object-cover">
                     </div>
                 </section>
             </div>

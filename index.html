@@ -23,7 +23,7 @@
         <h1 class="text-5xl font-extrabold mb-4 text-slate-800 tracking-tight">梁釗豪 <span class="text-gray-400">|</span> Chiu-Ho Leung</h1>
         <div class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto space-y-1">
             <p>長庚大學人工智慧學系 ｜ 智慧型語言演算法實驗室</p>
-            <p class="text-base text-gray-500 font-medium tracking-wide">專注於自然語言處理、Gen AI 與全端 AI 應用開發</p>
+            <p class="text-base text-gray-500 font-medium tracking-wide">專注於自然語言處理、多模態、電腦視覺與全端 AI 應用開發</p>
         </div>
         <div class="flex justify-center gap-4 mt-10">
             <a href="mailto:marcoleung.cgu@gmail.com" class="bg-blue-600 text-white px-8 py-3 rounded-full hover:bg-blue-700 transition shadow-lg shadow-blue-100">聯絡我</a>
@@ -45,7 +45,7 @@
                 </div>
                 <div class="p-8 bg-white rounded-3xl shadow-sm border border-gray-100">
                     <h3 class="font-bold text-blue-600 mb-3 text-lg">AI 專業</h3>
-                    <p class="text-gray-600 font-medium">自然語言處理、電腦視覺、資料探勘、RAG</p>
+                    <p class="text-gray-600 font-medium">自然語言處理、多模態、電腦視覺、資料探勘</p>
                 </div>
                 <div class="p-8 bg-white rounded-3xl shadow-sm border border-gray-100">
                     <h3 class="font-bold text-blue-600 mb-3 text-lg">學術表現</h3>
@@ -55,270 +55,271 @@
         </section>
 
         <section id="projects" class="py-12 border-t border-gray-200">
-    <div class="flex justify-between items-end mb-8">
-        <div>
-            <h2 class="text-2xl font-bold text-slate-800">近期實作專案</h2>
-            <p class="text-xs text-gray-400 mt-1 uppercase tracking-widest">Recent Projects</p>
-        </div>
-        <div class="flex gap-2">
-            <button onclick="document.getElementById('project-container').scrollBy({left: -240, behavior: 'smooth'})" class="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center hover:bg-white hover:shadow-md transition">
-                <i class="fas fa-chevron-left text-gray-500"></i>
-            </button>
-            <button onclick="document.getElementById('project-container').scrollBy({left: 240, behavior: 'smooth'})" class="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center hover:bg-white hover:shadow-md transition">
-                <i class="fas fa-chevron-right text-gray-500"></i>
-            </button>
-        </div>
-    </div>
-    
-    <div id="project-container" class="flex gap-4 overflow-x-auto no-scrollbar pb-8 snap-x scroll-smooth">
-        
-        <!-- 專案 1：護理紀錄補全系統 -->
-        <div class="min-w-[220px] md:min-w-[240px] h-[480px] bg-white rounded-2xl border border-gray-200 flex flex-col snap-start hover:border-blue-500 hover:shadow-lg transition-all duration-300 overflow-hidden text-left">
-            <div class="p-5 flex flex-col h-full">
-                <h3 class="font-bold text-lg mb-4 text-slate-800 h-14 overflow-hidden leading-tight text-left">護理紀錄補全系統</h3>
-                <div class="h-44 bg-slate-100 rounded-xl mb-5 overflow-hidden flex-shrink-0">
-                    <img src="../images/pro-nursing.jpg" alt="Nursing Project" class="w-full h-full object-cover">
+    <section id="projects" class="py-12 border-t border-gray-200">
+            <div class="flex justify-between items-end mb-8">
+                <div>
+                    <h2 class="text-2xl font-bold text-slate-800">近期實作專案</h2>
+                    <p class="text-xs text-gray-400 mt-1 uppercase tracking-widest">Recent Projects</p>
                 </div>
-                <div class="flex flex-wrap gap-1.5 mb-4 flex-grow content-start text-left">
-                    <span class="bg-blue-600 text-white px-2.5 py-1 rounded-md text-[12px] font-black tracking-wide">NLP</span>
-                    <span class="bg-blue-600 text-white px-2.5 py-1 rounded-md text-[12px] font-black tracking-wide">LLM</span>
-                    <span class="bg-blue-600 text-white px-2.5 py-1 rounded-md text-[12px] font-black tracking-wide">RAG</span>
-                    <span class="bg-slate-800 text-white px-2.5 py-1 rounded-md text-[12px] font-black tracking-wide">FASTAPI</span>
-                    <span class="bg-slate-800 text-white px-2.5 py-1 rounded-md text-[12px] font-black tracking-wide">SQL</span>
-                    <span class="bg-slate-500 text-white px-2.5 py-1 rounded-md text-[12px] font-black tracking-wide">Quantization</span>
-                </div>
-                <div class="pt-4 border-t border-gray-50 flex-shrink-0 text-left">
-                    <a href="project/nursing.html" class="text-blue-600 font-black text-xs flex items-center justify-end group uppercase tracking-widest">
-                        Learn More <i class="fas fa-arrow-right ml-1.5 group-hover:translate-x-1 transition"></i>
-                    </a>
+                <div class="flex gap-2">
+                    <button onclick="document.getElementById('project-container').scrollBy({left: -240, behavior: 'smooth'})" class="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center hover:bg-white hover:shadow-md transition">
+                        <i class="fas fa-chevron-left text-gray-500"></i>
+                    </button>
+                    <button onclick="document.getElementById('project-container').scrollBy({left: 240, behavior: 'smooth'})" class="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center hover:bg-white hover:shadow-md transition">
+                        <i class="fas fa-chevron-right text-gray-500"></i>
+                    </button>
                 </div>
             </div>
-        </div>
+            
+            <div id="project-container" class="flex gap-4 overflow-x-auto no-scrollbar pb-8 snap-x scroll-smooth">
+                
+                <!-- 專案 1：護理紀錄補全系統 -->
+                <div class="min-w-[220px] md:min-w-[240px] h-[480px] bg-white rounded-2xl border border-gray-200 flex flex-col snap-start hover:border-blue-500 hover:shadow-lg transition-all duration-300 overflow-hidden text-left">
+                    <div class="p-5 flex flex-col h-full">
+                        <h3 class="font-bold text-lg mb-4 text-slate-800 h-14 overflow-hidden leading-tight text-left">護理紀錄補全系統</h3>
+                        <div class="h-44 bg-slate-100 rounded-xl mb-5 overflow-hidden flex-shrink-0">
+                            <img src="../images/pro-nursing.jpg" alt="Nursing Project" class="w-full h-full object-cover object-left">
+                        </div>
+                        <div class="flex flex-wrap gap-1.5 mb-4 flex-grow content-start text-left">
+                            <span class="bg-blue-600 text-white px-2.5 py-1 rounded-md text-[12px] font-black tracking-wide">NLP</span>
+                            <span class="bg-blue-600 text-white px-2.5 py-1 rounded-md text-[12px] font-black tracking-wide">LLM</span>
+                            <span class="bg-blue-600 text-white px-2.5 py-1 rounded-md text-[12px] font-black tracking-wide">RAG</span>
+                            <span class="bg-slate-800 text-white px-2.5 py-1 rounded-md text-[12px] font-black tracking-wide">FASTAPI</span>
+                            <span class="bg-slate-800 text-white px-2.5 py-1 rounded-md text-[12px] font-black tracking-wide">SQL</span>
+                            <span class="bg-slate-500 text-white px-2.5 py-1 rounded-md text-[12px] font-black tracking-wide">Quantization</span>
+                        </div>
+                        <div class="pt-4 border-t border-gray-50 flex-shrink-0 text-left">
+                            <a href="project/nursing.html" class="text-blue-600 font-black text-xs flex items-center justify-end group uppercase tracking-widest">
+                                Learn More <i class="fas fa-arrow-right ml-1.5 group-hover:translate-x-1 transition"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
 
-        <!-- 專案 2：技術手冊語意搜尋引擎 (Kontex 實習) -->
-        <div class="min-w-[220px] md:min-w-[240px] h-[480px] bg-white rounded-2xl border border-gray-200 flex flex-col snap-start hover:border-sky-600 hover:shadow-lg transition-all duration-300 overflow-hidden text-left">
-            <div class="p-5 flex flex-col h-full">
-                <h3 class="font-bold text-lg mb-4 text-slate-800 h-14 overflow-hidden leading-tight text-left">技術手冊語意搜尋</h3>
-                <div class="h-44 bg-slate-100 rounded-xl mb-5 overflow-hidden flex-shrink-0">
-                    <img src="../images/pro-kontex.jpg" alt="Semantic Search" class="w-full h-full object-cover">
+                <!-- 專案 2：技術手冊語意搜尋引擎 (Kontex 實習) -->
+                <div class="min-w-[220px] md:min-w-[240px] h-[480px] bg-white rounded-2xl border border-gray-200 flex flex-col snap-start hover:border-sky-600 hover:shadow-lg transition-all duration-300 overflow-hidden text-left">
+                    <div class="p-5 flex flex-col h-full">
+                        <h3 class="font-bold text-lg mb-4 text-slate-800 h-14 overflow-hidden leading-tight text-left">技術手冊語意搜尋</h3>
+                        <div class="h-44 bg-slate-100 rounded-xl mb-5 overflow-hidden flex-shrink-0">
+                            <img src="../images/pro-kontex.jpg" alt="Semantic Search" class="w-full h-full object-cover object-left">
+                        </div>
+                        <div class="flex flex-wrap gap-1.5 mb-4 flex-grow content-start text-left">
+                            <span class="bg-sky-700 text-white px-2.5 py-1 rounded-md text-[12px] font-black tracking-wide">VECTOR SEARCH</span>
+                            <span class="bg-sky-700 text-white px-2.5 py-1 rounded-md text-[12px] font-black tracking-wide">HYBRID</span>
+                            <span class="bg-slate-800 text-white px-2.5 py-1 rounded-md text-[12px] font-black tracking-wide">EMBEDDING</span>
+                            <span class="bg-slate-800 text-white px-2.5 py-1 rounded-md text-[12px] font-black tracking-wide">MULTIMODAL</span>
+                            <span class="bg-slate-500 text-white px-2.5 py-1 rounded-md text-[12px] font-black tracking-wide">ONNX</span>
+                        </div>
+                        <div class="pt-4 border-t border-gray-50 flex-shrink-0 text-left">
+                            <a href="project/search_engine.html" class="text-sky-700 font-black text-xs flex items-center justify-end group uppercase tracking-widest">
+                                Learn More <i class="fas fa-arrow-right ml-1.5 group-hover:translate-x-1 transition"></i>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <div class="flex flex-wrap gap-1.5 mb-4 flex-grow content-start text-left">
-                    <span class="bg-sky-700 text-white px-2.5 py-1 rounded-md text-[12px] font-black tracking-wide">VECTOR SEARCH</span>
-                    <span class="bg-sky-700 text-white px-2.5 py-1 rounded-md text-[12px] font-black tracking-wide">HYBRID</span>
-                    <span class="bg-slate-800 text-white px-2.5 py-1 rounded-md text-[12px] font-black tracking-wide">EMBEDDING</span>
-                    <span class="bg-slate-800 text-white px-2.5 py-1 rounded-md text-[12px] font-black tracking-wide">MULTIMODAL</span>
-                    <span class="bg-slate-500 text-white px-2.5 py-1 rounded-md text-[12px] font-black tracking-wide">ONNX</span>
+
+                <!-- 專案 3：通用多模態文件衝突檢測 -->
+                <div class="min-w-[220px] md:min-w-[240px] h-[480px] bg-white rounded-2xl border border-gray-200 flex flex-col snap-start hover:border-rose-500 hover:shadow-lg transition-all duration-300 overflow-hidden text-left">
+                    <div class="p-5 flex flex-col h-full">
+                        <h3 class="font-bold text-lg mb-4 text-slate-800 h-14 overflow-hidden leading-tight text-left">通用多模態文件衝突檢測</h3>
+                        <div class="h-44 bg-slate-100 rounded-xl mb-5 overflow-hidden flex-shrink-0">
+                            <img src="../images/pro-conflict.jpg" alt="Conflict Detection" class="w-full h-full object-cover object-left">
+                        </div>
+                        <div class="flex flex-wrap gap-1.5 mb-4 flex-grow content-start text-left">
+                            <span class="bg-rose-600 text-white px-2.5 py-1 rounded-md text-[12px] font-black tracking-wide">MULTIMODAL</span>
+                            <span class="bg-rose-600 text-white px-2.5 py-1 rounded-md text-[12px] font-black tracking-wide">CONSISTENCY</span>
+                            <span class="bg-slate-800 text-white px-2.5 py-1 rounded-md text-[12px] font-black tracking-wide">CROSS-DOMAIN</span>
+                            <span class="bg-slate-800 text-white px-2.5 py-1 rounded-md text-[12px] font-black tracking-wide">NLI RULES</span>
+                            <span class="bg-slate-500 text-white px-2.5 py-1 rounded-md text-[12px] font-black tracking-wide">AUDIT</span>
+                        </div>
+                        <div class="pt-4 border-t border-gray-50 flex-shrink-0 text-left">
+                            <a href="project/doc_conflict.html" class="text-rose-600 font-black text-xs flex items-center justify-end group uppercase tracking-widest">
+                                Learn More <i class="fas fa-arrow-right ml-1.5 group-hover:translate-x-1 transition"></i>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <div class="pt-4 border-t border-gray-50 flex-shrink-0 text-left">
-                    <a href="project/search_engine.html" class="text-sky-700 font-black text-xs flex items-center justify-end group uppercase tracking-widest">
-                        Learn More <i class="fas fa-arrow-right ml-1.5 group-hover:translate-x-1 transition"></i>
-                    </a>
+
+                <!-- 專案 4：神經訊號標籤與閉迴路操控 -->
+                <div class="min-w-[220px] md:min-w-[240px] h-[480px] bg-white rounded-2xl border border-gray-200 flex flex-col snap-start hover:border-fuchsia-500 hover:shadow-lg transition-all duration-300 overflow-hidden text-left">
+                    <div class="p-5 flex flex-col h-full">
+                        <h3 class="font-bold text-lg mb-4 text-slate-800 h-14 overflow-hidden leading-tight text-left">神經訊號標籤與閉迴路操控</h3>
+                        <div class="h-44 bg-slate-100 rounded-xl mb-5 overflow-hidden flex-shrink-0">
+                            <img src="../images/pro-neural-system.jpg" alt="Neural System Project" class="w-full h-full object-cover object-left">
+                        </div>
+                        <div class="flex flex-wrap gap-1.5 mb-4 flex-grow content-start text-left">
+                            <span class="bg-fuchsia-600 text-white px-2.5 py-1 rounded-md text-[12px] font-black tracking-wide">NEURO AI</span>
+                            <span class="bg-fuchsia-600 text-white px-2.5 py-1 rounded-md text-[12px] font-black tracking-wide">CV TRACKING</span>
+                            <span class="bg-cyan-700 text-white px-2.5 py-1 rounded-md text-[12px] font-black tracking-wide">GUI DASHBOARD</span>
+                            <span class="bg-slate-800 text-white px-2.5 py-1 rounded-md text-[12px] font-black tracking-wide">CLOSED-LOOP</span>
+                            <span class="bg-indigo-600 text-white px-2.5 py-1 rounded-md text-[12px] font-black tracking-wide">AI SKILLS</span>
+                        </div>
+                        <div class="pt-4 border-t border-gray-50 flex-shrink-0 text-left">
+                            <a href="project/neural_system.html" class="text-fuchsia-600 font-black text-xs flex items-center justify-end group uppercase tracking-widest">
+                                Learn More <i class="fas fa-arrow-right ml-1.5 group-hover:translate-x-1 transition"></i>
+                            </a>
+                        </div>
+                    </div>
                 </div>
+
+                <!-- 專案 5：企業雲端知識庫整理管線 -->
+                <div class="min-w-[220px] md:min-w-[240px] h-[480px] bg-white rounded-2xl border border-gray-200 flex flex-col snap-start hover:border-slate-600 hover:shadow-lg transition-all duration-300 overflow-hidden text-left">
+                    <div class="p-5 flex flex-col h-full">
+                        <h3 class="font-bold text-lg mb-4 text-slate-800 h-14 overflow-hidden leading-tight text-left">企業雲端知識庫整理管線</h3>
+                        <div class="h-44 bg-slate-100 rounded-xl mb-5 overflow-hidden flex-shrink-0">
+                            <img src="../images/pro-doc-ai.jpg" alt="Knowledge Pipeline" class="w-full h-full object-cover object-left">
+                        </div>
+                        <div class="flex flex-wrap gap-1.5 mb-4 flex-grow content-start text-left">
+                            <span class="bg-slate-800 text-white px-2.5 py-1 rounded-md text-[12px] font-black tracking-wide">WORKSPACE LLM</span>
+                            <span class="bg-slate-800 text-white px-2.5 py-1 rounded-md text-[12px] font-black tracking-wide">GAS ETL</span>
+                            <span class="bg-slate-800 text-white px-2.5 py-1 rounded-md text-[12px] font-black tracking-wide">AGENTIC CLI</span>
+                            <span class="bg-slate-500 text-white px-2.5 py-1 rounded-md text-[12px] font-black tracking-wide">TOOL-USE</span>
+                            <span class="bg-slate-500 text-white px-2.5 py-1 rounded-md text-[12px] font-black tracking-wide">ON-DEMAND</span>
+                        </div>
+                        <div class="pt-4 border-t border-gray-50 flex-shrink-0 text-left">
+                            <a href="project/doc_organization.html" class="text-slate-800 font-black text-xs flex items-center justify-end group uppercase tracking-widest">
+                                Learn More <i class="fas fa-arrow-right ml-1.5 group-hover:translate-x-1 transition"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 專案 6：多模態 AI 機器人 -->
+                <div class="min-w-[220px] md:min-w-[240px] h-[480px] bg-white rounded-2xl border border-gray-200 flex flex-col snap-start hover:border-purple-500 hover:shadow-lg transition-all duration-300 overflow-hidden text-left">
+                    <div class="p-5 flex flex-col h-full">
+                        <h3 class="font-bold text-lg mb-4 text-slate-800 h-14 overflow-hidden leading-tight text-left">多模態 AI 機器人</h3>
+                        <div class="h-44 bg-slate-100 rounded-xl mb-6 overflow-hidden flex-shrink-0">
+                            <img src="../images/pro-chat.jpg" alt="Chatbot Project" class="w-full h-full object-cover object-left">
+                        </div>
+                        <div class="flex flex-wrap gap-1.5 mb-4 flex-grow content-start text-left">
+                            <span class="bg-purple-600 text-white px-2.5 py-1 rounded-md text-[12px] font-black tracking-wide">AI AGENT</span>
+                            <span class="bg-purple-600 text-white px-2.5 py-1 rounded-md text-[12px] font-black tracking-wide">RAG</span>
+                            <span class="bg-purple-600 text-white px-2.5 py-1 rounded-md text-[12px] font-black tracking-wide">CRAWLER</span>
+                            <span class="bg-slate-800 text-white px-2.5 py-1 rounded-md text-[12px] font-black tracking-wide">VISION</span>
+                            <span class="bg-slate-800 text-white px-2.5 py-1 rounded-md text-[12px] font-black tracking-wide">GRADIO</span>
+                            <span class="bg-slate-500 text-white px-2.5 py-1 rounded-md text-[12px] font-black tracking-wide">DIFFUSION</span>
+                        </div>
+                        <div class="pt-4 border-t border-gray-50 flex-shrink-0 text-left">
+                            <a href="project/chatbot.html" class="text-purple-600 font-black text-xs flex items-center justify-end group uppercase tracking-widest">
+                                Learn More <i class="fas fa-arrow-right ml-1.5 group-hover:translate-x-1 transition"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 專案 7：威秀訂票系統 -->
+                <div class="min-w-[220px] md:min-w-[240px] h-[480px] bg-white rounded-2xl border border-gray-200 flex flex-col snap-start hover:border-red-500 hover:shadow-lg transition-all duration-300 overflow-hidden text-left">
+                    <div class="p-5 flex flex-col h-full">
+                        <h3 class="font-bold text-lg mb-4 text-slate-800 h-14 overflow-hidden leading-tight text-left">威秀訂票系統</h3>
+                        <div class="h-44 bg-slate-100 rounded-xl mb-5 overflow-hidden flex-shrink-0">
+                            <img src="../images/pro-Ticketing.jpg" alt="Ticketing Project" class="w-full h-full object-cover object-left">
+                        </div>
+                        <div class="flex flex-wrap gap-1.5 mb-4 flex-grow content-start text-left">
+                            <span class="bg-red-600 text-white px-2.5 py-1 rounded-md text-[12px] font-black tracking-wide">MYSQL</span>
+                            <span class="bg-red-600 text-white px-2.5 py-1 rounded-md text-[12px] font-black tracking-wide">AI Agent</span>
+                            <span class="bg-red-600 text-white px-2.5 py-1 rounded-md text-[12px] font-black tracking-wide">RAG</span>
+                            <span class="bg-slate-800 text-white px-2.5 py-1 rounded-md text-[12px] font-black tracking-wide">API</span>
+                            <span class="bg-slate-800 text-white px-2.5 py-1 rounded-md text-[12px] font-black tracking-wide">FLASK</span>
+                            <span class="bg-slate-500 text-white px-2.5 py-1 rounded-md text-[12px] font-black tracking-wide">HF</span>
+                        </div>
+                        <div class="pt-4 border-t border-gray-50 flex-shrink-0 text-left">
+                            <a href="project/ticketing.html" class="text-red-600 font-black text-xs flex items-center justify-end group uppercase tracking-widest">
+                                Learn More <i class="fas fa-arrow-right ml-1.5 group-hover:translate-x-1 transition"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 專案 8：服飾以圖搜圖 -->
+                <div class="min-w-[220px] md:min-w-[240px] h-[480px] bg-white rounded-2xl border border-gray-200 flex flex-col snap-start hover:border-orange-500 hover:shadow-lg transition-all duration-300 overflow-hidden text-left">
+                    <div class="p-5 flex flex-col h-full">
+                        <h3 class="font-bold text-lg mb-4 text-slate-800 h-14 overflow-hidden leading-tight text-left">服飾以圖搜圖</h3>
+                        <div class="h-44 bg-slate-100 rounded-xl mb-5 overflow-hidden flex-shrink-0">
+                            <img src="../images/pro-retrieval.jpg" alt="Search Project" class="w-full h-full object-cover object-left">
+                        </div>
+                        <div class="flex flex-wrap gap-1.5 mb-4 flex-grow content-start text-left">
+                            <span class="bg-orange-500 text-white px-2.5 py-1 rounded-md text-[12px] font-black tracking-wide">CV</span>
+                            <span class="bg-orange-500 text-white px-2.5 py-1 rounded-md text-[12px] font-black tracking-wide">FAISS</span>
+                            <span class="bg-slate-800 text-white px-2.5 py-1 rounded-md text-[12px] font-black tracking-wide">VECTOR DB</span>
+                            <span class="bg-slate-800 text-white px-2.5 py-1 rounded-md text-[12px] font-black tracking-wide">EMBEDDING</span>
+                            <span class="bg-slate-500 text-white px-2.5 py-1 rounded-md text-[12px] font-black tracking-wide">PYTORCH</span>
+                        </div>
+                        <div class="pt-4 border-t border-gray-50 flex-shrink-0 text-left">
+                            <a href="project/retrieval.html" class="text-orange-600 font-black text-xs flex items-center justify-end group uppercase tracking-widest">
+                                Learn More <i class="fas fa-arrow-right ml-1.5 group-hover:translate-x-1 transition"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 專案 9：澳洲降雨預測系統 -->
+                <div class="min-w-[220px] md:min-w-[240px] h-[480px] bg-white rounded-2xl border border-gray-200 flex flex-col snap-start hover:border-yellow-500 hover:shadow-lg transition-all duration-300 overflow-hidden text-left">
+                    <div class="p-5 flex flex-col h-full">
+                        <h3 class="font-bold text-lg mb-4 text-slate-800 h-14 overflow-hidden leading-tight text-left">澳洲降雨預測系統</h3>
+                        <div class="h-44 bg-slate-100 rounded-xl mb-5 overflow-hidden flex-shrink-0">
+                            <img src="../images/pro-weather.jpg" alt="Weather Project" class="w-full h-full object-cover object-left">
+                        </div>
+                        <div class="flex flex-wrap gap-1.5 mb-4 flex-grow content-start text-left">
+                            <span class="bg-yellow-500 text-white px-2.5 py-1 rounded-md text-[12px] font-black tracking-wide">Data Mining</span>
+                            <span class="bg-yellow-500 text-white px-2.5 py-1 rounded-md text-[12px] font-black tracking-wide">Feature Eng</span>
+                            <span class="bg-slate-800 text-white px-2.5 py-1 rounded-md text-[12px] font-black tracking-wide">API</span>
+                            <span class="bg-slate-800 text-white px-2.5 py-1 rounded-md text-[12px] font-black tracking-wide">SMOTE</span>
+                            <span class="bg-slate-500 text-white px-2.5 py-1 rounded-md text-[12px] font-black tracking-wide">Gradio</span>
+                        </div>
+                        <div class="pt-4 border-t border-gray-50 flex-shrink-0 text-left">
+                            <a href="project/weather.html" class="text-yellow-600 font-black text-xs flex items-center justify-end group uppercase tracking-widest">
+                                Learn More <i class="fas fa-arrow-right ml-1.5 group-hover:translate-x-1 transition"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 專案 10：分散式共享帳本 -->
+                <div class="min-w-[220px] md:min-w-[240px] h-[480px] bg-white rounded-2xl border border-gray-200 flex flex-col snap-start hover:border-amber-500 hover:shadow-lg transition-all duration-300 overflow-hidden text-left">
+                    <div class="p-5 flex flex-col h-full">
+                        <h3 class="font-bold text-lg mb-4 text-slate-800 h-14 overflow-hidden leading-tight text-left">分散式區塊鏈共享帳本</h3>
+                        <div class="h-44 bg-slate-100 rounded-xl mb-5 overflow-hidden flex-shrink-0">
+                            <img src="../images/pro-ledger.jpg" alt="Ledger Project" class="w-full h-full object-cover object-left">
+                        </div>
+                        <div class="flex flex-wrap gap-1.5 mb-4 flex-grow content-start text-left">
+                            <span class="bg-amber-500 text-white px-2.5 py-1 rounded-md text-[12px] font-black tracking-wide">Blockchain</span>
+                            <span class="bg-amber-500 text-white px-2.5 py-1 rounded-md text-[12px] font-black tracking-wide">Docker</span>
+                            <span class="bg-slate-800 text-white px-2.5 py-1 rounded-md text-[12px] font-black tracking-wide">Isolation Forest</span>
+                            <span class="bg-slate-800 text-white px-2.5 py-1 rounded-md text-[12px] font-black tracking-wide">AI AGENT</span>
+                            <span class="bg-slate-500 text-white px-2.5 py-1 rounded-md text-[12px] font-black tracking-wide">Cryptography</span>
+                        </div>
+                        <div class="pt-4 border-t border-gray-50 flex-shrink-0 text-left">
+                            <a href="project/ledger.html" class="text-amber-600 font-black text-xs flex items-center justify-end group uppercase tracking-widest">
+                                Learn More <i class="fas fa-arrow-right ml-1.5 group-hover:translate-x-1 transition"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 專案 11：平行化巨量向量檢索 -->
+                <div class="min-w-[220px] md:min-w-[240px] h-[480px] bg-white rounded-2xl border border-gray-200 flex flex-col snap-start hover:border-teal-500 hover:shadow-lg transition-all duration-300 overflow-hidden text-left">
+                    <div class="p-5 flex flex-col h-full">
+                        <h3 class="font-bold text-lg mb-4 text-slate-800 h-14 overflow-hidden leading-tight text-left">平行化巨量向量檢索</h3>
+                        <div class="h-44 bg-slate-100 rounded-xl mb-5 overflow-hidden flex-shrink-0">
+                            <img src="../images/pro-mpi.jpg" alt="MPI Project" class="w-full h-full object-cover object-left">
+                        </div>
+                        <div class="flex flex-wrap gap-1.5 mb-4 flex-grow content-start text-left">
+                            <span class="bg-teal-600 text-white px-2.5 py-1 rounded-md text-[12px] font-black tracking-wide">OpenMP</span>
+                            <span class="bg-teal-600 text-white px-2.5 py-1 rounded-md text-[12px] font-black tracking-wide">MPI</span>
+                            <span class="bg-slate-800 text-white px-2.5 py-1 rounded-md text-[12px] font-black tracking-wide">Hybrid</span>
+                            <span class="bg-slate-800 text-white px-2.5 py-1 rounded-md text-[12px] font-black tracking-wide">Dynamic</span>
+                            <span class="bg-slate-500 text-white px-2.5 py-1 rounded-md text-[12px] font-black tracking-wide">C++</span>
+                        </div>
+                        <div class="pt-4 border-t border-gray-50 flex-shrink-0 text-left">
+                            <a href="project/mpi.html" class="text-teal-600 font-black text-xs flex items-center justify-end group uppercase tracking-widest">
+                                Learn More <i class="fas fa-arrow-right ml-1.5 group-hover:translate-x-1 transition"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
             </div>
-        </div>
-
-        <!-- 專案 3：通用多模態文件衝突檢測 -->
-        <div class="min-w-[220px] md:min-w-[240px] h-[480px] bg-white rounded-2xl border border-gray-200 flex flex-col snap-start hover:border-rose-500 hover:shadow-lg transition-all duration-300 overflow-hidden text-left">
-            <div class="p-5 flex flex-col h-full">
-                <h3 class="font-bold text-lg mb-4 text-slate-800 h-14 overflow-hidden leading-tight text-left">通用多模態文件衝突檢測</h3>
-                <div class="h-44 bg-slate-100 rounded-xl mb-5 overflow-hidden flex-shrink-0">
-                    <img src="../images/pro-conflict.jpg" alt="Conflict Detection" class="w-full h-full object-cover">
-                </div>
-                <div class="flex flex-wrap gap-1.5 mb-4 flex-grow content-start text-left">
-                    <span class="bg-rose-600 text-white px-2.5 py-1 rounded-md text-[12px] font-black tracking-wide">MULTIMODAL</span>
-                    <span class="bg-rose-600 text-white px-2.5 py-1 rounded-md text-[12px] font-black tracking-wide">CONSISTENCY</span>
-                    <span class="bg-slate-800 text-white px-2.5 py-1 rounded-md text-[12px] font-black tracking-wide">CROSS-DOMAIN</span>
-                    <span class="bg-slate-800 text-white px-2.5 py-1 rounded-md text-[12px] font-black tracking-wide">NLI RULES</span>
-                    <span class="bg-slate-500 text-white px-2.5 py-1 rounded-md text-[12px] font-black tracking-wide">AUDIT</span>
-                </div>
-                <div class="pt-4 border-t border-gray-50 flex-shrink-0 text-left">
-                    <a href="project/doc_conflict.html" class="text-rose-600 font-black text-xs flex items-center justify-end group uppercase tracking-widest">
-                        Learn More <i class="fas fa-arrow-right ml-1.5 group-hover:translate-x-1 transition"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <!-- 專案 4：神經訊號標籤與閉迴路操控 -->
-        <div class="min-w-[220px] md:min-w-[240px] h-[480px] bg-white rounded-2xl border border-gray-200 flex flex-col snap-start hover:border-fuchsia-500 hover:shadow-lg transition-all duration-300 overflow-hidden text-left">
-            <div class="p-5 flex flex-col h-full">
-                <h3 class="font-bold text-lg mb-4 text-slate-800 h-14 overflow-hidden leading-tight text-left">神經訊號標籤與閉迴路操控</h3>
-                <div class="h-44 bg-slate-100 rounded-xl mb-5 overflow-hidden flex-shrink-0">
-                    <img src="../images/pro-neural-system.jpg" alt="Neural System Project" class="w-full h-full object-cover">
-                </div>
-                <div class="flex flex-wrap gap-1.5 mb-4 flex-grow content-start text-left">
-                    <span class="bg-fuchsia-600 text-white px-2.5 py-1 rounded-md text-[12px] font-black tracking-wide">NEURO AI</span>
-                    <span class="bg-fuchsia-600 text-white px-2.5 py-1 rounded-md text-[12px] font-black tracking-wide">CV TRACKING</span>
-                    <span class="bg-cyan-700 text-white px-2.5 py-1 rounded-md text-[12px] font-black tracking-wide">GUI DASHBOARD</span>
-                    <span class="bg-slate-800 text-white px-2.5 py-1 rounded-md text-[12px] font-black tracking-wide">CLOSED-LOOP</span>
-                    <span class="bg-indigo-600 text-white px-2.5 py-1 rounded-md text-[12px] font-black tracking-wide">AI SKILLS</span>
-                </div>
-                <div class="pt-4 border-t border-gray-50 flex-shrink-0 text-left">
-                    <a href="project/neural_system.html" class="text-fuchsia-600 font-black text-xs flex items-center justify-end group uppercase tracking-widest">
-                        Learn More <i class="fas fa-arrow-right ml-1.5 group-hover:translate-x-1 transition"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <!-- 專案 5：企業雲端知識庫整理管線 -->
-        <div class="min-w-[220px] md:min-w-[240px] h-[480px] bg-white rounded-2xl border border-gray-200 flex flex-col snap-start hover:border-slate-600 hover:shadow-lg transition-all duration-300 overflow-hidden text-left">
-            <div class="p-5 flex flex-col h-full">
-                <h3 class="font-bold text-lg mb-4 text-slate-800 h-14 overflow-hidden leading-tight text-left">企業雲端知識庫整理管線</h3>
-                <div class="h-44 bg-slate-100 rounded-xl mb-5 overflow-hidden flex-shrink-0">
-                    <img src="../images/pro-doc-ai.jpg" alt="Knowledge Pipeline" class="w-full h-full object-cover">
-                </div>
-                <div class="flex flex-wrap gap-1.5 mb-4 flex-grow content-start text-left">
-                    <span class="bg-slate-800 text-white px-2.5 py-1 rounded-md text-[12px] font-black tracking-wide">WORKSPACE LLM</span>
-                    <span class="bg-slate-800 text-white px-2.5 py-1 rounded-md text-[12px] font-black tracking-wide">GAS ETL</span>
-                    <span class="bg-slate-800 text-white px-2.5 py-1 rounded-md text-[12px] font-black tracking-wide">AGENTIC CLI</span>
-                    <span class="bg-slate-500 text-white px-2.5 py-1 rounded-md text-[12px] font-black tracking-wide">TOOL-USE</span>
-                    <span class="bg-slate-500 text-white px-2.5 py-1 rounded-md text-[12px] font-black tracking-wide">ON-DEMAND</span>
-                </div>
-                <div class="pt-4 border-t border-gray-50 flex-shrink-0 text-left">
-                    <a href="project/doc_organization.html" class="text-slate-800 font-black text-xs flex items-center justify-end group uppercase tracking-widest">
-                        Learn More <i class="fas fa-arrow-right ml-1.5 group-hover:translate-x-1 transition"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <!-- 專案 6：多模態 AI 機器人 -->
-        <div class="min-w-[220px] md:min-w-[240px] h-[480px] bg-white rounded-2xl border border-gray-200 flex flex-col snap-start hover:border-purple-500 hover:shadow-lg transition-all duration-300 overflow-hidden text-left">
-            <div class="p-5 flex flex-col h-full">
-                <h3 class="font-bold text-lg mb-4 text-slate-800 h-14 overflow-hidden leading-tight text-left">多模態 AI 機器人</h3>
-                <div class="h-44 bg-slate-100 rounded-xl mb-6 overflow-hidden flex-shrink-0">
-                    <img src="../images/pro-chat.jpg" alt="Chatbot Project" class="w-full h-full object-cover">
-                </div>
-                <div class="flex flex-wrap gap-1.5 mb-4 flex-grow content-start text-left">
-                    <span class="bg-purple-600 text-white px-2.5 py-1 rounded-md text-[12px] font-black tracking-wide">AI AGENT</span>
-                    <span class="bg-purple-600 text-white px-2.5 py-1 rounded-md text-[12px] font-black tracking-wide">RAG</span>
-                    <span class="bg-purple-600 text-white px-2.5 py-1 rounded-md text-[12px] font-black tracking-wide">CRAWLER</span>
-                    <span class="bg-slate-800 text-white px-2.5 py-1 rounded-md text-[12px] font-black tracking-wide">VISION</span>
-                    <span class="bg-slate-800 text-white px-2.5 py-1 rounded-md text-[12px] font-black tracking-wide">GRADIO</span>
-                    <span class="bg-slate-500 text-white px-2.5 py-1 rounded-md text-[12px] font-black tracking-wide">DIFFUSION</span>
-                </div>
-                <div class="pt-4 border-t border-gray-50 flex-shrink-0 text-left">
-                    <a href="project/chatbot.html" class="text-purple-600 font-black text-xs flex items-center justify-end group uppercase tracking-widest">
-                        Learn More <i class="fas fa-arrow-right ml-1.5 group-hover:translate-x-1 transition"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <!-- 專案 7：威秀訂票系統 -->
-        <div class="min-w-[220px] md:min-w-[240px] h-[480px] bg-white rounded-2xl border border-gray-200 flex flex-col snap-start hover:border-red-500 hover:shadow-lg transition-all duration-300 overflow-hidden text-left">
-            <div class="p-5 flex flex-col h-full">
-                <h3 class="font-bold text-lg mb-4 text-slate-800 h-14 overflow-hidden leading-tight text-left">威秀訂票系統</h3>
-                <div class="h-44 bg-slate-100 rounded-xl mb-5 overflow-hidden flex-shrink-0">
-                    <img src="../images/pro-Ticketing.jpg" alt="Ticketing Project" class="w-full h-full object-cover">
-                </div>
-                <div class="flex flex-wrap gap-1.5 mb-4 flex-grow content-start text-left">
-                    <span class="bg-red-600 text-white px-2.5 py-1 rounded-md text-[12px] font-black tracking-wide">MYSQL</span>
-                    <span class="bg-red-600 text-white px-2.5 py-1 rounded-md text-[12px] font-black tracking-wide">AI Agent</span>
-                    <span class="bg-red-600 text-white px-2.5 py-1 rounded-md text-[12px] font-black tracking-wide">RAG</span>
-                    <span class="bg-slate-800 text-white px-2.5 py-1 rounded-md text-[12px] font-black tracking-wide">API</span>
-                    <span class="bg-slate-800 text-white px-2.5 py-1 rounded-md text-[12px] font-black tracking-wide">FLASK</span>
-                    <span class="bg-slate-500 text-white px-2.5 py-1 rounded-md text-[12px] font-black tracking-wide">HF</span>
-                </div>
-                <div class="pt-4 border-t border-gray-50 flex-shrink-0 text-left">
-                    <a href="project/ticketing.html" class="text-red-600 font-black text-xs flex items-center justify-end group uppercase tracking-widest">
-                        Learn More <i class="fas fa-arrow-right ml-1.5 group-hover:translate-x-1 transition"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <!-- 專案 8：服飾以圖搜圖 -->
-        <div class="min-w-[220px] md:min-w-[240px] h-[480px] bg-white rounded-2xl border border-gray-200 flex flex-col snap-start hover:border-orange-500 hover:shadow-lg transition-all duration-300 overflow-hidden text-left">
-            <div class="p-5 flex flex-col h-full">
-                <h3 class="font-bold text-lg mb-4 text-slate-800 h-14 overflow-hidden leading-tight text-left">服飾以圖搜圖</h3>
-                <div class="h-44 bg-slate-100 rounded-xl mb-5 overflow-hidden flex-shrink-0">
-                    <img src="../images/pro-retrieval.jpg" alt="Search Project" class="w-full h-full object-cover">
-                </div>
-                <div class="flex flex-wrap gap-1.5 mb-4 flex-grow content-start text-left">
-                    <span class="bg-orange-500 text-white px-2.5 py-1 rounded-md text-[12px] font-black tracking-wide">CV</span>
-                    <span class="bg-orange-500 text-white px-2.5 py-1 rounded-md text-[12px] font-black tracking-wide">FAISS</span>
-                    <span class="bg-slate-800 text-white px-2.5 py-1 rounded-md text-[12px] font-black tracking-wide">VECTOR DB</span>
-                    <span class="bg-slate-800 text-white px-2.5 py-1 rounded-md text-[12px] font-black tracking-wide">EMBEDDING</span>
-                    <span class="bg-slate-500 text-white px-2.5 py-1 rounded-md text-[12px] font-black tracking-wide">PYTORCH</span>
-                </div>
-                <div class="pt-4 border-t border-gray-50 flex-shrink-0 text-left">
-                    <a href="project/retrieval.html" class="text-orange-600 font-black text-xs flex items-center justify-end group uppercase tracking-widest">
-                        Learn More <i class="fas fa-arrow-right ml-1.5 group-hover:translate-x-1 transition"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <!-- 專案 9：澳洲降雨預測系統 -->
-        <div class="min-w-[220px] md:min-w-[240px] h-[480px] bg-white rounded-2xl border border-gray-200 flex flex-col snap-start hover:border-yellow-500 hover:shadow-lg transition-all duration-300 overflow-hidden text-left">
-            <div class="p-5 flex flex-col h-full">
-                <h3 class="font-bold text-lg mb-4 text-slate-800 h-14 overflow-hidden leading-tight text-left">澳洲降雨預測系統</h3>
-                <div class="h-44 bg-slate-100 rounded-xl mb-5 overflow-hidden flex-shrink-0">
-                    <img src="../images/pro-weather.jpg" alt="Weather Project" class="w-full h-full object-cover">
-                </div>
-                <div class="flex flex-wrap gap-1.5 mb-4 flex-grow content-start text-left">
-                    <span class="bg-yellow-500 text-white px-2.5 py-1 rounded-md text-[12px] font-black tracking-wide">Data Mining</span>
-                    <span class="bg-yellow-500 text-white px-2.5 py-1 rounded-md text-[12px] font-black tracking-wide">Feature Eng</span>
-                    <span class="bg-slate-800 text-white px-2.5 py-1 rounded-md text-[12px] font-black tracking-wide">API</span>
-                    <span class="bg-slate-800 text-white px-2.5 py-1 rounded-md text-[12px] font-black tracking-wide">SMOTE</span>
-                    <span class="bg-slate-500 text-white px-2.5 py-1 rounded-md text-[12px] font-black tracking-wide">Gradio</span>
-                </div>
-                <div class="pt-4 border-t border-gray-50 flex-shrink-0 text-left">
-                    <a href="project/weather.html" class="text-yellow-600 font-black text-xs flex items-center justify-end group uppercase tracking-widest">
-                        Learn More <i class="fas fa-arrow-right ml-1.5 group-hover:translate-x-1 transition"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <!-- 專案 10：分散式共享帳本 -->
-        <div class="min-w-[220px] md:min-w-[240px] h-[480px] bg-white rounded-2xl border border-gray-200 flex flex-col snap-start hover:border-amber-500 hover:shadow-lg transition-all duration-300 overflow-hidden text-left">
-            <div class="p-5 flex flex-col h-full">
-                <h3 class="font-bold text-lg mb-4 text-slate-800 h-14 overflow-hidden leading-tight text-left">分散式區塊鏈共享帳本</h3>
-                <div class="h-44 bg-slate-100 rounded-xl mb-5 overflow-hidden flex-shrink-0">
-                    <img src="../images/pro-ledger.jpg" alt="Ledger Project" class="w-full h-full object-cover">
-                </div>
-                <div class="flex flex-wrap gap-1.5 mb-4 flex-grow content-start text-left">
-                    <span class="bg-amber-500 text-white px-2.5 py-1 rounded-md text-[12px] font-black tracking-wide">Blockchain</span>
-                    <span class="bg-amber-500 text-white px-2.5 py-1 rounded-md text-[12px] font-black tracking-wide">Docker</span>
-                    <span class="bg-slate-800 text-white px-2.5 py-1 rounded-md text-[12px] font-black tracking-wide">Isolation Forest</span>
-                    <span class="bg-slate-800 text-white px-2.5 py-1 rounded-md text-[12px] font-black tracking-wide">AI AGENT</span>
-                    <span class="bg-slate-500 text-white px-2.5 py-1 rounded-md text-[12px] font-black tracking-wide">Cryptography</span>
-                </div>
-                <div class="pt-4 border-t border-gray-50 flex-shrink-0 text-left">
-                    <a href="project/ledger.html" class="text-amber-600 font-black text-xs flex items-center justify-end group uppercase tracking-widest">
-                        Learn More <i class="fas fa-arrow-right ml-1.5 group-hover:translate-x-1 transition"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <!-- 專案 11：平行化巨量向量檢索 -->
-        <div class="min-w-[220px] md:min-w-[240px] h-[480px] bg-white rounded-2xl border border-gray-200 flex flex-col snap-start hover:border-teal-500 hover:shadow-lg transition-all duration-300 overflow-hidden text-left">
-            <div class="p-5 flex flex-col h-full">
-                <h3 class="font-bold text-lg mb-4 text-slate-800 h-14 overflow-hidden leading-tight text-left">平行化巨量向量檢索</h3>
-                <div class="h-44 bg-slate-100 rounded-xl mb-5 overflow-hidden flex-shrink-0">
-                    <img src="../images/pro-mpi.jpg" alt="MPI Project" class="w-full h-full object-cover">
-                </div>
-                <div class="flex flex-wrap gap-1.5 mb-4 flex-grow content-start text-left">
-                    <span class="bg-teal-600 text-white px-2.5 py-1 rounded-md text-[12px] font-black tracking-wide">OpenMP</span>
-                    <span class="bg-teal-600 text-white px-2.5 py-1 rounded-md text-[12px] font-black tracking-wide">MPI</span>
-                    <span class="bg-slate-800 text-white px-2.5 py-1 rounded-md text-[12px] font-black tracking-wide">Hybrid</span>
-                    <span class="bg-slate-800 text-white px-2.5 py-1 rounded-md text-[12px] font-black tracking-wide">Dynamic</span>
-                    <span class="bg-slate-500 text-white px-2.5 py-1 rounded-md text-[12px] font-black tracking-wide">C++</span>
-                </div>
-                <div class="pt-4 border-t border-gray-50 flex-shrink-0 text-left">
-                    <a href="project/mpi.html" class="text-teal-600 font-black text-xs flex items-center justify-end group uppercase tracking-widest">
-                        Learn More <i class="fas fa-arrow-right ml-1.5 group-hover:translate-x-1 transition"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-
-    </div>
-</section>
+        </section>
 
         <section id="experience" class="py-12 border-t border-gray-200">
             <div class="mb-8">
@@ -392,7 +393,7 @@
                 <div class="flex-grow text-left">
                     <h3 class="text-2xl font-bold text-slate-800 mb-4 tracking-tight">學術探索與團隊實踐的認可</h3>
                     <p class="text-slate-500 mb-8 max-w-xl leading-relaxed font-medium">
-                        在學術研究與競賽上追求卓越，修畢資工輔系並深入修讀 NLP、電腦視覺等多項學程；同時在社團領導中學習協作，印證跨領域實踐與持續成長的足跡。
+                        在學術研究與競賽上追求卓越，修畢資工輔系並深入修讀 NLP、電腦視覺、團隊領導等多項學程；同時在社團領導中學習協作，印證跨領域實踐與持續成長的足跡。
                     </p>
                     <div class="flex flex-wrap gap-6 items-center text-sm font-semibold text-slate-400">
                         <span class="flex items-center gap-2"><i class="fas fa-graduation-cap text-indigo-500"></i> 資工輔系 </span>
